@@ -1,22 +1,20 @@
 /*
-Theme Name: Canadian Guide
+Theme Name: Canadian Guide Default
 Theme URI: https://github.com/jvanstone/canadian-guide
-Author: VanstoneOnline
+Author: Vanstone Online
 Author URI: https://vanstoneonline.com
 Description: Template for Job Canada - Canadian Guide
 Version: 2021.1
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
-Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Tags: one-column, custom-menu, featured-images, microformats, threaded-comments, translation-ready
 Text Domain: canadian_guide
 
 Vanstone Online is distributed under the terms of the GNU GPL
+
 */
 
 /******* IMPORTS ***********/
-@import url('reset.scss');
-@import url('typography.scss');
-@import url('normalize.scss');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&display=swap');
 
@@ -39,7 +37,9 @@ $font-color: #230925;
 $line-height: 1.414;
 $mainText: 16px;
 
-* { box-sizing: border-box;}
+// BORDER BOX should already be installed by Bootstrap
+//* { box-sizing: border-box;}
+
 
 /***** MAIN ELEMENTS **********/
 body {
@@ -48,26 +48,21 @@ body {
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 25%;
-    width: 100%;
     color: rgb(31, 42, 50);
     font-size: $mainText;
     font-family: $sanSource-text;
 }
 
 #wrapper {
-   margin: 0 auto;
-   height: auto;
+   min-height: 100%;
    background-color: rgba(255, 255, 255, 0.507);
-   //background-color: rgb(27, 55, 134);
+
 }
 
 #container { margin: 0;}
 
 #header {
-    margin: 0;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
+    
 }
 
 main {

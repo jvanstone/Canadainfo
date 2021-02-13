@@ -10,6 +10,7 @@
  */
 
 get_header(); ?>
+
 <main id="content">
 
     <?php //edit_post_link(); ?>
