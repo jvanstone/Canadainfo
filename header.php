@@ -37,7 +37,7 @@
         </div>  
     </header>
     
-    
+    <div class="col-12">
     <img src="<?php header_image(); ?>" class=".img-fluid header-image" alt="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" />
 
     <!-- Top Navigation Menu -->
@@ -59,6 +59,7 @@
             ?>
         </div>
     </nav>
+    </div>
 
     <div id="container">
    
