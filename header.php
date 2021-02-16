@@ -25,21 +25,21 @@
 
     <body <?php body_class(); ?>>
 
-    <div id="wrapper" class="container-fluid">
+    <div id="wrapper" class="container-fluid">  
 
-    <header id="header">
+    <header id="header" class="row justify-start align-middle"> 
+       
+            <?php theme_prefix_the_custom_logo()?>
+       
         <div id="site-title">
-            <?php //if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?>
-        <h1> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
-        <div id="site-description"><?php bloginfo( 'description' ); ?></div>
-            <?php //if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?>
-        </div>
-    
+            <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
+            <div id="site-description"><?php bloginfo( 'description' ); ?></div>
+        </div>  
     </header>
 
     <!-- Top Navigation Menu -->
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Menu</a>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,9 +48,9 @@
             <?php
             //make wp_mav_menu use bootstrap
             wp_nav_menu( array( 
-                'theme_location' => 'mobile-menu', 
+                'theme_location' => 'primary', 
                 'menu_class' => 'navbar-nav',
-                'add_li_class' => 'nav-item',
+                'add_li_class' => 'nav-item col-md-4',
                 'container' => false
                 )); 
             ?>

@@ -12,11 +12,11 @@
 // Local project URL of your already running WordPress site.
 // > Could be something like "wpgulp.local" or "localhost"
 // > depending upon your local WordPress setup.
-const projectURL = 'wpgulp.local';
+const projectURL = 'http://localhost/sandbox-wp/canadian-gude/';
 
 // Theme/Plugin URL. Leave it like it is; since our gulpfile.js lives in the root folder.
 const productURL = './';
-const browserAutoOpen = false;
+const browserAutoOpen = true;
 const injectChanges = true;
 
 // >>>>> Style options.
@@ -105,27 +105,28 @@ const zipIgnoreGlob = [
 	`!${imgSRC}`,
 	`!${styleSRC}`,
 	`!${jsCustomSRC}`,
-	`!${jsVendorSRC}`
+	`!${jsVendorSRC}`,
+	'./function-extra.php'
 ];
 
 // >>>>> Translation options.
 // Your text domain here.
-const textDomain = 'WPGULP';
+const textDomain = 'canadian-guide';
 
 // Name of the translation file.
-const translationFile = 'WPGULP.pot';
+const translationFile = 'language.pot';
 
 // Where to save the translation files.
 const translationDestination = './languages';
 
 // Package name.
-const packageName = 'WPGULP';
+const packageName = 'Canadian Guide';
 
 // Where can users report bugs.
 const bugReport = 'https://vanstoneonline.com/contact/';
 
 // Last translator Email ID.
-const lastTranslator = 'Ahmad Awais <your_email@email.com>';
+const lastTranslator = 'Jason Vanstone <jason@vanstoneonline.com>';
 
 // Team's Email ID.
 const team = 'Jason Vanstone <jason@vanstoneonline.com>';

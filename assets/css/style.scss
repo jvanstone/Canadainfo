@@ -11,7 +11,6 @@ Tags: one-column, custom-menu, featured-images, microformats, threaded-comments,
 Text Domain: canadian_guide
 
 Vanstone Online is distributed under the terms of the GNU GPL
-
 */
 
 /******* IMPORTS ***********/
@@ -26,16 +25,19 @@ $backgroundcolor1: rgb(247, 248, 248); //Off-White
 $backgroundcolor2: #c4a5e7;
 $backgroundcolor3: #a7c2c8;
 $backgroundcolor4: #8667af73;
-$h2-background:#8475AC;
+$h2-background:#8475AC; 
 $border-test: solid 1px rgb(63, 32, 32);
 $border-round: 10px;
 
+
+$color1L: #1d694d;
 $h1-size: 24px;
 $h2-size: 20px;
 $header-color:#534266;
 $font-color: #230925;
 $line-height: 1.414;
 $mainText: 16px;
+$new: 34px;
 
 // BORDER BOX should already be installed by Bootstrap
 //* { box-sizing: border-box;}
@@ -61,14 +63,11 @@ body {
 
 #container { margin: 0;}
 
-#header {
-    
-}
-
 main {
     margin: 0px auto; 
     width: 100%;
   
+    
     box-shadow : 4px, 6px, 2px, rgba(0, 0, 0, 0.2);
 
     font-size: inherit;
@@ -143,18 +142,23 @@ input:focus {
 
 /******** Main Header ********/
 
+header {  
+    min-height: 100px; 
+    padding: 1rem;
+}
 
 #site-title {
-    margin: 1rem 3rem ;
+    margin: 1rem 0rem;
     font: #{$h1-size} / #{$line-height};
     color: $header-color;
     font-family: $cabin-text;
     font-weight: bold;
-    text-decoration: none;
-    //border: $border-test;
-    flex: 70%;
-    display: flex;
-    flex-flow: column nowrap;
+    text-decoration: none
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
 }
 
 #site-title h1,  #site-title > a, #site-title > a:visited {
@@ -163,17 +167,13 @@ input:focus {
     color: $header-color;
     font-family: $cabin-text;
     font-weight: bold;
-    text-decoration: none;
-    //border: $border-test;
-    display: flex;
-    flex-grow: 1;
+    text-decoration: none; 
 }
 
 #site-description { 
     //border: $border-test;
     color: black; 
-    display: flex;
-    flex-grow: 1;
+ 
 }
 
 h1.entry-title {

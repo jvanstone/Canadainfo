@@ -1,48 +1,52 @@
-        <footer id="footer">
-            <div class="pure-g">
-                    
-                    <div class="pure-u-1 pure-u-sm-1 pure-u-md-1 pure-u-lg-1-5 pure-u-xl-1-5">
-                        
-                        <?php dynamic_sidebar( 'footer_area_one' ); ?>
-                        
-                    </div>
+    <footer id="colophon" class="site-footer" role="contentinfo">
 
-                    <div class="pure-u-1 pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-5 pure-u-xl-1-5">
-                        
-                        <?php dynamic_sidebar( 'footer_area_two' ); ?>
-                        
-                    </div>
-                    
-                    <div class="pure-u-1 pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-5 pure-u-xl-1-5">
-                        
-                        <?php dynamic_sidebar( 'footer_area_three' ); ?>
-                        
-                    </div>
-                    
-                    <div class="pure-u-1 pure-u-sm-1-3 pure-u-md-1-3 pure-u-lg-1-5 pure-u-xl-1-5">
-                        
-                        <?php dynamic_sidebar( 'footer_area_four' ); ?>
-                        
-                    </div>
-                    
-                </div>
-            <div id="copyright">
-            &copy; <?php echo esc_html_e( date_i18n( __( 'Y', 'canadian_guide' ) ) ); ?> <?php echo esc_html_e( get_bloginfo( 'name', 'canadian_guide' ) ); ?>
-            </div>
-        </footer>
-        </div> <!-- End Container -->
-        </div> <!-- End Wrapper -->
+    <?php if ( has_nav_menu( 'footer' ) ) : ?>
+        <nav aria-label="<?php esc_attr_e( 'Secondary menu', 'canadian_guide' ); ?>" class="footer-navigation">
+            <ul class="footer-navigation-wrapper">
+                <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'footer',
+                        'items_wrap'     => '%3$s',
+                        'container'      => false,
+                        'depth'          => 1,
+                        'link_before'    => '<span>',
+                        'link_after'     => '</span>',
+                        'fallback_cb'    => false,
+                    )
+                );
+                ?>
+            </ul><!-- .footer-navigation-wrapper -->
+        </nav><!-- .footer-navigation -->
+    <?php endif; ?>
+    <div class="site-info">
+        <div class="site-name">
+            <?php if ( has_custom_logo() ) : ?>
+                <div class="site-logo"><?php the_custom_logo(); ?></div>
+            <?php else : ?>
+                <?php if ( get_bloginfo( 'name' ) && get_theme_mod( 'display_title_and_tagline', true ) ) : ?>
+                    <?php if ( is_front_page() && ! is_paged() ) : ?>
+                        <?php bloginfo( 'name' ); ?>
+                    <?php else : ?>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+                    <?php endif; ?>
+                <?php endif; ?>
+            <?php endif; ?>
+        </div><!-- .site-name -->
+        <div class="powered-by">
+            <?php
+            printf(
+                /* translators: %s: WordPress. */
+                esc_html__( 'Proudly powered by %s.', 'canadian_guide' ),
+                '<a href="' . esc_attr__( 'https://wordpress.org/', 'canadian_guide' ) . '">WordPress</a>'
+            );
+            ?>
+        </div><!-- .powered-by -->
+
+    </div><!-- .site-info -->
+    </footer><!-- #colophon -->
+    </div> <!-- End Container -->
+    </div> <!-- End Wrapper -->
         <?php wp_footer(); ?>
 
-        <!-- Adding the needed Bootstrap javascript files -->
-        <!-- Latest compiled and minified CSS -->
-
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
-      
-    </body>
 </html>
