@@ -177,6 +177,9 @@ add_action( 'widgets_init', 'canadian_guide_widgets_init' );
  */
 function canadian_guide_scripts() {
 
+	//Load Bootstrap CSS First to allow for Customization in style.css
+	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' );
+
     // Note, the is_IE global variable is defined by WordPress and is used
 	// to detect if the current browser is internet explorer.
 	global $is_IE;
@@ -193,8 +196,10 @@ function canadian_guide_scripts() {
 	// Print styles.
 	wp_enqueue_style( 'canadian-guide-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
-    //Bootstrap
-    wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' );
+	//remove unwanted stylesheets that are part of the basic WordPress build
+	wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
     
     /*****
      * 
@@ -236,3 +241,12 @@ add_action( 'wp_enqueue_scripts', 'canadian_guide_scripts' );
         return preg_replace('/<a /', '<a class="nav-link" ', $ulclass);
     }
     add_filter('wp_nav_menu','add_menuclass');
+
+	function add_image_fluid_class($content) {
+		global $post;
+		$pattern        = "/<figure class=\"[A-Za-z-]*\"><img (.*?)class=\".*?\"(.*?)><figcaption>(.*?)<\/figcaption><\/figure>/i";
+		$replacement    = '<figure class="text-center my-3"><img class="figure-img img-fluid" $1$2><figcaption class="text-muted">$3</figcaption></figure>';
+		$content        = preg_replace($pattern,$replacement,$content);
+		return $content;
+	 }
+	 add_filter('the_content','add_image_fluid_class');

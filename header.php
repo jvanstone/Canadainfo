@@ -33,9 +33,12 @@
        
         <div id="site-title">
             <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
-            <div id="site-description"><?php bloginfo( 'description' ); ?></div>
+            <h3 id="site-description"><?php bloginfo( 'description' ); ?></h>
         </div>  
     </header>
+    
+    
+    <img src="<?php header_image(); ?>" class=".img-fluid header-image" alt="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" />
 
     <!-- Top Navigation Menu -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -58,4 +61,4 @@
     </nav>
 
     <div id="container">
-        <img src="<?php header_image(); ?>" class="header-image" alt="" />
+   

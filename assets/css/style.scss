@@ -17,7 +17,7 @@ Vanstone Online is distributed under the terms of the GNU GPL
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&display=swap');
 
-/***** VARIABLES **********/
+//***** VARIABLES **********
 $cabin-text: 'Cabin', sans-serif;
 $sanSource-text: 'Source Sans Pro', sans-serif;
 
@@ -25,22 +25,23 @@ $backgroundcolor1: rgb(247, 248, 248); //Off-White
 $backgroundcolor2: #c4a5e7;
 $backgroundcolor3: #a7c2c8;
 $backgroundcolor4: #8667af73;
+
 $h2-background:#8475AC; 
 $border-test: solid 1px rgb(63, 32, 32);
 $border-round: 10px;
 
 
-$color1L: #1d694d;
-$h1-size: 24px;
-$h2-size: 20px;
 $header-color:#534266;
 $font-color: #230925;
 $line-height: 1.414;
-$mainText: 16px;
-$new: 34px;
 
-// BORDER BOX should already be installed by Bootstrap
+//******** Presets Set by Bootstrap
+
+
 //* { box-sizing: border-box;}
+
+// Font-Size default 
+// body { font-size 16px; }
 
 
 /***** MAIN ELEMENTS **********/
@@ -51,30 +52,60 @@ body {
     background-repeat: no-repeat;
     background-size: 25%;
     color: rgb(31, 42, 50);
-    font-size: $mainText;
     font-family: $sanSource-text;
 }
 
 #wrapper {
+   margin: 0;
+   padding: 0;
    min-height: 100%;
    background-color: rgba(255, 255, 255, 0.507);
-
 }
 
 #container { margin: 0;}
 
-main {
-    margin: 0px auto; 
-    width: 100%;
-  
-    
-    box-shadow : 4px, 6px, 2px, rgba(0, 0, 0, 0.2);
+/******** 
 
-    font-size: inherit;
+ Main Header 
+
+
+********/
+
+header {  
+    margin: 1rem;
+    padding: 1rem 2rem;
+    min-height: 100px; 
+    
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+#site-title {
+
+    h1 > a, h1 > a:visited {
+        color: $header-color;
+        font-family: $cabin-text;
+        font-weight: 700;
+        text-decoration: none; 
+       
+    }
+
+    #site-description { 
+        color: black; 
+        font-weight: 500;
+    }
+}
+
+.header-image {
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.228);
 }
 
 footer {
-    margin: 5px auto;
+    margin: 0.313rem auto;
     padding: 2rem;
     width: 100%;
     height: 10rem;
@@ -83,48 +114,157 @@ footer {
    text-align: center;
 }
 
-
-
-a, a:visited { 
-    color: $header-color;
-    text-decoration: underline;
+article, article > header { 
+    margin: 0;
+    padding: .5rem 1rem;
 }
 
-a:hover { 
-    color: $font-color;
-    text-decoration: none;
-}
+/**************
 
+ Liquid Font Sizes 
+
+ **********/
+
+ $min_width: 325px;
+ $max_width: 1200px;
+ $min_font: 16px; //bootstrap default
+ $max_font: 22px;
+ $mod_1: 1.3; // mobile
+ $mod_2: 1.5; // desktop
+ 
+ @function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+  @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+  
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+        font-size: $min-font-size;
+        @media screen and (min-width: $min-vw) {
+          font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        }
+        @media screen and (min-width: $max-vw) {
+          font-size: $max-font-size;
+        }
+      }
+    }
+  }
+
+  h1 {  
+    font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem; 
+    @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+  }
+  h2 {  
+    font-size: $mod_1*$mod_1*$mod_1 *1rem; 
+    @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+  }
+  h3 { 
+    font-size: $mod_1*$mod_1 *1rem;
+    @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2  *$min_font);
+  } 
+  p, p > a, ul {
+    font-size: $mod_1 *1rem;
+    @include fluid-type($min_width, $max_width, $mod_1 *$min_font, $mod_2  *$min_font);
+  }
+
+
+/*****************************
+
+Other Header Settings 
+
+**************************/
+  
 h1, h1 > a, h1 > a:visited {
-    font: #{$h1-size} / #{$line-height};
     color: $header-color;
     font-family: $cabin-text;
     text-decoration: none;
 }
 
+h1.entry-title {
+    margin: 0;
+    border: 1rem solid $h2-background;
+    background-color: $backgroundcolor2;
+    min-height: 6rem;
+    text-align: center;
+}
+
+
 /*** Guide Header breakdown ***/
 h2 {
-    margin: 20px 0;
-    padding: 5px 10px;
+    margin: 2rem 0;
+    padding: .313rem 1rem;
+
+    width: 100%;
+
     background-color: $h2-background;
     border: 1px solid $header-color; 
-    font-size: $h2-size;
-    line-height: 2;
-    width: 100%;
     box-shadow:  5px 10px $backgroundcolor4;
+    color: #fff;
 }
+
+
+.entry-content h3 {
+    margin: 1rem;
+    font-weight: 500;
+    color:rgb(31, 42, 50);
+}
+
+
+/******************
+
+ Link settings
+
+
+***********************/
+
+
+
+a, a:visited { 
+    color: $header-color;
+    text-decoration: none;
+}
+
+a:hover { 
+    color: $font-color;
+    text-decoration: underline;
+}
+
+
+/*********************
+
+Navagation Settins
+
+
+**************************/
+
+li.menu-item > a.nav-link {
+    width: 18rem;
+    //text-align: center;
+}
+
+li.menu-item > a:hover.nav-link {
+    background-color: $backgroundcolor2;
+    
+}
+
 
 
 
 p, ul {
-    margin: 10px;
+    margin: 1rem;
 }
 
 ul { line-height: 2; padding-bottom: 2rem;}
 
+ul, li { margin: .5rem 0; }
 
 label, input, button {
-    margin: 10px;
+    margin: 1rem;
     display: block;
 }
 
@@ -134,98 +274,16 @@ input:focus {
   }
 
 .error {
-    margin: 10px;
-    font-size: $mainText;
+    margin: 1rem;
     color: red;
-
 }
 
-/******** Main Header ********/
-
-header {  
-    min-height: 100px; 
-    padding: 1rem;
-}
-
-#site-title {
-    margin: 1rem 0rem;
-    font: #{$h1-size} / #{$line-height};
-    color: $header-color;
-    font-family: $cabin-text;
-    font-weight: bold;
-    text-decoration: none
-}
-
-.logo {
-    width: 100px;
-    height: 100px;
-}
-
-#site-title h1,  #site-title > a, #site-title > a:visited {
-    margin:0;
-    font: #{$h1-size} / #{$line-height};
-    color: $header-color;
-    font-family: $cabin-text;
-    font-weight: bold;
-    text-decoration: none; 
-}
-
-#site-description { 
-    //border: $border-test;
-    color: black; 
- 
-}
-
-h1.entry-title {
-    margin: 0;
-    padding-top: 1rem;
-    border: 1rem solid $h2-background;
-    background-color: $backgroundcolor2;
-    width: 100%;
-    height: 6rem;
-    text-align: center;
-}
-
-#menu { 
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    //border: $border-test;
-    text-align: right;
-    background-color: $backgroundcolor3;
-}
-.menu-login-register-container ul{
-    display: inline-flex;
-    flex-flow: row nowrap;
-    list-style: none;
-    text-align: right;
-    //border: $border-test;
-    flex-grow: 1;
-   
-}
-
-.menu-login-register-container li{
-    margin: 0 10px; 
-    //border: $border-test;  
-}
-
-.header-image {
-    margin: 0;
-    width: 100%;
-    border-bottom: 20px solid $backgroundcolor3;
-}
-
-.entry-content {
-    padding: 2px 40px;
-    font-size: inherit;
-    //border: $border-test;
-}
 
 .entry-footer, .footer {display: none;}
 
 .login_box {
-    margin: 10px auto; 
-    padding: 10px;
+    margin: 1rem auto; 
+    padding: 1rem;
     background-color: $backgroundcolor2;
     
     border: 4px solid white;
@@ -240,7 +298,7 @@ h1.entry-title {
 
 
 .login-flex {
-    margin: 10px;
+    margin: 1rem;
     padding: 10px 30px;
     flex: 50%;
 
@@ -252,7 +310,7 @@ h1.entry-title {
 }
 
 .login-flex > h2> a {
-    font: #{$h2-size} / #{$line-height};
+    //font: #{$h2-size} / #{$line-height};
     color: $header-color;
     font-family: $cabin-text;
 
@@ -260,14 +318,10 @@ h1.entry-title {
 
 
 blockquote {
-    margin: 5px auto;
-    padding: 20px;
+    margin: 0.313rem auto;
+    padding: 2rem;
     width: 80%;
     background-color: $backgroundcolor2;
-    font-size: .75rem;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-all;
 }
 
 /************************
@@ -281,29 +335,33 @@ Guide Styles
     padding: 20px;
 }
 
-.guide_width h1.entry-title {
+.guide_width { 
+
+    h1.entry-title {
     text-align: left;
     margin: 0;
     padding: 1rem;
     height: 3rem;
     background-color: #fff;
     border: 0 solid #000;
-}
+    }
 
-.guide_width h3 { 
-    margin: 40px;
-}
-.guide_width p { 
-    margin: 40px;
-    text-align: justify;
-}
+    h3 { 
+        margin: 40px;
 
-.guide_width ul {
-    margin: 0 auto;
-    width: 60%;
+    }
+
+    p { 
+        margin: 40px;
+        text-align: justify;
+    }
+
+    ul {
+        margin: 0 auto;
+        width: 60%;
+    }
+
 }
-
-
 
 
 
@@ -330,7 +388,7 @@ Canada Guide Extras
 }
 
 .party {
-    margin: 10px;
+    margin: 1rem;
     flex: 30%;
     min-width: 10em;
     min-height: 5em;
@@ -386,29 +444,11 @@ Canada Guide Extras
     display: none;
 }
 
-.nav-links {
-    font-size: $h1-size;
-}
-
 
 table, tr, td {
     border: 1px solid #444;
 }
 
-@media screen and (max-width:480px) {
-
-    .header-image {
-        margin: 0 auto;
-        max-width: 480px;
-        height: auto;
-    }
-
-    h1 { font-size: 18px;}
-
-   
-
-
-}
 
 ul.list-box {
     display: flex;
@@ -424,7 +464,7 @@ ul.list-box {
 }
 
 ul.list-box li {
-    margin: 10px; 
+    margin: 1rem; 
     flex-basis: 150px;
     height: 50px;
     border: $border-test;
@@ -522,7 +562,7 @@ ul.list-box li {
     padding: 20px;
     //border: $border-test;
     height: 400px;
-    font-size: $h2-size;
+    //font-size: $h2-size;
     line-height: $line-height;
 }
 
@@ -534,7 +574,7 @@ h3.flex-td {
     background-color: $backgroundcolor2;
     border: solid 1px #3f2020;
     height: 2rem;
-    font-size: $h2-size;
+    //font-size: $h2-size;
 }
 
 .pmpro_login_wrap > h2 {
