@@ -163,11 +163,11 @@ article, article > header {
     font-size: $mod_1*$mod_1*$mod_1 *1rem; 
     @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
   }
-  h3 { 
+  h3, .card-header { 
     font-size: $mod_1*$mod_1 *1rem;
     @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2  *$min_font);
   } 
-  p, p > a, ul {
+  p, p > a, ul, table {
     font-size: $mod_1 *1rem;
     @include fluid-type($min_width, $max_width, $mod_1 *$min_font, $mod_2  *$min_font);
   }
@@ -214,6 +214,12 @@ h2 {
     color:rgb(31, 42, 50);
 }
 
+.entry-content > figure  > img {
+    margin: 0 auto;
+    //border: $border-test;
+    width: 100%;
+}
+
 
 /******************
 
@@ -237,7 +243,7 @@ a:hover {
 
 /*********************
 
-Navagation Settins
+Navagation Setting  s
 
 
 **************************/
@@ -253,9 +259,13 @@ li.menu-item > a:hover.nav-link {
 }
 
 
+/*************
 
+General Typography Settings
 
-p, ul {
+*************/
+
+p, ul, figcaption {
     margin: 1rem;
 }
 
@@ -324,6 +334,7 @@ blockquote {
     background-color: $backgroundcolor2;
 }
 
+
 /************************
 
 Guide Styles
@@ -364,13 +375,60 @@ Guide Styles
 }
 
 
-
 /**************************
 
-Canada Guide Extras
+Canadian Guide Issue 1 Extras
 
 
 ***************************/
+
+.province { 
+    margin: 1rem auto;
+    width: 95%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    //border: $border-test;
+}
+
+.province  {
+
+    .list-inline-item {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        padding-left: 1rem;
+        width: 20rem;
+        height: auto;
+        
+        border-bottom: $border-test;
+        box-shadow: 2px 5px #888888;
+        //border-left: 50px solid transparent;
+        //border-right: 50px solid transparent;
+        //border-bottom: 100px solid red;
+        position: relative;
+    }
+    .list-inline-item::after {
+        width: 0;
+        height: 0;
+        //border-left: 50px solid transparent;
+        //border-right: 50px solid transparent;
+        //border-top: 100px solid red;
+        
+        position: absolute;
+        content: "\2192";
+        top: 0px;
+        right: 50px;
+    }
+}
+
+
+/***************
+
+
+ Styling to Visualize Canadian Party Data
+
+********************/
+
 .canadaguide-map {
     flex: 100%;
     height: auto;
@@ -409,6 +467,8 @@ Canada Guide Extras
 
 .party p { margin: 5px; text-align: center;}
 
+
+//Currently not used.
 .leader-img {
     margin: 0 auto;
     width: 100%;
@@ -419,6 +479,7 @@ Canada Guide Extras
    
 }
 
+//Party Color Blocks
 .colorblock {
     height: 2em;
     width: 100%;
@@ -431,6 +492,7 @@ Canada Guide Extras
     display: flex;
 }
 
+//Party Colour presests 
 .liberal { background-color: rgb(204, 0, 0);}
 .conservative { background-color: rgb(4, 0, 231);}
 .ndp { background-color: rgb(204, 116, 0);}
@@ -439,23 +501,28 @@ Canada Guide Extras
 .green { background-color: rgb(43, 149, 66);}
 
 
-//Footer Stylin
-.screen-reader-text, .cat-links, .tag-links  {
-    display: none;
-}
+
+/***********
+ List  Styles
+********/
 
 
-table, tr, td {
-    border: 1px solid #444;
-}
 
+
+/***********
+
+ List Box
+ Turns a list into a boxs that flow on a row with wrap. 
+
+********/
 
 ul.list-box {
     display: flex;
     margin: 10px auto;
     padding: 0;
     flex-flow: row wrap;
-    align-content: space-between;
+    align-items: center;
+    
     justify-content: space-evenly;
     width: 90%;
     list-style-type: none;
@@ -465,12 +532,59 @@ ul.list-box {
 
 ul.list-box li {
     margin: 1rem; 
-    flex-basis: 150px;
-    height: 50px;
+    padding: 1rem;
+    min-width: 12rem;
+    flex-basis: 10rem;
+    min-height: 5rem;
+    height: auto;
     border: $border-test;
     text-align: center;
     box-shadow: 2px 5px #888888;
+    line-height: 1;
 }
+
+
+/*********
+
+ Checkmark List
+ Turn list into a checkmark list. 
+
+******************/
+.checkmark-list {
+    list-style: none;
+    text-align: left;
+  }
+.checkmark-list  li:before {
+    margin: 0 2px;
+    padding: 10px;
+    content: '✓';
+    color: $h2-background;
+
+} 
+
+/***********
+
+ Table Stylings  >> Beyond Bootstrap
+
+**************/
+.table { 
+    margin: 0 auto;
+    width: 95%;
+}
+
+/****************
+
+Card Styling >> Beyond Bootstrap 
+
+********************/
+    
+.card {
+    margin: 1rem auto;
+    width: 80%;
+    box-shadow: 2px 5px #888888;   
+}
+
+
 
 
 /*---------------------------------------
