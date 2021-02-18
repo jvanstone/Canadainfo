@@ -106,7 +106,7 @@ const zipIgnoreGlob = [
 	`!${styleSRC}`,
 	`!${jsCustomSRC}`,
 	`!${jsVendorSRC}`,
-	'./function-extra.php'
+	'!./function-extra.php'
 ];
 
 // >>>>> Translation options.

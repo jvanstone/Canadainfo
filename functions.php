@@ -244,9 +244,15 @@ add_action( 'wp_enqueue_scripts', 'canadian_guide_scripts' );
 
 	function add_image_fluid_class($content) {
 		global $post;
-		$pattern        = "/<figure class=\"[A-Za-z-]*\"><img (.*?)class=\".*?\"(.*?)><figcaption>(.*?)<\/figcaption><\/figure>/i";
-		$replacement    = '<figure class="text-center my-3"><img class="figure-img img-fluid" $1$2><figcaption class="text-muted">$3</figcaption></figure>';
+		$pattern        = "/<figure class=\"[A-Za-z-]+\"><img (.*?)class=\".*?\"(.*?)><figcaption>(.*?)<\/figcaption><\/figure>/i";
+		$replacement    = '<figure class="figure"><img class="img-fluid" $1$2><figcaption class="text-muted">$3</figcaption></figure>';
 		$content        = preg_replace($pattern,$replacement,$content);
 		return $content;
 	 }
 	 add_filter('the_content','add_image_fluid_class');
+
+	 
+	 function add_custom_table_class( $content ) {
+	 return str_replace( '<table', '<table class="table  table-striped	table-responsive-sm"', $content );
+	 }
+	 add_filter( 'the_content', 'add_custom_table_class' );
