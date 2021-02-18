@@ -33,7 +33,7 @@
        
         <div id="site-title">
             <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
-            <h3 id="site-description"><?php bloginfo( 'description' ); ?></h>
+            <h3 id="site-description"><?php bloginfo( 'description' ); ?></h3>
         </div>  
     </header>
     
