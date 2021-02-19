@@ -1,16 +1,44 @@
 <?php
 /**
- * Locations taxonomy archive
+ * Locations Taxonomy: Guide Page Layout
+ * 
+ * 
+ * @package Canadian Guide
+ * @subpackage canadian-guide
+ * 
+ * 
  */
+
+
 get_header();
+
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
 
-<div class="wrapper">
+<main id="content" class="guide_width">
 
-<h1>TEST</H1>
-  <div class="primary-content">
-    <h1 class="archive-title"><?php echo apply_filters( 'the_title', $term->name ); ?> News</h1>
+    <div class="card bg-dark text-black col-12">
+    <?php 
+
+      if ( have_posts() ) {
+        while ( have_posts() ) {
+            the_post();
+   
+
+         /* grab the url for the full size featured image */
+          $featured_img_url = get_the_post_thumbnail_url(); 
+           echo '<img src="' .esc_url($featured_img_url). '" class="card-img img-fluid" alt="">';
+       
+        }
+      }
+      
+      ?>
+      <div class="card-img-overlay">
+        <h5 class="card-title">Canadian Guide <?php echo apply_filters( 'the_title', $term->name ); ?></h5>
+  
+      </div>
+    </div>
+
 
     <?php if ( !empty( $term->description ) ): ?>
     <div class="archive-description">
@@ -22,10 +50,8 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
     <div id="post-<?php the_ID(); ?>" <?php post_class('post clearfix'); ?>>
       <h2 class="post-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-      <div class="content clearfix">
-        <div class="post-info">
-          <p><?php the_time(get_option('date_format')); ?> by <?php the_author_posts_link(); ?></p>
-        </div><!--// end .post-info -->
+      <div class="content">
+       
         <div class="entry">
           <?php the_content( __('Full story…') ); ?>
         </div>
@@ -49,8 +75,8 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
     </div>
 
     <?php endif; ?>
-  </div><!--// end .primary-content -->
-
+ 
+    </main>
   <div class="secondary-content">
     <?php get_sidebar(); ?>
   </div><!--// end .secondary-content -->

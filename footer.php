@@ -45,8 +45,10 @@
 
     </div><!-- .site-info -->
     </footer><!-- #colophon -->
-    </div> <!-- End Container -->
+    <?php wp_footer(); ?>
+  
+   
     </div> <!-- End Wrapper -->
-        <?php wp_footer(); ?>
-
+      
+ </body>
 </html>
