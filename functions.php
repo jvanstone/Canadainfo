@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions and definitions
+ * Functions and definitions for the Canada Info Theme
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -113,6 +113,43 @@ if ( ! function_exists( 'canadian_guide_setup' ) ) {
 			)
 		);
 
+ 
+        /**
+		 * Add a custom Taxonomy: Guide
+		 *
+		 * @link https://developer.wordpress.org/plugins/taxonomies/working-with-custom-taxonomies/
+		 */
+		function cg_register_taxonomy_guide() {
+			$labels = array(
+				'name'              => _x( 'Guides', 'taxonomy general name' ),
+				'singular_name'     => _x( 'guide', 'taxonomy singular name' ),
+				'search_items'      => __( 'Search All Guides' ),
+				'all_items'         => __( 'All Guides' ),
+				'parent_item'       => __( 'Parent Guide' ),
+				'parent_item_colon' => __( 'Parent Guide:' ),
+				'edit_item'         => __( 'Edit Guide' ),
+				'update_item'       => __( 'Update Guide' ),
+				'add_new_item'      => __( 'Add New Guide' ),
+				'new_item_name'     => __( 'New Guide Name' ),
+				'menu_name'         => __( 'Guides' ),
+			);
+			$args   = array(
+				'hierarchical'      => true, // make it hierarchical (like categories)
+				'labels'            => $labels,
+				'show_ui'           => true,
+				'translatable' 		=> true,
+				'show_admin_column' => true,
+				'show_in_rest'		=> true,
+				'query_var'         => true,
+				'rewrite'           => [ 'slug' => 'guide',  
+										 'with_front' =>true, // Don't display the category base before "/locations/"
+										'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/" 
+									],
+			);
+			register_taxonomy( 'guide', [ 'post' ], $args );
+	   }
+	   add_action( 'init', 'cg_register_taxonomy_guide' );
+
         // Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -210,7 +247,8 @@ function canadian_guide_scripts() {
     function canadian_guide_bootstrap_scripts() {
         wp_enqueue_script( 'jquery' );
         wp_enqueue_script( 'Popper' , 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js');
-        wp_enqueue_script( 'Javascript' , 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'); 
+        wp_enqueue_script( 'Javascript' , 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js');
+		wp_enqueue_script( 'Crossword','/assets/js/crossword.js' ); 
     }
    
 }
