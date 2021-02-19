@@ -275,7 +275,7 @@ function canadian_guide_logo() { ?>
 	}
 	</style>
 <?php }
-	add_action( ‘login_enqueue_scripts’, ‘canadian_guide_logo’ );
+	add_action( 'login_enqueue_scripts', 'canadian_guide_logo' );
 
 	function my_login_logo_url() {
 		return home_url();
