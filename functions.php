@@ -260,22 +260,25 @@ add_action( 'wp_enqueue_scripts', 'canadian_guide_scripts' );
  *  Change the login screen to show a custom logo
  * 
  * 
+ *  @link https://codex.wordpress.org/Customizing_the_Login_Form
  * 
  */
 
 function canadian_guide_logo() { ?>
-	<style type=”text/css”>
-	#login h1 a, .login h1 a {
-	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/uploads/2021/02/cropped-canadaleaf-background-768x1074-1.png);
+	<style type="text/css">
+    #login h1 a, .login h1 a {
+	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/site-login-logo.png);
 	height:65px;
 	width:320px;
-	background-size: 320px 65px;
+	background-size: 80px 80px;
 	background-repeat: no-repeat;
 	padding-bottom: 30px;
 	}
 	</style>
+	<?php //echo get_stylesheet_directory_uri(). ?>
 <?php }
 	add_action( 'login_enqueue_scripts', 'canadian_guide_logo' );
+
 
 	function my_login_logo_url() {
 		return home_url();
@@ -286,6 +289,8 @@ function canadian_guide_logo() { ?>
 		return 'Your Site Name and Info';
 	}
 	add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+	
+
 
     /**
      * 
