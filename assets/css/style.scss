@@ -246,8 +246,7 @@ Navagation Settings
 **************************/
 
 .navbar {
-
-    padding: .25rem .5rem;
+    padding: 0rem .5rem;
 }
 
 ul.navbar-nav {
@@ -263,6 +262,8 @@ li.menu-item > a:hover.nav-link {
     color:rgba(0, 0, 0, 0.2);   
 }
 
+
+.navbar-toggler > button { margin: .5rem;}
 
 /*************
 
@@ -447,7 +448,7 @@ Canadian Guide Issue 1 Extras
     //border: $border-test;
     width: 100%;
     text-align: center;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .party {
@@ -559,6 +560,8 @@ ul.list-box li {
     list-style: none;
     text-align: left;
   }
+
+.checkmark-list li {  padding-left: 2rem; }
 .checkmark-list  li:before {
     margin: 0 2px;
     padding: 10px;
@@ -593,7 +596,7 @@ Card Styling >> Beyond Bootstrap
 
 
 /*---------------------------------------
-	Register
+	Membership Levels
 ---------------------------------------*/
 #pmpro_register {
     margin: 0 auto;
@@ -608,55 +611,66 @@ Card Styling >> Beyond Bootstrap
 }
 
 #pmpro_levels_table {
-    //border: $border-test;
-    margin: 10px 20px; 
+    margin: 10px auto; 
     min-width: 15rem;
     max-width: 25rem;
+
+   
+    border: $border-test;
+    border-radius: 3px;
 
     text-align: center;
     display: flex;
     flex-flow: column nowrap;
+    align-items: stretch;
     justify-content: space-between;
 }
 
 .odd, .even {
     margin: 10px 0;
-    border: $border-test;
+    padding: 0;
     background-color: #fff;
     
     flex-direction: column;
-    min-width: 15rem;
-    max-width: 25rem;
-    height: 15rem;
+  
+
+    min-height: 25rem;
     display: flex;
     justify-content: space-between;
 }
 
+.button-bottom {
+
+    align-self: flex-end;
+    width: 100%;
+}
+
 .why-register {
-    //border: $border-test;
-    margin: 0 20px; 
-    padding: 10px;
-    min-width: 15rem;
-    max-width: 25rem;
+    border: $border-test;
+    border-radius: 3px;
+    margin: 0 auto; 
+    padding-top: 1rem;
+
  
     background-color: $backgroundcolor2;
-//  border-radius: 50%;
 
     text-align: center;
     vertical-align: top;
     display: flex;
     flex-flow: column nowrap;
-    font-weight: bold;
+    font-weight: 600;   
 }
 
 
-.why-register ul, .checkmark-list {
+.why-register ul {
+
+    padding: 4px;
     list-style: none;
     text-align: left;
   }
 .why-register li:before, .checkmark-list  li:before {
     margin: 0 2px;
-    padding: 10px;
+    padding: 10px 0;
     content: '✓';
 
 } 
@@ -664,8 +678,8 @@ Card Styling >> Beyond Bootstrap
 
 #pmpro_level_cost { 
     padding: 5px;
-     font-size: 20px; 
-     background-color: $h2-background;
+    font-size: 20px; 
+    background-color: $h2-background;
 
 }
 
@@ -673,6 +687,8 @@ Card Styling >> Beyond Bootstrap
     margin: 20px;
     border: 1px solid #000;
 }
+
+
 //Hide the levels and pricing labels at Register 
 .pmpro_level_price { display: none;}
 
