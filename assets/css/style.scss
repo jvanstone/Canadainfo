@@ -245,6 +245,15 @@ Navagation Settings
 
 **************************/
 
+.navbar {
+
+    padding: .25rem .5rem;
+}
+
+ul.navbar-nav {
+    padding-bottom: 1rem;
+    line-height: 1;
+}
 li.menu-item > a.nav-link {
     text-align: center;
 }
