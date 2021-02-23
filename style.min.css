@@ -103,11 +103,11 @@ ul.issues>li{margin-left:20px;padding:0}
 .pmpro_message{margin:2rem auto}
 .pmpro_asterisk{display:none}
 .pmpro_level_price{display:none}
+.pmpro_actionlinks>#pmpro_actionlink-cancel{display:none}
 .pmpro_content_message{padding:20px;height:400px;line-height:1.414}
 .pmpro_checkout>h3{margin:4rem 0;padding:1rem;background-color:#d9edf7;border:1px solid #bce8f1;border-radius:4px;color:#31708f;font-weight:400;line-height:1.5em;text-align:left}
 .pmpro_checkout-h3-msg{margin:1rem;font-style:normal}
-.pmpro_login_wrap>h2{display:none}
-.login-remember{display:inline-block}
+.pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,#pmpro_account,.pmpro_change_password_wrap{margin:2rem;padding:2rem;border:1px solid #ddd;border-radius:5px}
 @media screen and (min-width:325px){h1{font-size:calc(20.736px + 12.192 * ((100vw - 325px) / 875))}
 h2{font-size:calc(20.736px + 12.192 * ((100vw - 325px) / 875))}
 h3,.card-header{font-size:calc(17.28px + 6.24 * ((100vw - 325px) / 875))}

@@ -716,6 +716,7 @@ ul.issues >li {
 .pmpro_asterisk { display:none;}
 //Hide the levels and pricing labels at Register 
 .pmpro_level_price { display: none;}
+.pmpro_actionlinks > #pmpro_actionlink-cancel { display:none;}
 
 
 .pmpro_content_message {
@@ -749,13 +750,20 @@ ul.issues >li {
 }
 
 
-.pmpro_login_wrap > h2 {
-    display: none;
+/*---------------------------------------
+	Subscriber Profile Edut
+---------------------------------------*/
+
+.pmpro_member_profile_edit_wrap, .pmpro_confirmation_wrap, #pmpro_account, .pmpro_change_password_wrap {
+
+    margin: 2rem;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 
-.login-remember {
-    display: inline-block;
 
-}
+
+
 
