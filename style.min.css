@@ -97,11 +97,15 @@ ul.issues>li{margin-left:20px;padding:0}
 .why-register{border:solid 1px #3f2020;border-radius:3px;margin:0 auto;padding-top:1rem;background-color:#c4a5e7;text-align:center;vertical-align:top;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;font-weight:600}
 .why-register ul{padding:4px;list-style:none;text-align:left}
 .why-register li:before,.checkmark-list li:before{margin:0 2px;padding:10px 0;content:'✓'}
-#pmpro_level_cost{padding:5px;font-size:20px;background-color:#8475ac}
-#pmpro_level_cost span{margin:20px;border:1px solid #000}
+.pmpro_checkout-fields>ul{padding-bottom:0}
+#pmpro_level_cost{margin:2rem 0;padding:.313rem 1rem;width:100%;background-color:#8475ac;border:1px solid #534266;-webkit-box-shadow:5px 10px #8667af73;box-shadow:5px 10px #8667af73;color:#fff}
+#pmpro_level_cost span{margin:2rem;border:1px solid #000}
+.pmpro_message{margin:2rem auto}
+.pmpro_asterisk{display:none}
 .pmpro_level_price{display:none}
 .pmpro_content_message{padding:20px;height:400px;line-height:1.414}
-h3.flex-td{margin:0;margin-bottom:10px;background-color:#c4a5e7;border:solid 1px #3f2020;height:2rem}
+.pmpro_checkout>h3{margin:4rem 0;padding:1rem;background-color:#d9edf7;border:1px solid #bce8f1;border-radius:4px;color:#31708f;font-weight:400;line-height:1.5em;text-align:left}
+.pmpro_checkout-h3-msg{margin:1rem;font-style:normal}
 .pmpro_login_wrap>h2{display:none}
 .login-remember{display:inline-block}
 @media screen and (min-width:325px){h1{font-size:calc(20.736px + 12.192 * ((100vw - 325px) / 875))}
