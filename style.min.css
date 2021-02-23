@@ -89,9 +89,11 @@ ul.list-box li{margin:1rem;padding:1rem;min-width:12rem;-ms-flex-preferred-size:
 .table{margin:0 auto;width:95%}
 .card{margin:1rem auto;width:80%;-webkit-box-shadow:2px 5px #888;box-shadow:2px 5px #888}
 #pmpro_register{margin:0 auto;padding:1rem 1rem;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;max-width:80rem;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-line-pack:center;align-content:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
-#pmpro_levels_table{margin:10px auto;min-width:15rem;max-width:25rem;border:solid 1px #3f2020;border-radius:3px;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
-.odd,.even{margin:10px 0;padding:0;background-color:#fff;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;min-height:25rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
-.button-bottom{-ms-flex-item-align:end;align-self:flex-end;width:100%}
+#pmpro_levels_table{margin:10px auto;min-width:15rem;max-width:25rem;border:#505050;border-radius:3px;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}
+.odd,.even{margin:1rem;margin-bottom:5rem;padding:0;background-color:#fff;vertical-align:middle;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+ul.issues{margin:0;padding:0}
+ul.issues>li{margin-left:20px;padding:0}
+.button-get{margin:1rem}
 .why-register{border:solid 1px #3f2020;border-radius:3px;margin:0 auto;padding-top:1rem;background-color:#c4a5e7;text-align:center;vertical-align:top;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;font-weight:600}
 .why-register ul{padding:4px;list-style:none;text-align:left}
 .why-register li:before,.checkmark-list li:before{margin:0 2px;padding:10px 0;content:'✓'}

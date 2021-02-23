@@ -616,34 +616,43 @@ Card Styling >> Beyond Bootstrap
     max-width: 25rem;
 
    
-    border: $border-test;
+    border: rgb(80, 80, 80);
     border-radius: 3px;
 
     text-align: center;
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
-    justify-content: space-between;
 }
 
 .odd, .even {
-    margin: 10px 0;
+    margin: 1rem;
+    margin-bottom: 5rem;
     padding: 0;
     background-color: #fff;
-    
-    flex-direction: column;
-  
-
-    min-height: 25rem;
+    vertical-align: middle;
+    //min-height: 25rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.button-bottom {
-
-    align-self: flex-end;
-    width: 100%;
+ul.issues { 
+    margin: 0;
+    padding: 0;
 }
+
+ul.issues >li { 
+    margin-left: 20px;
+    padding: 0;
+}
+
+
+.button-get {
+  
+    margin: 1rem;
+
+  }
 
 .why-register {
     border: $border-test;
