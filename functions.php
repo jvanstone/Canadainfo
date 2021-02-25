@@ -217,6 +217,11 @@ function canadian_guide_scripts() {
 	//Load Bootstrap CSS First to allow for Customization in style.css
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' );
 
+	//Load Cookie Disclaimer
+	wp_enqueue_script( 'Cookies-Config', get_stylesheet_directory_uri() .'/assets/js/cookie-config.js' );
+	wp_enqueue_script( 'Cookis-Script', get_stylesheet_directory_uri() .'/assets/js/jquery.ihavecookies.js' );
+
+
     // Note, the is_IE global variable is defined by WordPress and is used
 	// to detect if the current browser is internet explorer.
 	global $is_IE;
@@ -247,8 +252,8 @@ function canadian_guide_scripts() {
     function canadian_guide_bootstrap_scripts() {
         wp_enqueue_script( 'jquery' );
         wp_enqueue_script( 'Popper' , 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js');
-        wp_enqueue_script( 'Javascript' , 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js');
-		wp_enqueue_script( 'Crossword','/assets/js/crossword.js' ); 
+        wp_enqueue_script( 'Javascript' , 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', true);
+		wp_enqueue_script( 'Crossword',get_stylesheet_directory_uri() .'/assets/js/crossword.js' ); 
     }
    
 }

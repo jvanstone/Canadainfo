@@ -16,10 +16,11 @@ Vanstone Online is distributed under the terms of the GNU GPL
 /******* IMPORTS ***********/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 //***** VARIABLES **********
 $cabin-text: 'Cabin', sans-serif;
 $sanSource-text: 'Source Sans Pro', sans-serif;
+$Prata:'Prata', serif;
 
 $backgroundcolor1: rgb(247, 248, 248); //Off-White
 $backgroundcolor2: #c4a5e7;
@@ -56,7 +57,10 @@ body {
 }
 
 #wrapper {
+   margin: 0 auto;
+   padding: 0;
    background-color: rgba(255, 255, 255, 0.507);
+   width: 100%;
 }
 
 
@@ -68,7 +72,7 @@ body {
 
 ********/
 
-header {  
+#header {  
     margin: .5rem;
     padding: 1rem 2rem;
     min-height: 100px; 
@@ -82,6 +86,9 @@ header {
 
 #site-title {
 
+    h1 { 
+        margin: .5rem;
+    }
     h1 > a, h1 > a:visited {
         color: $header-color;
         font-family: $cabin-text;
@@ -91,6 +98,7 @@ header {
     }
 
     #site-description { 
+        margin: .5rem;
         color: black; 
         font-weight: 500;
     }
@@ -151,7 +159,7 @@ article, article > header {
       }
     }
   }
-
+ 
   h1 {  
     font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem; 
     @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
@@ -183,11 +191,14 @@ h1, h1 > a, h1 > a:visited {
 }
 
 h1.entry-title {
-    margin: 0;
+    margin-top: 1rem;
+    padding: 0rem;
     border: 1rem solid $h2-background;
     background-color: $backgroundcolor2;
     min-height: 6rem;
     text-align: center;
+    font-family: $Prata ;
+  
 }
 
 
@@ -210,11 +221,6 @@ h2 {
     color:rgb(31, 42, 50);
 }
 
-.entry-content > figure  > img {
-    margin: 0 auto;
-    //border: $border-test;
-    width: 100%;
-}
 
 /******************
 
@@ -261,6 +267,36 @@ li.menu-item > a:hover.nav-link {
 
 .navbar-toggler > button { margin: .5rem;}
 
+
+
+.footer-navigation {
+
+
+ ul { 
+    margin: .5rem;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    text-align:left;
+
+}
+
+ li {
+     margin-right: 1rem;
+     //width: 10rem;
+     height: 4rem;
+     //border: $border-test;
+    
+ }
+
+a:hover {
+    background-color: $backgroundcolor2;
+}
+ 
+}
+
+
+
 /*************
 
 General Typography Settings
@@ -276,8 +312,7 @@ ul { line-height: 2; padding-bottom: 2rem;}
 ul, li { margin: .5rem 0; }
 
 label, input, button {
-    margin: 1rem;
-    display: block;
+    margin: .5rem;
 }
 
 input:focus {
@@ -762,6 +797,112 @@ ul.issues >li {
     border-radius: 5px;
 }
 
+
+@media screen and (max-size:400px) {
+
+    .container-fluid { padding: 0;}
+
+    #header {
+        margin: .5rem;
+        padding: .5rem;
+    }
+
+    .pmpro_member_profile_edit_wrap, .pmpro_confirmation_wrap, #pmpro_account, .pmpro_change_password_wrap {
+
+        margin: 0rem;
+        padding: 0rem;
+        border: 0px solid #ddd;
+        border-radius: 0px;
+    }
+
+}
+
+button#ihavecookiesBtn {
+    margin-left: 0px !important;
+}
+/* Cookie Dialog */
+#cookie-message {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    max-width: 50%;
+    background-color: var(--purple);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 6px 6px rgba(0,0,0,0.25);
+    margin-left: 30px;
+    //font-family: system-ui;
+}
+#cookie-message h4 {
+    color: var(--red);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#cookie-message h5 {
+    color: var(--red);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+#cookie-message p, #cookie-message ul {
+    color: white;
+    font-size: 15px;
+    line-height: 1.5em;
+}
+#cookie-message p:last-child {
+    margin-bottom: 0;
+    text-align: right;
+}
+#cookie-message li {
+    width: 49%;
+    display: inline-block;
+}
+#cookie-message a {
+    color: var(--red);
+    text-decoration: none;
+    font-size: 15px;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted rgba(255,255,255,0.75);
+    transition: all 0.3s ease-in;
+}
+#cookie-message a:hover {
+    color: white;
+    border-bottom-color: var(--red);
+    transition: all 0.3s ease-in;
+}
+#cookie-message button,
+button#ihavecookiesBtn {
+    border: none;
+    background: var(--red);
+    color: white;
+    //font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 3px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+#cookie-message button:hover {
+    background: white;
+    color: var(--red);
+    transition: all 0.3s ease-in;
+}
+button#gdpr-cookie-advanced {
+    background: white;
+    color: var(--red);
+}
+#cookie-message button:disabled {
+    opacity: 0.3;
+}
+#cookie-message input[type="checkbox"] {
+    float: none;
+    margin-top: 0;
+    margin-right: 5px;
+}
 
 
 

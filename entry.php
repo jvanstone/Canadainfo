@@ -3,7 +3,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header>
     <?php if ( is_singular() ) {
-    echo '<h1 class="entry-title">';
+    echo '<h1 >';
     } else {
     echo '<h2 class="entry-title">';
     } ?>
