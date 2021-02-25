@@ -58,6 +58,29 @@ if ( ! function_exists( 'canadian_guide_setup' ) ) {
 			)
 		);
 
+		//Dynamic Login
+		function wp_login_logout($items, $args) {
+			if($args->theme_location =='primary'):
+		
+			if (is_user_logged_in()) {
+	
+				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. get_site_url() . '/account-details/">Account Details</a></li>';
+				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. get_site_url() . '/account-details/update-profile/">Update Profile</a></li>';
+				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. wp_logout_url() .'">Log Out</a></li>';
+			} else {
+				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. get_site_url() . '/checkout/?level=1">Get the Latest Issue</a></li>';
+				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. wp_login_url(get_permalink()) .'">Log In</a></li>';
+			
+			}
+			
+			return $items;
+			endif;
+			
+		return $items;
+		}
+		add_filter('wp_nav_menu_items', 'wp_login_logout', 10, 2);
+   
+
         /*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -336,3 +359,5 @@ function canadian_guide_logo() { ?>
 	 return str_replace( '<table', '<table class="table  table-striped	table-responsive-sm"', $content );
 	 }
 	 add_filter( 'the_content', 'add_custom_table_class' );
+
+

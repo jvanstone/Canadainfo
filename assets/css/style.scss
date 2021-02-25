@@ -222,6 +222,11 @@ h2 {
 }
 
 
+.attachment-feature {
+    width: 100%;
+    height: auto;
+}
+
 /******************
 
  Link settings
@@ -255,9 +260,11 @@ ul.navbar-nav {
     padding-bottom: 1rem;
     line-height: 1;
 }
+
 li.menu-item > a.nav-link {
     text-align: center;
 }
+
 
 li.menu-item > a:hover.nav-link {
     background-color: $backgroundcolor2;
@@ -385,14 +392,7 @@ Guide Styles
 
 .guide_width { 
 
-    h1.entry-title {
-    text-align: left;
-    margin: 0;
-    padding: 1rem;
-    height: 3rem;
-    background-color: #fff;
-    border: 0 solid #000;
-    }
+
 
     h3 { 
         margin: 2rem;

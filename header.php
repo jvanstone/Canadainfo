@@ -20,7 +20,7 @@
     </head>
 
     <body id="cookieConsent" <?php body_class(); ?>>
-
+    
     <div id="wrapper" class="container-fluid">  
 
     <header id="header" class="row justify-start align-middle"> 
