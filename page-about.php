@@ -21,7 +21,7 @@
     $args = array( 
         'posts_per_page' => 3, 
         'offset'=> 0, 
-        'category' => 7,
+        'category' => 8,
         'orderby'         => 'date',
         'order'            => 'ASC', );
 
