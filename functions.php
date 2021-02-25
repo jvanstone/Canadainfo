@@ -97,7 +97,29 @@ if ( ! function_exists( 'canadian_guide_setup' ) ) {
 				'navigation-widgets',
 			)
 		);
+		/*****
+		 * 
+		 *  Create a custom background
+		 * 
+		 * 
+		 *  @link https://codex.wordpress.org/Custom_Backgrounds
+		 */
 
+
+		$defaults = array(
+			'default-color'          => '#ffffff',
+			'default-image'          => '',
+			'default-repeat'         => 'repeat',
+			'default-position-x'     => 'left',
+			'default-position-y'     => 'top',
+			'default-size'           => 'auto',
+			'default-attachment'     => 'scroll',
+			'wp-head-callback'       => '_custom_background_cb',
+			'admin-head-callback'    => '',
+			'admin-preview-callback' => ''
+		);
+		add_theme_support( 'custom-background', $defaults );
+		
         /**
          * 
          * Create Custom Header for the Theme
