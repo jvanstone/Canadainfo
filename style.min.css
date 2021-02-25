@@ -110,7 +110,7 @@ ul.issues>li{margin-left:20px;padding:0}
 .pmpro_content_message{padding:20px;height:400px;line-height:1.414}
 .pmpro_checkout>h3{margin:4rem 0;padding:1rem;background-color:#d9edf7;border:1px solid #bce8f1;border-radius:4px;color:#31708f;font-weight:400;line-height:1.5em;text-align:left}
 .pmpro_checkout-h3-msg{margin:1rem;font-style:normal}
-.pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,#pmpro_account,.pmpro_change_password_wrap{margin:2rem;padding:2rem;border:1px solid #ddd;border-radius:5px}
+.pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,#pmpro_account,.pmpro_change_password_wrap,.pmpro_login_wrap{margin:2rem;padding:2rem;border:1px solid #ddd;border-radius:5px}
 button#ihavecookiesBtn{margin-left:0 !important}
 #cookie-message{position:fixed;right:30px;bottom:30px;max-width:50%;background-color:var(--purple);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:30px}
 #cookie-message h4{color:var(--red);font-family:'Quicksand',sans-serif;font-size:18px;font-weight:500;margin-bottom:10px}
