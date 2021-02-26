@@ -4,7 +4,7 @@ var options = {
 	message: ' We use cookies or similar technologies as specified in the cookie policy. You can consent to the use of such technologies by closing this notice, by interacting with any link or button outside of this notice or by continuing to browse otherwise. Click the <strong>accept</strong> button below to see the optional callback in action...',
 	delay: 600,
 	expires: 1,
-	link: '#privacy',
+	link: 'https://canadainfo.org/privacy-policy/',
 	onAccept: function() {
 		var myPreferences = $.fn.ihavecookies.cookie();
 		console.log( 'Yay! The following preferences were saved...' );
