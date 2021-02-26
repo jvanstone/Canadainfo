@@ -118,17 +118,17 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 .pmpro_checkout h3 span.pmpro_checkout-h3-msg{margin:1rem;font-size:12px;font-style:normal}
 .pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,#pmpro_account,.pmpro_change_password_wrap,.pmpro_login_wrap{margin:2rem;padding:2rem;border:1px solid #ddd;border-radius:5px}
 button#ihavecookiesBtn{margin-left:0 !important}
-#cookie-message{position:fixed;right:30px;bottom:30px;max-width:50%;background-color:var(--purple);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:30px}
-#cookie-message h4{color:var(--red);font-family:'Quicksand',sans-serif;font-size:18px;font-weight:500;margin-bottom:10px}
-#cookie-message h5{color:var(--red);font-family:'Quicksand',sans-serif;font-size:15px;font-weight:500;margin-bottom:10px}
+#cookie-message{position:fixed;right:30px;bottom:30px;max-width:100%;background-color:#8475ac;padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:30px}
+#cookie-message h4{color:black;font-family:'Quicksand',sans-serif;font-size:18px;font-weight:500;margin-bottom:10px}
+#cookie-message h5{color:black;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:500;margin-bottom:10px}
 #cookie-message p,#cookie-message ul{color:white;font-size:15px;line-height:1.5em}
 #cookie-message p:last-child{margin-bottom:0;text-align:right}
 #cookie-message li{width:49%;display:inline-block}
-#cookie-message a{color:var(--red);text-decoration:none;font-size:15px;padding-bottom:2px;border-bottom:1px dotted rgba(255,255,255,0.75);-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
-#cookie-message a:hover{color:white;border-bottom-color:var(--red);-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
-#cookie-message button,button#ihavecookiesBtn{border:0;background:var(--red);color:white;font-size:15px;padding:7px;border-radius:3px;margin-left:15px;cursor:pointer;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
-#cookie-message button:hover{background:white;color:var(--red);-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
-button#gdpr-cookie-advanced{background:white;color:var(--red)}
+#cookie-message a{color:black;text-decoration:none;font-size:15px;padding-bottom:2px;border-bottom:1px dotted rgba(255,255,255,0.75);-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
+#cookie-message a:hover{color:white;border-bottom-color:black;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
+#cookie-message button,button#ihavecookiesBtn{border:0;background:black;color:white;font-size:15px;padding:7px;border-radius:3px;margin-left:15px;cursor:pointer;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
+#cookie-message button:hover{background:white;color:black;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
+button#gdpr-cookie-advanced{background:white;color:black}
 #cookie-message button:disabled{opacity:.3}
 #cookie-message input[type="checkbox"]{float:none;margin-top:0;margin-right:5px}
 #wp-submit{padding:.5rem;width:10rem !important}
