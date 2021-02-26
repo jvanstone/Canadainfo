@@ -93,10 +93,14 @@ ul.list-box li{margin:1rem;padding:1rem;min-width:12rem;-ms-flex-preferred-size:
 .card{margin:1rem auto;width:80%;-webkit-box-shadow:2px 5px #888;box-shadow:2px 5px #888}
 #pmpro_register{margin:0 auto;padding:1rem 1rem;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;max-width:80rem;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-line-pack:center;align-content:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 #pmpro_levels_table{margin:10px auto;min-width:15rem;max-width:25rem;border:#505050;border-radius:3px;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}
-.odd,.even{margin:1rem;margin-bottom:5rem;padding:0;background-color:#fff;vertical-align:middle;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.odd,.even{margin:0;margin-bottom:5rem;padding:0;background-color:#fff;vertical-align:middle;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 ul.issues{margin:0;padding:0}
-ul.issues>li{margin-left:20px;padding:0}
+ul.issues>li{margin-left:0;padding:0}
 .button-get{margin:1rem}
+ul.latest-issue{margin:0;padding:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;width:100%}
+ul.latest-issue li{margin:0;padding:0;list-style-type:none}
+ul.latest-issue li:first-child{padding-left:.5rem}
+ul.latest-issue li:last-child{width:100%;text-align:center}
 .why-register{border:solid 1px #3f2020;border-radius:3px;margin:0 auto;padding-top:1rem;background-color:#c4a5e7;text-align:center;vertical-align:top;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;font-weight:600}
 .why-register ul{padding:4px;list-style:none;text-align:left}
 .why-register li:before,.checkmark-list li:before{margin:0 2px;padding:10px 0;content:'✓'}
@@ -108,8 +112,10 @@ ul.issues>li{margin-left:20px;padding:0}
 .pmpro_level_price{display:none}
 .pmpro_actionlinks>#pmpro_actionlink-cancel{display:none}
 .pmpro_content_message{padding:20px;height:400px;line-height:1.414}
+#pmpro_payment_method span.gateway_paypalexpress,#pmpro_payment_method span.gateway_paypal{margin:.5rem}
 .pmpro_checkout>h3{margin:4rem 0;padding:1rem;background-color:#d9edf7;border:1px solid #bce8f1;border-radius:4px;color:#31708f;font-weight:400;line-height:1.5em;text-align:left}
-.pmpro_checkout-h3-msg{margin:1rem;font-style:normal}
+span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !important}
+.pmpro_checkout h3 span.pmpro_checkout-h3-msg{margin:1rem;font-size:12px;font-style:normal}
 .pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,#pmpro_account,.pmpro_change_password_wrap,.pmpro_login_wrap{margin:2rem;padding:2rem;border:1px solid #ddd;border-radius:5px}
 button#ihavecookiesBtn{margin-left:0 !important}
 #cookie-message{position:fixed;right:30px;bottom:30px;max-width:50%;background-color:var(--purple);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:30px}
@@ -125,7 +131,7 @@ button#ihavecookiesBtn{margin-left:0 !important}
 button#gdpr-cookie-advanced{background:white;color:var(--red)}
 #cookie-message button:disabled{opacity:.3}
 #cookie-message input[type="checkbox"]{float:none;margin-top:0;margin-right:5px}
-#wp-submit{width:10rem !important}
+#wp-submit{padding:.5rem;width:10rem !important}
 @media screen and (max-size:400px){.container-fluid{padding:0}
 #header{margin:.5rem;padding:.5rem}
 .pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,#pmpro_account,.pmpro_change_password_wrap{margin:0;padding:0;border:0 solid #ddd;border-radius:0}

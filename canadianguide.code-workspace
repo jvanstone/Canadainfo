@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../../plugins/paid-memberships-pro"
+		},
+		{
+			"path": "../../plugins/pmpro-mailchimp"
 		}
 	],
 	"settings": {}
