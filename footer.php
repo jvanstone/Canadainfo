@@ -1,4 +1,4 @@
-    <footer id="colophon" class="site-footer" role="contentinfo">
+    <footer id="colophon" class="site-footer no-print" role="contentinfo">
 
     <?php if ( has_nav_menu( 'footer' ) ) : ?>
         <nav aria-label="<?php esc_attr_e( 'Secondary menu', 'canadian_guide' ); ?>" class="footer-navigation">

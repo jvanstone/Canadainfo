@@ -23,7 +23,7 @@
     
     <div id="wrapper" class="container-fluid">  
 
-    <header id="header" class="row justify-start align-middle"> 
+    <header id="header" class="row justify-start align-middle no-print"> 
        
             <?php theme_prefix_the_custom_logo()?>
        
@@ -33,11 +33,11 @@
         </div>  
     </header>
     
-    <div class="col-12">
+    <div class="col-12 no-print">
     <img src="<?php header_image(); ?>" class=".img-fluid header-image" alt="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" />
 
     <!-- Top Navigation Menu -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark no-print">
         <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
