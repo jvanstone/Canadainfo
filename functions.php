@@ -262,11 +262,6 @@ function canadian_guide_scripts() {
 	//Load Bootstrap CSS First to allow for Customization in style.css
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' );
 
-	//Load Cookie Disclaimer
-	wp_enqueue_script( 'Cookies-Config', get_stylesheet_directory_uri() .'/assets/js/cookie-config.js' );
-	wp_enqueue_script( 'Cookis-Script', get_stylesheet_directory_uri() .'/assets/js/jquery.ihavecookies.js' );
-
-
     // Note, the is_IE global variable is defined by WordPress and is used
 	// to detect if the current browser is internet explorer.
 	global $is_IE;
@@ -278,29 +273,33 @@ function canadian_guide_scripts() {
 		wp_enqueue_style( 'canadian-guide-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
 	}
 
-    wp_style_add_data( 'canadian-guide-style', 'rtl', 'replace' );
+    //wp_style_add_data( 'canadian-guide-style', 'rtl', 'replace' );
 
 	// Print styles.
-	wp_enqueue_style( 'canadian-guide-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
+	//wp_enqueue_style( 'canadian-guide-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
 
-	//remove unwanted stylesheets that are part of the basic WordPress build
-	wp_dequeue_style( 'wp-block-library' );
-    wp_dequeue_style( 'wp-block-library-theme' );
-    wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
-    
+
+		//Load Cookie Disclaimer
+		wp_enqueue_script( 'Cookies-Script', get_stylesheet_directory_uri() .'/assets/js/jquery.ihavecookies.js', array('jQuery'), null, false);
+		wp_enqueue_script( 'Cookies-Config', get_stylesheet_directory_uri() .'/assets/js/cookie-config.js', array('jQuery'), null, false );
+	
+
     /*****
      * 
      * Add BootStrap to WP footer
      * 
      */
-    add_action( 'wp_footer', 'canadian_guide_bootstrap_scripts' );
-    function canadian_guide_bootstrap_scripts() {
-        wp_enqueue_script( 'jquery' );
-        wp_enqueue_script( 'Popper' , 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js');
-        wp_enqueue_script( 'Javascript' , 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', true);
-		wp_enqueue_script( 'Crossword',get_stylesheet_directory_uri() .'/assets/js/crossword.js' ); 
-    }
-   
+	//wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',null, null, false );
+	wp_enqueue_script( 'Popper' , 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', array(), null, true);
+	wp_enqueue_script( 'Javascript' , 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), null, true);
+
+	//remove unwanted stylesheets that are part of the basic WordPress build
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'wp-block-library-theme' );
+	wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
+		
+
 }
 add_action( 'wp_enqueue_scripts', 'canadian_guide_scripts' );
 

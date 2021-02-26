@@ -10,5 +10,8 @@
 			"path": "../../plugins/pmpro-mailchimp"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "canadian-guide",
+		"liveServer.settings.port": 5501
+	}
 }
