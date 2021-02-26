@@ -33,6 +33,9 @@
                 <?php endif; ?>
             <?php endif; ?>
         </div><!-- .site-name -->
+        <div id="copyright">
+        &copy; <?php echo esc_html( date_i18n( __( 'Y', 'canadaian_guide' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
+        </div>
         <div class="powered-by">
             <?php
             printf(
@@ -42,6 +45,8 @@
             );
             ?>
         </div><!-- .powered-by -->
+
+
 
     </div><!-- .site-info -->
     </footer><!-- #colophon -->

@@ -47,7 +47,6 @@ $line-height: 1.414;
 
 /***** MAIN ELEMENTS **********/
 body {
-
     color: rgb(31, 42, 50);
     font-family: $sanSource-text;
 }
@@ -55,7 +54,7 @@ body {
 #wrapper {
    margin: 0 auto;
    padding: 0;
-   background-color: rgba(255, 255, 255, 0.507);
+   background-color: rgba(255, 255, 255, 0.507);    
    width: 100%;
 }
 
@@ -106,12 +105,13 @@ body {
 }
 
 footer {
-    margin: 0.313rem;
+  
     padding: 1rem;
    
     height: auto;
+    border-top: 1px solid rgb(87, 85, 85);
     background-color: $backgroundcolor3;
-    border: $border-test;
+
     text-align: center;
 }
 
@@ -271,7 +271,6 @@ li.menu-item > a:hover.nav-link {
 .navbar-toggler > button { margin: .5rem;}
 
 
-
 .footer-navigation {
 
 
@@ -281,19 +280,20 @@ li.menu-item > a:hover.nav-link {
     list-style: none;
     display: flex;
     text-align:left;
+    justify-content: space-evenly;
+    width: auto;
 
 }
 
  li {
      margin-right: 1rem;
-     //width: 10rem;
-     height: 4rem;
-     //border: $border-test;
+     flex-grow: 2;
     
  }
 
 a:hover {
     background-color: $backgroundcolor2;
+    color: white;
 }
  
 }
@@ -904,3 +904,7 @@ button#gdpr-cookie-advanced {
 
 
 
+#wp-submit {
+ width: 10rem !important;
+
+}
