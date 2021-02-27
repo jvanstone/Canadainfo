@@ -10,7 +10,7 @@
 
 <?php get_header(); ?>
 
-<main id="content" class="guide_width">
+<main id="content">
 
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -36,7 +36,7 @@
                     <div class="card-body" style="text-align: center;">
                         <h5 class="card-title" style="text-align: center;"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                         <?php $content = apply_filters( 'the_content', get_the_content() ); ?>
-                        <p class="card-text"><?php echo $content;?></p>
+                        <div class="card-text" style="text-align: center;"><?php echo $content;?></div>
                     </div> 
                 </div>
             </div>   
