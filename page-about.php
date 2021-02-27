@@ -10,7 +10,7 @@
 
 <?php get_header(); ?>
 
-<main id="content">
+<main id="content" style="text-align: center;">
 
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
