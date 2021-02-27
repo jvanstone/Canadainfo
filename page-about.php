@@ -29,10 +29,10 @@
     foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
         <div class="card mb-3" style="max-width: 500px;">
             <div class="row g-0">
-                <div class="col-4">
+                <div class="col-md-4">
                     <?php echo get_the_post_thumbnail( $page->ID, 'thumbnail' ); ?>
                 </div>
-                <div class="col-8">
+                <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title"><?php the_title(); ?></h5>
                         <a href="<?php the_permalink(); ?>"></a>
