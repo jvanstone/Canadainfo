@@ -30,13 +30,13 @@
         <div class="card mb-3" style="max-width: 500px; text-align: center;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <?php echo get_the_post_thumbnail( $page->ID, 'thumbnail' ); ?>
+                <a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $page->ID, 'thumbnail' ); ?></a>
                 </div>
                 <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title" style="text-align: center;"><?php the_title(); ?></h5>
-                        <a href="<?php the_permalink(); ?>"></a>
-                        <p class="card-text" style="text-align: center;"><?php $content = apply_filters( 'the_content', get_the_content() ); echo $content;?></p>
+                    <div class="card-body" style="text-align: center;">
+                        <h5 class="card-title" style="text-align: center;"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                        <?php $content = apply_filters( 'the_content', get_the_content() ); ?>
+                        <p class="card-text"><?php echo $content;?></p>
                     </div> 
                 </div>
             </div>   
