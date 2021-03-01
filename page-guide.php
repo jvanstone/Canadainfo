@@ -27,16 +27,16 @@
 
     $myposts = get_posts( $args );
     foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-        <div class="card mb-3" style="max-width: 900px;">
-            <div class="row g-0">
-                <div class="col-4" style="padding-left: 1rem; padding-top: 1rem; background-color:#c4a5e7;">
+        <div class="card mb-3">
+            <div class="">
+                <div class="col-md-4 guide-card">
                     <a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $page->ID, 'thumbnail', 'class=img-fluid' ); ?>
                 </div>
-                <div class="col-8">
+                <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
    
-                        <p class="card-text"><?php the_excerpt(); ?></p>
+                        <div class="card-text"><?php the_excerpt(); ?></div>
                     </div> 
                 </div>
             </div>   

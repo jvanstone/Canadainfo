@@ -65,8 +65,11 @@ input:focus{background-color:#d5d5cd;border:2px solid wheat}
 blockquote{margin:.313rem auto;padding:2rem;width:80%;background-color:#c4a5e7}
 .guide_width{margin:0 auto;width:100%;padding:20px}
 .guide_width h3{margin:2rem}
-.guide_width p{margin:2rem;text-align:justify}
+.guide_width p{text-align:justify}
 .guide_width ul{margin:0 auto;width:60%}
+.guide-card{margin:0;padding:.5rem;background-color:#c4a5e7;text-align:center}
+.card-text>.guide-card p{margin:.5rem !important}
+.img-fluid.wp-post-image{margin:0 auto}
 .province{margin:1rem auto;width:95%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .province .list-inline-item{margin-right:1rem;margin-left:1rem;padding-left:1rem;width:20rem;height:auto;border-bottom:solid 1px #3f2020;-webkit-box-shadow:2px 5px #888;box-shadow:2px 5px #888;position:relative}
 .province .list-inline-item::after{width:0;height:0;position:absolute;content:"\2192";top:0;right:50px}

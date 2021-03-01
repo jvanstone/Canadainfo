@@ -397,7 +397,6 @@ Guide Styles
     }
 
     p { 
-        margin: 2rem;
         text-align: justify;
     }
 
@@ -407,6 +406,18 @@ Guide Styles
     }
 
 }
+
+.guide-card {
+   margin: 0 ;
+   padding: .5rem;
+   background-color: $backgroundcolor2;
+   text-align: center;
+    
+}
+
+.card-text > .guide-card p { margin: .5rem !important;}
+
+.img-fluid.wp-post-image { margin: 0 auto;}
 
 
 /**************************
