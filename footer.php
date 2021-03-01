@@ -1,5 +1,5 @@
     <footer id="colophon" class="site-footer no-print" role="contentinfo">
-
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <?php if ( has_nav_menu( 'footer' ) ) : ?>
         <nav aria-label="<?php esc_attr_e( 'Secondary menu', 'canadian_guide' ); ?>" class="footer-navigation">
             <ul class="footer-navigation-wrapper">

@@ -293,6 +293,7 @@ function canadian_guide_scripts() {
 	wp_enqueue_script( 'jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',null, null, false );
 	wp_enqueue_script( 'Popper' , 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', array(), null, true);
 	wp_enqueue_script( 'Javascript' , 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), null, true);
+	wp_enqueue_script( 'top' , get_stylesheet_directory_uri() .'/assets/js/top.js', array(), null, true);
 
 	//remove unwanted stylesheets that are part of the basic WordPress build
 	wp_dequeue_style( 'wp-block-library' );
