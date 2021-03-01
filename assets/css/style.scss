@@ -595,12 +595,15 @@ ul.list-box li {
  Turn list into a checkmark list. 
 
 ******************/
-.checkmark-list {
+ul.checkmark-list  {
+    margin: 0 auto;
+    padding: 0;
     list-style: none;
+    width:90;
     text-align: left;
   }
 
-.checkmark-list li {  padding-left: 2rem; }
+.checkmark-list li {  padding-left: 1rem; }
 .checkmark-list  li:before {
     margin: 0 2px;
     padding: 10px;
@@ -742,9 +745,9 @@ li:last-child {
     list-style: none;
     text-align: left;
   }
-.why-register li:before, .checkmark-list  li:before {
+.why-register li:before {
     margin: 0 2px;
-    padding: 10px 0;
+    padding: 10px;
     content: '✓';
 
 } 

@@ -89,8 +89,8 @@ blockquote{margin:.313rem auto;padding:2rem;width:80%;background-color:#c4a5e7}
 .green{background-color:#2b9542}
 ul.list-box{display:-webkit-box;display:-ms-flexbox;display:flex;margin:10px auto;padding:0;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly;width:90%;list-style-type:none}
 ul.list-box li{margin:1rem;padding:1rem;min-width:12rem;-ms-flex-preferred-size:10rem;flex-basis:10rem;min-height:5rem;height:auto;border:solid 1px #3f2020;text-align:center;-webkit-box-shadow:2px 5px #888;box-shadow:2px 5px #888;line-height:1}
-.checkmark-list{list-style:none;text-align:left}
-.checkmark-list li{padding-left:2rem}
+ul.checkmark-list{margin:0 auto;padding:0;list-style:none;width:90;text-align:left}
+.checkmark-list li{padding-left:1rem}
 .checkmark-list li:before{margin:0 2px;padding:10px;content:'✓';color:#8475ac}
 .table{margin:0 auto;width:95%}
 .card{margin:1rem auto;width:80%;-webkit-box-shadow:2px 5px #888;box-shadow:2px 5px #888}
@@ -106,7 +106,7 @@ ul.latest-issue li:first-child{padding-left:.5rem}
 ul.latest-issue li:last-child{width:100%;text-align:center}
 .why-register{border:solid 1px #3f2020;border-radius:3px;margin:0 auto;padding-top:1rem;background-color:#c4a5e7;text-align:center;vertical-align:top;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;font-weight:600}
 .why-register ul{padding:4px;list-style:none;text-align:left}
-.why-register li:before,.checkmark-list li:before{margin:0 2px;padding:10px 0;content:'✓'}
+.why-register li:before{margin:0 2px;padding:10px;content:'✓'}
 .pmpro_checkout-fields>ul{padding-bottom:0}
 #pmpro_level_cost{margin:2rem 0;padding:.313rem 1rem;width:100%;background-color:#8475ac;border:1px solid #534266;-webkit-box-shadow:5px 10px #8667af73;box-shadow:5px 10px #8667af73;color:#fff}
 #pmpro_level_cost span{margin:2rem;border:1px solid #000}
