@@ -67,8 +67,8 @@ if ( ! function_exists( 'canadian_guide_setup' ) ) {
 				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. get_site_url() . '/account-details/">Account Details</a></li>';
 				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. get_site_url() . '/account-details/update-profile/">Update Profile</a></li>';
 				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. wp_logout_url() .'">Log Out</a></li>';
-			} else {
-				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. get_site_url() . '/checkout/?level=1">Get the Latest Issue</a></li>';
+			} else {																												
+				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. get_site_url() . '/get-the-guide/?level=1">Get the Latest Issue</a></li>';
 				$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="'. wp_login_url(get_permalink()) .'">Log In</a></li>';
 			
 			}
