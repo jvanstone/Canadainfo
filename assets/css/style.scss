@@ -280,14 +280,15 @@ li.menu-item > a:hover.nav-link {
     list-style: none;
     display: flex;
     text-align:left;
-    justify-content: space-evenly;
+    justify-content: center;
     width: auto;
 
 }
 
  li {
-     margin-right: 1rem;
-     flex-grow: 2;
+     margin-right: .5rem;
+     text-align: center;
+     width: auto;
     
  }
 
@@ -853,6 +854,11 @@ span.pmpro_checkout-h3-name {
         border-radius: 0px;
     }
 
+    .footer-navigation li{
+    
+        margin-right: .5rem
+    }
+
 }
 
 button#ihavecookiesBtn {
@@ -895,7 +901,8 @@ button#ihavecookiesBtn {
         margin: 0 auto;
         width: 100%;
         display: flex;
-        flex-flow: row  wrap;
+        flex-flow: row wrap;
+        
     }
     p:last-child {
         margin-bottom: 0;

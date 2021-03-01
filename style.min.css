@@ -49,8 +49,8 @@ ul.navbar-nav{padding-bottom:1rem;line-height:1}
 li.menu-item>a.nav-link{text-align:center}
 li.menu-item>a:hover.nav-link{background-color:#c4a5e7;color:rgba(0,0,0,0.2)}
 .navbar-toggler>button{margin:.5rem}
-.footer-navigation ul{margin:.5rem;padding:0;list-style:none;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly;width:auto}
-.footer-navigation li{margin-right:1rem;-webkit-box-flex:2;-ms-flex-positive:2;flex-grow:2}
+.footer-navigation ul{margin:.5rem;padding:0;list-style:none;display:-webkit-box;display:-ms-flexbox;display:flex;text-align:left;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:auto}
+.footer-navigation li{margin-right:.5rem;text-align:center;width:auto}
 .footer-navigation a:hover{background-color:#c4a5e7;color:white}
 p,ul,figcaption{margin:1rem}
 ul{line-height:2;padding-bottom:2rem}
@@ -135,6 +135,7 @@ button#ihavecookiesBtn{margin-left:0 !important}
 @media screen and (max-size:400px){.container-fluid{padding:0}
 #header{margin:.5rem;padding:.5rem}
 .pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,#pmpro_account,.pmpro_change_password_wrap{margin:0;padding:0;border:0 solid #ddd;border-radius:0}
+.footer-navigation li{margin-right:.5rem}
 }@media screen and (min-width:325px){h1{font-size:calc(20.736px + 12.192 * ((100vw - 325px) / 875))}
 h2{font-size:calc(20.736px + 12.192 * ((100vw - 325px) / 875))}
 h3,.card-header{font-size:calc(17.28px + 6.24 * ((100vw - 325px) / 875))}
