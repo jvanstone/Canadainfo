@@ -19,7 +19,7 @@
         <?php wp_head(); ?>
     </head>
 
-    <body id="cookieConsent" <?php body_class(); ?>>
+    <body <?php body_class(); ?>>
 
     
     <div id="wrapper" class="container-fluid">  

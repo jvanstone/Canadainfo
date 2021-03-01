@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../../plugins/pmpro-mailchimp"
+		},
+		{
+			"path": "../../plugins/crossword-plugin"
 		}
 	],
 	"settings": {
