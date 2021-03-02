@@ -69,3 +69,7 @@ assets/img/.DS_Store
 
 # Extra Files #
 /extra-files
+canadianguide.code-workspace
+.babelrc
+.editorconfig
+.eslintrc.js
