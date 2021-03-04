@@ -142,107 +142,11 @@
 
 
 
-.entry-footer, .footer {display: none;}
-
-.login_box {
-    margin: 1rem auto; 
-    padding: 1rem;
-    background-color: var(--global--color-background2);
-    
-    border: 4px solid white;
-    border-radius: 10px; 
-    width: 70%;
-    min-width: 300px;
-    box-shadow : 4px, 6px, 2px, rgba(0, 0, 0, 0.2);
-
-    display: flex;
-    flex-direction: row wrap;
-}
-
-
-/************************
-
-Guide Styles
-
-**********************/
-.guide_width { 
-    margin: 0 auto;
-    width: 100%;
-    padding: 20px;
-}
-
-
-
-.guide-card {
-   margin: 0 ;
-   padding: .5rem;
-   background-color: var(--global--color-purple);
-   text-align: center;
-    
-}
-
-.card-text > .guide-card p { margin: .5rem !important;}
 
 
 
 
-/***********
 
- List Box
- Turns a list into a boxs that flow on a row with wrap. 
-
-********/
-
-ul.list-box {
-    display: flex;
-    margin: 10px auto;
-    padding: 0;
-    flex-flow: row wrap;
-    align-items: center;
-    
-    justify-content: space-evenly;
-    width: 90%;
-    list-style-type: none;
-    //border: var(--global-border);
-    
-}
-
-ul.list-box li {
-    margin: 1rem; 
-    padding: 1rem;
-    min-width: 12rem;
-    flex-basis: 10rem;
-    min-height: 5rem;
-    height: auto;
-    border: var(--global-border);
-    text-align: center;
-    box-shadow: 2px 5px #888888;
-    line-height: var(--global--line-height-body);
-}
-
-
-/*********
-
- Checkmark List
- Turn list into a checkmark list. 
-
-******************/
-ul.checkmark-list  {
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-    width:90;
-    text-align: left;
-  }
-
-.checkmark-list li {  padding-left: 1rem; }
-.checkmark-list  li:before {
-    margin: 0 2px;
-    padding: 10px;
-    content: '✓';
-    color: var(--global--color-purple);
-
-} 
 
 
 

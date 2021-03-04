@@ -232,3 +232,31 @@ article, article > header {
 .table { 
 	margin: calc(.25 * var(--global--spacing-vertical)) auto;
    width: 98%; }
+
+
+   /************************
+
+Guide Styles
+
+**********************/
+.guide_width { 
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+}
+
+.guide-card-row { margin: 0 auto;width: 100%;} 
+
+
+.guide-card {
+   margin: 0 ;
+   padding: .5rem;
+   background-color: var(--global--color-purple);
+   text-align: center;
+    
+}
+
+.card-text > .guide-card p { margin: .5rem !important;}
+
+//HIDE THE PREV AND NEXT
+.entry-footer, .footer {display: none;}

@@ -68,7 +68,7 @@ $baseline-unit: 10px;
 	--global--color-black: #000;
 	--global--color-dark-gray: rgb(31, 42, 50);
 	--global--color-gray: #39414d;
-	--global--color-light-gray: #f0f0f0;
+	--global--color-light-gray: #cccccc;
 	--global--color-green: #d1e4dd;
 	--global--color-blue: #a7c2c8;;
 	--global--color-purple:  #c4a5e7;
@@ -112,7 +112,7 @@ $baseline-unit: 10px;
 	--form--color-text: var(--global--color-dark-gray); // Text color in input fields is always dark over light background.
 	--form--color-ranged: var(--global--color-secondary);
 	--form--label-weight: 400;
-	--form--border-color: var(--global--color-blue);
+	--form--border-color: var(--global--color-light-gray);
 	--form--border-width: 1px;
 	--form--border-radius: 3px;
 	--form--spacing-unit: calc(0.5 * var(--global--spacing-unit));

@@ -28,7 +28,7 @@
     $myposts = get_posts( $args );
     foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
         <div class="card mb-3">
-            <div class="">
+            <div class="row guide-card-row">
                 <div class="col-md-4 guide-card">
                     <a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $page->ID, 'thumbnail', 'class=img-fluid' ); ?>
                 </div>

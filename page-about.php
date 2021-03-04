@@ -27,12 +27,12 @@
 
     $myposts = get_posts( $args );
     foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-        <div class="card mb-3" style="max-width: 500px; text-align: center;">
+        <div class="card mb-3" style="max-width: 500px; text-align: center; margin:0 auto;">
             <div class="row g-0">
-                <div class="col-md-4">
+                <div class="col-12 col-md-4">
                 <a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $page->ID, 'thumbnail' ); ?></a>
                 </div>
-                <div class="col-md-8">
+                <div class="col-12 col-md-8">
                     <div class="card-body" style="text-align: center;">
                         <h5 class="card-title" style="text-align: center;"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                         <?php $content = apply_filters( 'the_content', get_the_content() ); ?>
