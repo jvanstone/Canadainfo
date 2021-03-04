@@ -21,7 +21,7 @@ const injectChanges = true;
 
 // >>>>> Style options.
 // Path to main .scss file.
-const styleSRC = './assets/css/style.scss';
+const styleSRC = './assets/sass/style.scss';
 
 // Path to place the compiled CSS file. Default set to root folder.
 const styleDestination = './';
@@ -65,7 +65,7 @@ const imgDST = './assets/img/';
 
 // >>>>> Watch files paths.
 // Path to all *.scss files inside css folder and inside them.
-const watchStyles = './assets/css/**/*.scss';
+const watchStyles = './assets/sass/**/*.scss';
 
 // Path to all vendor JS files.
 const watchJsVendor = './assets/js/vendor/*.js';
@@ -82,7 +82,7 @@ const zipName = 'file.zip';
 
 // Must be a folder outside of the zip folder.
 const zipDestination = './../'; // Default: Parent folder.
-const zipIncludeGlob = ['./**/*']; // Default: Include all files/folders in current directory.
+const zipIncludeGlob = [ './**/*' ]; // Default: Include all files/folders in current directory.
 
 // Default ignored files and folders for the zip file.
 const zipIgnoreGlob = [
@@ -120,7 +120,7 @@ const translationFile = 'language.pot';
 const translationDestination = './languages';
 
 // Package name.
-const packageName = 'Canadian Guide';
+const packageName = 'Canada Info';
 
 // Where can users report bugs.
 const bugReport = 'https://vanstoneonline.com/contact/';
@@ -133,7 +133,7 @@ const team = 'Jason Vanstone <jason@vanstoneonline.com>';
 
 // Browsers you care about for auto-prefixing. Browserlist https://github.com/ai/browserslist
 // The following list is set as per WordPress requirements. Though; Feel free to change.
-const BROWSERS_LIST = ['last 2 version', '> 1%'];
+const BROWSERS_LIST = [ 'last 2 version', '> 1%' ];
 
 // Export.
 module.exports = {

@@ -4,13 +4,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Canadian Guide
- * @subpackage canadian_guide
+ * @package Canada Info
+ * @subpackage canada_info
  * @since 1.0.0
  */
 
 
-if ( ! function_exists( 'canadian_guide_setup' ) ) {
+if ( ! function_exists( 'canada_info_setup' ) ) {
 
     /**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -24,14 +24,14 @@ if ( ! function_exists( 'canadian_guide_setup' ) ) {
 	 * @return void
 	 */
    
-    function canadian_guide_setup() {
+    function canada_info_setup() {
         /*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Twenty Twenty-One, use a find and replace
-		 * to change 'canadian_guide' to the name of your theme in all the template files.
+		 * to change 'canada_info' to the name of your theme in all the template files.
 		 */
-        load_theme_textdomain( 'canadian_guide', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'canada_info', get_template_directory() . '/languages' );
 
         // Add default posts and comments RSS feed links to head.
         add_theme_support( 'automatic-feed-links' );
@@ -49,12 +49,20 @@ if ( ! function_exists( 'canadian_guide_setup' ) ) {
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
         add_theme_support( 'post-thumbnails' );
-
+	
+		set_post_thumbnail_size( 9999, 300, true ); // default Featured Image dimensions (cropped)
+		
+		// additional image sizes
+		// delete the next line if you do not need additional image sizes
+		//add_image_size( 'category-thumb', 300, 9999 ); // 300 pixels wide (and unlimited height)
+	
+	
+		
 
         register_nav_menus(
 			array(
-				'primary' => esc_html__( 'Primary menu', 'canadian_guide' ),
-				'footer'  => __( 'Secondary menu', 'canadian_guide' ),
+				'primary' => esc_html__( 'Primary menu', 'canada_info' ),
+				'footer'  => __( 'Secondary menu', 'canada_info' ),
 			)
 		);
 
@@ -221,7 +229,7 @@ if ( ! function_exists( 'canadian_guide_setup' ) ) {
 		add_editor_style( $editor_stylesheet_path );
     }
 }
-add_action( 'after_setup_theme', 'canadian_guide_setup' );
+add_action( 'after_setup_theme', 'canada_info_setup' );
 
 
 /**
@@ -233,13 +241,13 @@ add_action( 'after_setup_theme', 'canadian_guide_setup' );
  *
  * @return void
  */
-function canadian_guide_widgets_init() {
+function canada_info_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer', 'canadian_guide' ),
+			'name'          => esc_html__( 'Footer', 'canada_info' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'canadian_guide' ),
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'canada_info' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -247,7 +255,7 @@ function canadian_guide_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'canadian_guide_widgets_init' );
+add_action( 'widgets_init', 'canada_info_widgets_init' );
 
 
 /**
@@ -257,7 +265,7 @@ add_action( 'widgets_init', 'canadian_guide_widgets_init' );
  *
  * @return void
  */
-function canadian_guide_scripts() {
+function canada_info_scripts() {
 
 	//Load Bootstrap CSS First to allow for Customization in style.css
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' );
@@ -302,7 +310,7 @@ function canadian_guide_scripts() {
 		
 
 }
-add_action( 'wp_enqueue_scripts', 'canadian_guide_scripts' );
+add_action( 'wp_enqueue_scripts', 'canada_info_scripts' );
 
 
 /*******
@@ -314,7 +322,7 @@ add_action( 'wp_enqueue_scripts', 'canadian_guide_scripts' );
  * 
  */
 
-function canadian_guide_logo() { ?>
+function canada_info_logo() { ?>
 	<style type="text/css">
     #login h1 a, .login h1 a {
 	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/site-login-logo.png);
@@ -327,7 +335,7 @@ function canadian_guide_logo() { ?>
 	</style>
 	<?php //echo get_stylesheet_directory_uri(). ?>
 <?php }
-	add_action( 'login_enqueue_scripts', 'canadian_guide_logo' );
+	add_action( 'login_enqueue_scripts', 'canada_info_logo' );
 
 
 	function my_login_logo_url() {
@@ -381,5 +389,6 @@ function canadian_guide_logo() { ?>
 	 return str_replace( '<table', '<table class="table  table-striped	table-responsive-sm"', $content );
 	 }
 	 add_filter( 'the_content', 'add_custom_table_class' );
+
 
 

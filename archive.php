@@ -1,13 +1,37 @@
-<?php get_header(); ?>
-<main id="content">
-<header class="header">
-<h1 class="entry-title"><?php single_term_title(); ?></h1>
-<div class="archive-meta"><?php if ( '' != the_archive_description() ) { echo esc_html( the_archive_description() ); } ?></div>
-</header>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; endif; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-</main>
-<?php get_sidebar(); ?>
+<?php
+/**
+ * The template for displaying archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Canada Info
+ * @subpackage  canada_info
+ * @since 1.0.0
+ */
+
+get_header();
+
+$description = get_the_archive_description();
+?>
+
+<?php if ( have_posts() ) : ?>
+
+	<header class="page-header alignwide">
+		<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+		<?php if ( $description ) : ?>
+			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
+		<?php endif; ?>
+	</header><!-- .page-header -->
+
+	<?php while ( have_posts() ) : ?>
+		<?php the_post(); ?>
+		<?php get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
+	<?php endwhile; ?>
+
+	<?php mj_wedding_the_posts_navigation(); ?>
+
+<?php else : ?>
+	<?php get_template_part( 'template-parts/content/content-none' ); ?>
+<?php endif; ?>
+
 <?php get_footer(); ?>

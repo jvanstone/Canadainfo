@@ -1,4 +1,4 @@
-=== Canadian Guide ===
+=== Canada Info ===
 
 Contributors: vjstereo
 https://github.com/jvanstone/canadian-guide
@@ -19,8 +19,8 @@ This website is created with Bootstrap capabilities. It also has fluid typograph
 
 In its unchanged and original state:
 
-Canadian Guide Theme © 2011-2019 TidyThemes
-Canadian Guide is distributed under the terms of the GNU GPL
+Canada Info Theme © 2011-2019 TidyThemes
+Canada Info is distributed under the terms of the GNU GPL
 
-The Canadian Guide theme package and all files contained within are distributed under the terms of the GNU GPL v3 or Later (https://www.gnu.org/licenses/gpl.html).
+The Canada Info theme package and all files contained within are distributed under the terms of the GNU GPL v3 or Later (https://www.gnu.org/licenses/gpl.html).
 

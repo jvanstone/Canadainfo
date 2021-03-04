@@ -5,8 +5,8 @@
  * This is the template that displays all of the <head> section and everything up until main.
  *
  * 
- * @package Canadian Guide
- * @subpackage canadian_guide
+ * @package Canada Info
+ * @subpackage canada_info
  * @since 1.0.0
  */
 ?>
@@ -14,7 +14,7 @@
 <html <?php language_attributes(); ?>>
     
     <head>
-        <meta charset="<?php bloginfo( 'charset' , 'canadian_guide' ); ?>" />
+        <meta charset="<?php bloginfo( 'charset' , 'canada_info' ); ?>" />
         <meta name="viewport" content="width=device-width" />
         <?php wp_head(); ?>
     </head>

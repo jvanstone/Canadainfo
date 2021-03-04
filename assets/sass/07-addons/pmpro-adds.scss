@@ -1,0 +1,235 @@
+
+/*---------------------------------------
+	Get the latest Issue
+---------------------------------------*/
+#pmpro_register {
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    display: flex;
+    width: 100%;   
+    max-width: 80rem;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-between;
+
+}
+
+#pmpro_levels_table {
+    margin: 10px auto; 
+    min-width: 15rem;
+    max-width: 25rem;
+
+   
+    border: rgb(80, 80, 80);
+    border-radius: 3px;
+
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
+
+.odd, .even {
+    margin: 0rem;
+    margin-bottom: 5rem;
+    padding: 0;
+    background-color: #fff;
+    vertical-align: middle;
+    //min-height: 25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.issues { 
+    margin: 0;
+    padding: 0;
+}
+
+ul.issues > li { 
+    margin-left: 0px;
+    padding: 0;
+}
+
+.button-get { margin: 1rem; }
+
+ul.latest-issue {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+ul.latest-issue {
+  li { 
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+   li:first-child {
+       padding-left: .5rem;
+    }
+
+    li:last-child {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.why-register {
+    border: var(--global--border);
+    border-radius: 3px;
+    margin: 0 auto; 
+    padding-top: 1rem;
+
+
+    background-color: var(--global--color-background2);
+
+    text-align: center;
+    vertical-align: top;
+    display: flex;
+    flex-flow: column nowrap;
+    font-weight: 600;   
+
+    h1 {
+        margin-top: .5rem;
+        color: var(--global--color-header);
+        font-family: var(--global--font-primary);
+        text-decoration: underline;
+        text-decoration-skip: auto;
+        }
+
+    ul {
+        padding: 4px;
+        padding-bottom: 1rem;
+        list-style: none;
+        text-align: left;
+        line-height: 2;
+    }    
+
+    li:before {
+        margin: 0 2px;
+        padding: 10px;
+        content: '✓';
+    }
+
+}
+
+
+
+
+/*---------------------------------------
+	Checkout
+---------------------------------------*/
+
+.pmpro_checkout-fields > ul { 
+    padding-bottom: 0;
+}
+
+#pmpro_level_cost {
+    margin: 2rem 0;
+    padding: .313rem 1rem;
+
+    width: 100%;
+
+    background-color: var(--global--color-header-med);
+    border: 1px solid var(--global--color-header-dark); 
+    box-shadow:  5px 10px var(--global--color-boxshadow);
+    color: #fff;
+}
+
+#pmpro_level_cost span {
+    margin: 2rem;
+    border: 1px solid #000;
+}
+
+.pmpro_message { 
+
+    margin: 2rem auto;
+}
+
+.pmpro_asterisk { display:none;}
+//Hide the levels and pricing labels at Register 
+.pmpro_level_price { display: none;}
+.pmpro_actionlinks > #pmpro_actionlink-cancel { display:none;}
+
+
+.pmpro_content_message {
+    padding: 20px;
+    //border: var(--global-border);
+    height: 400px;
+    //font-size: $h2-size;
+    line-height: var(--global--line-height-body);
+}
+
+
+
+#pmpro_payment_method span.gateway_paypalexpress, #pmpro_payment_method span.gateway_paypal {
+    margin: .5rem;
+    //border: var(--global-border);
+}
+
+
+.pmpro_checkout > h3 {
+    margin: 4rem 0;
+    padding: 1rem;
+
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    border-radius: 4px;
+    color: #31708f;
+   
+ 
+    font-weight: 400;
+    line-height: 1.5em;
+   
+    text-align: left;
+}
+
+
+span.pmpro_checkout-h3-name {
+    padding-top: .5rem;
+    padding-left: 1rem;
+    display: block!important;
+}
+
+
+
+.pmpro_checkout h3 span.pmpro_checkout-h3-msg {
+    margin: 1rem;
+    font-size: 12px;
+    font-style: normal;
+}
+
+/*---------------------------------------
+	Subscriber Profile Edit
+---------------------------------------*/
+
+.pmpro_member_profile_edit_wrap, .pmpro_confirmation_wrap, #pmpro_account, .pmpro_change_password_wrap, .pmpro_login_wrap, .contact-form {
+    margin: 2rem;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-size:400px) {
+
+    .container-fluid { padding: 0;}
+
+    #header {
+        margin: .5rem;
+        padding: .5rem;
+    }
+
+    .pmpro_member_profile_edit_wrap, .pmpro_confirmation_wrap, #pmpro_account, .pmpro_change_password_wrap {
+
+        margin: 0rem;
+        padding: 0rem;
+        border: 0px solid #ddd;
+        border-radius: 0px;
+    }
+}

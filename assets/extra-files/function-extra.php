@@ -8,63 +8,63 @@ function check_login() {
 add_action('init', 'check_login');
 
 
-function canadian_guide_document_title_separator( $sep ) {
+function canada_info_document_title_separator( $sep ) {
     $sep = '|';
     return $sep;
 }
-add_filter( 'document_title_separator', 'canadian_guide_document_title_separator' );
+add_filter( 'document_title_separator', 'canada_info_document_title_separator' );
 
-function canadian_guide_title( $title ) {
+function canada_info_title( $title ) {
     if ( $title == '' ) {
     return '...';
     } else {
     return $title;
     }
 }
-add_filter( 'the_title', 'canadian_guide_title' );
+add_filter( 'the_title', 'canada_info_title' );
 
-add_filter( 'the_content_more_link', 'canadian_guide_read_more_link' );
-function canadian_guide_read_more_link() {
+add_filter( 'the_content_more_link', 'canada_info_read_more_link' );
+function canada_info_read_more_link() {
     if ( ! is_admin() ) {
     return ' <a href="' . esc_url( get_permalink() ) . '" class="more-link">...</a>';
     }
 }
 
-add_filter( 'excerpt_more', 'canadian_guide_excerpt_read_more_link' );
-function canadian_guide_excerpt_read_more_link( $more ) {
+add_filter( 'excerpt_more', 'canada_info_excerpt_read_more_link' );
+function canada_info_excerpt_read_more_link( $more ) {
     if ( ! is_admin() ) {
     global $post;
     return ' <a href="' . esc_url( get_permalink( $post->ID ) ) . '" class="more-link">...</a>';
     }
 }
 
-add_filter( 'intermediate_image_sizes_advanced', 'canadian_guide_image_insert_override' );
-    function canadian_guide_image_insert_override( $sizes ) {
+add_filter( 'intermediate_image_sizes_advanced', 'canada_info_image_insert_override' );
+    function canada_info_image_insert_override( $sizes ) {
     unset( $sizes['medium_large'] );
     return $sizes;
 }
 
 
-add_action( 'wp_head', 'canadian_guide_pingback_header' );
-function canadian_guide_pingback_header() {
+add_action( 'wp_head', 'canada_info_pingback_header' );
+function canada_info_pingback_header() {
     if ( is_singular() && pings_open() ) {
     printf( '<link rel="pingback" href="%s" />' . "\n", esc_url( get_bloginfo( 'pingback_url' ) ) );
     }
 }
-add_action( 'comment_form_before', 'canadian_guide_enqueue_comment_reply_script' );
-function canadian_guide_enqueue_comment_reply_script() {
+add_action( 'comment_form_before', 'canada_info_enqueue_comment_reply_script' );
+function canada_info_enqueue_comment_reply_script() {
     if ( get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
     }
 }
-function canadian_guide_custom_pings( $comment ) {
+function canada_info_custom_pings( $comment ) {
 ?>
 <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo comment_author_link(); ?></li>
 <?php
 }
 
-add_filter( 'get_comments_number', 'canadian_guide_comment_count', 0 );
-function canadian_guide_comment_count( $count ) {
+add_filter( 'get_comments_number', 'canada_info_comment_count', 0 );
+function canada_info_comment_count( $count ) {
     if ( ! is_admin() ) {
         global $id;
         $get_comments = get_comments( 'status=approve&post_id=' . $id );

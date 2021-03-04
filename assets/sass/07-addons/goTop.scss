@@ -1,0 +1,19 @@
+#goTop {
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: .5rem;
+    z-index: 99;
+
+    border: 0 solid var(--global--color-blue);
+    outline: none;
+    background-color: var(--global--color-background2);
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  
+  #goTop:hover {
+    background-color: #555;
+  }

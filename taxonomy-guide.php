@@ -3,7 +3,7 @@
  * Locations Taxonomy: Guide Page Layout
  * 
  * 
- * @package Canadian Guide
+ * @package Canada Info
  * @subpackage canadian-guide
  * 
  * 
@@ -34,7 +34,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
       
       ?>
       <div class="card-img-overlay">
-        <h5 class="card-title">Canadian Guide <?php echo apply_filters( 'the_title', $term->name ); ?></h5>
+        <h5 class="card-title">Canada Info <?php echo apply_filters( 'the_title', $term->name ); ?></h5>
   
       </div>
     </div>

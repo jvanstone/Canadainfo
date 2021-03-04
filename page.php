@@ -4,8 +4,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Canadian Guide
- * @subpackage canadian_guide
+ * @package Canada Info
+ * @subpackage canada_info
  * @since 1.0.0
  */
 

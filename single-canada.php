@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Canadian Guide Layout
+ * Template Name: Canada Info Layout
  * Description:  
  * Created by: Vanstone Online - Jason Vanstone
  *
