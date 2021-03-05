@@ -1,3 +1,16 @@
+<?php
+/**
+ * This part is used to display posts. 
+ *
+ * This is the template that displays all of the <head> section and everything up until main.
+ *
+ * 
+ * @package Canada Info
+ * @subpackage canada_info
+ * @since 1.0.0
+ */
+?>
+
 <?php get_header(); ?>
 
 <main id="content">
