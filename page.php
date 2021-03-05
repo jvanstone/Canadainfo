@@ -18,7 +18,7 @@ get_header(); ?>
     <?php /* Start the Loop */ ?>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="header row">
+        <header>
             <h1 class="entry-title col-12 align-middle p-2"><?php the_title(); ?></h1> 
         </header>
         <div class="entry-content">
