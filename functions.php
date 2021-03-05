@@ -9,7 +9,6 @@
  * @since 1.0.0
  */
 
-
 if ( ! function_exists( 'canada_info_setup' ) ) {
 
     /**

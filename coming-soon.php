@@ -15,7 +15,7 @@
     
     <head>
         <meta charset="<?php bloginfo( 'charset' , 'canada_info' ); ?>" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial=scale=1 "/>
         <?php wp_head(); ?>
     </head>
 
@@ -29,7 +29,7 @@
             <?php theme_prefix_the_custom_logo()?>
        
         <div id="site-title">
-            <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
+            <h1 style="text-align: center;"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
             <h3 id="site-description"><?php bloginfo( 'description' ); ?></h3>
         </div>  
     </header>
