@@ -643,6 +643,19 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 .bloc{background-color:#0034c2}
 .people{background-color:#5115f5}
 .green{background-color:#2b9542}
+button#ihavecookiesBtn{margin-left:0 !important}
+#cookie-message{position:fixed;right:10px;bottom:10px;max-width:100%;background-color:var(--global--color-background2);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:1rem}
+#cookie-message h4{color:black;font-weight:500;margin-bottom:10px}
+#cookie-message h5{color:black;font-weight:500;margin:1rem 0}
+#cookie-message li{color:white;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1}
+#cookie-message p{margin:0 auto;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap}
+#cookie-message p:last-child{margin-bottom:0;text-align:right}
+#cookie-message a{color:black;text-decoration:none;padding-bottom:2px;border-bottom:1px dotted rgba(255,255,255,0.75);-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
+#cookie-message a:hover{color:white;border-bottom-color:black;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
+#cookie-message button,#cookie-message button#ihavecookiesBtn{border:0;background:black;color:white;padding:7px;border-radius:3px;margin-left:15px;cursor:pointer;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
+#cookie-message button:hover{background:white;color:black;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
+#cookie-message button#gdpr-cookie-advanced{background:white;color:black}
+#cookie-message button:disabled{opacity:.3}
 .screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute !important;width:1px;word-wrap:normal !important;word-break:normal}
 .skip-link:focus{background-color:#f1f1f1;border-radius:3px;-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,0.6);box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;-webkit-clip-path:none;clip-path:none;color:#21759b;display:block;font-size:.875rem;font-weight:700;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 #content[tabindex="-1"]:focus{outline:0}
