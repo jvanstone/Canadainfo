@@ -1,6 +1,8 @@
 
-button#ihavecookiesBtn {
-    margin-left: 0px !important;
+
+#gdpr-cookie-types { 
+    padding-bottom: 1rem;
+    margin: 1rem;
 }
 /* Cookie Dialog */
 #cookie-message {
@@ -25,6 +27,10 @@ button#ihavecookiesBtn {
         font-weight: 500;
         margin: 1rem 0;
     }
+
+    ul { 
+        margin: 1rem;
+    }
     li {
         color: white;
         align-items: center;
@@ -33,7 +39,7 @@ button#ihavecookiesBtn {
       
     }
     p { 
-        margin: 0 auto;
+        margin: 2rem auto;
         width: 100%;
         display: flex;
         flex-flow: row wrap;

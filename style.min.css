@@ -643,12 +643,13 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 .bloc{background-color:#0034c2}
 .people{background-color:#5115f5}
 .green{background-color:#2b9542}
-button#ihavecookiesBtn{margin-left:0 !important}
+#gdpr-cookie-types{padding-bottom:1rem;margin:1rem}
 #cookie-message{position:fixed;right:10px;bottom:10px;max-width:100%;background-color:var(--global--color-background2);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:1rem}
 #cookie-message h4{color:black;font-weight:500;margin-bottom:10px}
 #cookie-message h5{color:black;font-weight:500;margin:1rem 0}
+#cookie-message ul{margin:1rem}
 #cookie-message li{color:white;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1}
-#cookie-message p{margin:0 auto;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap}
+#cookie-message p{margin:2rem auto;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap}
 #cookie-message p:last-child{margin-bottom:0;text-align:right}
 #cookie-message a{color:black;text-decoration:none;padding-bottom:2px;border-bottom:1px dotted rgba(255,255,255,0.75);-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
 #cookie-message a:hover{color:white;border-bottom-color:black;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
