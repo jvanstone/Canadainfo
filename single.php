@@ -2,7 +2,7 @@
 /**
  * This part is used to display posts. 
  *
- * This is the template that displays all of the <head> section and everything up until main.
+ * This is the template that displays all of the <main> section and everything up until footer
  *
  * 
  * @package Canada Info
