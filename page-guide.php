@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: Guide Page
+ * Template Name: Canada Info Page
  * Description: Takes the Post Category { About } and displays the content on this page 
  * Created by: Vanstone Online - Jason Vanstone
  *

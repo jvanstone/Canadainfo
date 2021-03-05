@@ -2,6 +2,8 @@
 /**
  * Locations Taxonomy: Guide Page Layout
  * 
+ * This template is not in use yet
+ * 
  * 
  * @package Canada Info
  * @subpackage canadian-guide
