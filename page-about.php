@@ -6,6 +6,10 @@
  *  
  * Removed links to single post  - >  the_permalink()
  * 
+ * @package Canada Info
+ * @subpackage canada_info
+ * @since 1.0.0
+ * 
  */
 ?>
 
@@ -53,7 +57,7 @@
     <footer class="footer">
     <?php get_template_part( 'nav', 'below-single' ); ?>
     </footer>
-    
+
 </main>
 
 <?php get_sidebar(); ?>
