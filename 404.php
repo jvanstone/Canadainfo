@@ -7,23 +7,21 @@
  * @package Canada Info
  * @subpackage  canada_info
  * @since 1.0.0
- */
-
+ */ 
+    
 get_header();
 ?>
 
-<?php get_header(); ?>
+	<header class="page-header alignwide">
+		<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'twentytwentyone' ); ?></h1>
+	</header><!-- .page-header -->
 
-<main id="content">
-    <article id="post-0" class="post not-found">
-        <header class="header">
-            <h1 class="entry-title"><?php esc_html_e( 'Not Found', 'canadainfo' ); ?></h1>
-        </header>
-        <div class="entry-content">
-            <p><?php esc_html_e( 'Nothing found for the requested page. Try a search instead?', 'canadainfo' ); ?></p>
-            <?php get_search_form(); ?>
-        </div>
-    </article>
-</main>
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+	<div class="error-404 not-found default-max-width">
+		<div class="page-content">
+			<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentytwentyone' ); ?></p>
+			<?php get_search_form(); ?>
+		</div><!-- .page-content -->
+	</div><!-- .error-404 -->
+
+<?php
+get_footer();

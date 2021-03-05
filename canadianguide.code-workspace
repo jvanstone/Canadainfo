@@ -1,15 +1,23 @@
 {
 	"folders": [
 		{
+			"name": "canadian-guide",
 			"path": "."
 		},
 		{
+			"name": "template-parts copy",
+			"path": "../twentytwentyone/template-parts copy"
+		},
+		{
+			"name": "paid-memberships-pro",
 			"path": "../../plugins/paid-memberships-pro"
 		},
 		{
+			"name": "pmpro-mailchimp",
 			"path": "../../plugins/pmpro-mailchimp"
 		},
 		{
+			"name": "crossword-plugin",
 			"path": "../../plugins/crossword-plugin"
 		}
 	],

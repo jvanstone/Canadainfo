@@ -1,40 +1,37 @@
-<div id="comments">
 <?php
-if ( have_comments() ) :
-global $comments_by_type;
-$comments_by_type = separate_comments( $comments );
-if ( ! empty( $comments_by_type['comment'] ) ) :
+/**
+ * The template for displaying archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twenty_One
+ * @since 1.0.0
+ */
+
+get_header();
+
+$description = get_the_archive_description();
 ?>
-<section id="comments-list" class="comments">
-<h3 class="comments-title"><?php comments_number(); ?></h3>
-<?php if ( get_comment_pages_count() > 1 ) : ?>
-<nav id="comments-nav-above" class="comments-navigation" role="navigation">
-<div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
-</nav>
+
+<?php if ( have_posts() ) : ?>
+
+	<header class="page-header alignwide">
+		<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+		<?php if ( $description ) : ?>
+			<div class="archive-description"><?php echo wp_kses_post( wpautop( $description ) ); ?></div>
+		<?php endif; ?>
+	</header><!-- .page-header -->
+
+	<?php while ( have_posts() ) : ?>
+		<?php the_post(); ?>
+		<?php get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
+	<?php endwhile; ?>
+
+	<?php twenty_twenty_one_the_posts_navigation(); ?>
+
+<?php else : ?>
+	<?php get_template_part( 'template-parts/content/content-none' ); ?>
 <?php endif; ?>
-<ul>
-<?php wp_list_comments( 'type=comment' ); ?>
-</ul>
-<?php if ( get_comment_pages_count() > 1 ) : ?>
-<nav id="comments-nav-below" class="comments-navigation" role="navigation">
-<div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
-</nav>
-<?php endif; ?>
-</section>
-<?php
-endif;
-if ( ! empty( $comments_by_type['pings'] ) ) :
-$ping_count = count( $comments_by_type['pings'] );
-?>
-<section id="trackbacks-list" class="comments">
-<h3 class="comments-title"><?php echo '<span class="ping-count">' . esc_html( $ping_count ) . '</span> ' . esc_html( _nx( 'Trackback or Pingback', 'Trackbacks and Pingbacks', $ping_count, 'comments count', 'canadainfo' ) ); ?></h3>
-<ul>
-<?php wp_list_comments( 'type=pings&callback=canadainfo_custom_pings' ); ?>
-</ul>
-</section>
-<?php
-endif;
-endif;
-if ( comments_open() ) { comment_form(); }
-?>
-</div>
+
+<?php get_footer(); ?>
