@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Custom made theme that has Cookie-Pop-up. 
+Custom made theme that has Cookie-Pop-up. Styling uses Boostrap and SASS. 
 
 == Plugin Add-ons == 
 1. Crossword Plugin
