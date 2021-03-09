@@ -12,12 +12,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-
 Custom made theme that has Cookie-Pop-up. 
-	 Plugin Add-ons: 
-	 1. Crossword Plugin
-	 2. Canadian-guide members. It is a plugin that has been customized from PMPRO to reflect the needs for the Subscription site. 
-	 3. "Rate us" Custom Plugin.
+
+== Plugin Add-ons == 
+1. Crossword Plugin
+2. Canadian-guide members. It is a plugin that has been customized from PMPRO to reflect the needs for the Subscription site. 
+3. "Rate us" Custom Plugin.
 
 
 == Installation ==
