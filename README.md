@@ -1,4 +1,8 @@
-# canadian-guide
+# canada info
  WordPress Theme
 	
-	This theme is a work in progress. Some files are in the theme as place holders. 
+	Custom made theme that has Cookie-Pop-up. 
+	 Plugin Add-ons: 
+	 >> Crossword Plugin
+	 >> Canadian-guide members. It is a plugin that has been customized form PMPRO to reflect the needs of the clients Subsscription site. 
+	 
