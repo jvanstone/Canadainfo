@@ -15,9 +15,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Custom made theme that has Cookie-Pop-up. 
 	 Plugin Add-ons: 
-	 >> Crossword Plugin
-	 >> Canadian-guide members. It is a plugin that has been customized from PMPRO to reflect the needs for the Subscription site. 
-	 >> "Rate us" Custom Plugin.
+	 1. Crossword Plugin
+	 2. Canadian-guide members. It is a plugin that has been customized from PMPRO to reflect the needs for the Subscription site. 
+	 3. "Rate us" Custom Plugin.
 
 
 == Installation ==
@@ -29,21 +29,18 @@ Custom made theme that has Cookie-Pop-up.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Privacy ==
-M & J Wedding uses LocalStorage to save the setting when Dark Mode support is turned on or off.
-LocalStorage is necessary for the setting to work and is only used when a user clicks on the Dark Mode button.
-No data is saved in the database or transferred.
 
 == Changelog ==
 
 = 1.0 =
-* Released: December 8, 2020
+* Released: Mar 1, 2021
 
 Initial release
 
 == Copyright ==
 
-M & J Wedding WordPress Theme, 2021 Vanstone Online
-M & J Wedding is distributed under the terms of the GNU GPL.
+Canada Info WordPress Theme, 2021 Vanstone Online
+Canada Info is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
