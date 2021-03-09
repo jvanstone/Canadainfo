@@ -39,7 +39,7 @@ Initial release
 
 == Copyright ==
 
-Canada Info WordPress Theme, 2021 Vanstone Online
+Canada Info WordPress Theme, 2021 Vanstone Online. 
 Canada Info is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
