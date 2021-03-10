@@ -1,6 +1,6 @@
 {
-	"name": "your-project",
-	"description": "A WPGulp based project.",
+	"name": "canada-info",
+	"description": "wordpress theme",
 	"version": "0.0.1",
 	"repository": "ahmadawais/WPGulp",
 	"license": "MIT",
@@ -44,5 +44,8 @@
 		"translate": "gulp translate",
 		"styles-rtl": "gulp stylesRTL",
 		"cache-clear": "gulp clearCache"
+	},
+	"dependencies": {
+		"jquery-bar-rating": "^1.2.2"
 	}
 }

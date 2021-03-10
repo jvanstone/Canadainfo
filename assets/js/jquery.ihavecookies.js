@@ -115,6 +115,9 @@
                 settings.onAccept.call(this);
             });
 
+
+
+
             // Toggle advanced cookie options
             $('body').on('click', '#cookie-advanced', function(){
                 // Uncheck all checkboxes except for the disabled 'necessary'
