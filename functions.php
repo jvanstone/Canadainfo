@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Canada Info
+ * @package	Canada_Info
  * @subpackage canada_info
  * @since 1.0.0
  */
@@ -300,7 +300,7 @@ function canada_info_scripts() {
 	//wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',null, null, false );
 	wp_enqueue_script( 'Popper' , 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', array(), null, true);
-	wp_enqueue_script( 'Javascript' , 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), null, true);
+	wp_enqueue_script( 'Javascript' , 'ttps://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js', array(), null, true);
 	wp_enqueue_script( 'top' , get_stylesheet_directory_uri() .'/assets/js/top.js', array(), null, true);
 	wp_enqueue_script( 'star-rating' , get_stylesheet_directory_uri() .'/jquery-bar-rating-master/jquery.barrating.js', array(), null, true);
 
