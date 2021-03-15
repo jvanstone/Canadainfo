@@ -267,7 +267,7 @@ add_action( 'widgets_init', 'canada_info_widgets_init' );
 function canada_info_scripts() {
 
 	//Load Bootstrap CSS First to allow for Customization in style.css
-	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
 
     // Note, the is_IE global variable is defined by WordPress and is used
@@ -300,7 +300,7 @@ function canada_info_scripts() {
 	//wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',null, null, false );
 	wp_enqueue_script( 'Popper' , 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', array(), null, true);
-	wp_enqueue_script( 'Javascript' , 'ttps://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js', array(), null, true);
+	wp_enqueue_script( 'Javascript' , 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), null, true);
 	wp_enqueue_script( 'top' , get_stylesheet_directory_uri() .'/assets/js/top.js', array(), null, true);
 	wp_enqueue_script( 'star-rating' , get_stylesheet_directory_uri() .'/jquery-bar-rating-master/jquery.barrating.js', array(), null, true);
 
