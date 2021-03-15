@@ -267,7 +267,7 @@ add_action( 'widgets_init', 'canada_info_widgets_init' );
 function canada_info_scripts() {
 
 	//Load Bootstrap CSS First to allow for Customization in style.css
-	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
 
     // Note, the is_IE global variable is defined by WordPress and is used
