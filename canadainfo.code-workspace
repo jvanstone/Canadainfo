@@ -5,10 +5,6 @@
 			"path": "."
 		},
 		{
-			"name": "template-parts copy",
-			"path": "../twentytwentyone/template-parts copy"
-		},
-		{
 			"name": "paid-memberships-pro",
 			"path": "../../plugins/paid-memberships-pro"
 		},
@@ -22,7 +18,8 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "canadian-guide",
-		"liveServer.settings.port": 5501
+		"phpcs.enable": true,
+    	"phpcs.standard": "WordPress",
+    	"phpcs.autoConfigSearch": false,
 	}
 }

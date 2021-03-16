@@ -8,7 +8,7 @@
  *
  */
 (function($) {
-
+    "use strict";
     /*
     |--------------------------------------------------------------------------
     | Cookie Message
@@ -21,7 +21,7 @@
     |
     */
     $.fn.ihavecookies = function(options, event) {
-
+        
         var $element = $(this);
 
         // Set defaults

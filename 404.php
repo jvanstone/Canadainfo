@@ -7,9 +7,10 @@
  * @package Canada Info
  * @subpackage  canada_info
  * @since 1.0.0
- */ 
-    
+ */
+
 get_header();
+
 ?>
 
 	<header class="page-header alignwide">
