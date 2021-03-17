@@ -106,7 +106,7 @@
 	}
 
 	// Block Styles
-	&.is-style-canada_info-latest-posts-dividers {
+	&.is-style-canadainfo-latest-posts-dividers {
 		border-top: calc(3 * var(--separator--height)) solid var(--global--color-border);
 		border-bottom: calc(3 * var(--separator--height)) solid var(--global--color-border);
 
@@ -150,7 +150,7 @@
 		}
 	}
 
-	&.is-style-canada_info-latest-posts-borders {
+	&.is-style-canadainfo-latest-posts-borders {
 
 		li {
 			border: calc(3 * var(--separator--height)) solid var(--global--color-border);
@@ -165,5 +165,14 @@
 			margin-top: var(--global--spacing-horizontal);
 			margin-bottom: var(--global--spacing-horizontal);
 		}
+	}
+}
+
+
+.about {
+
+	img {
+		width: 150px !important;
+		height: auto;
 	}
 }

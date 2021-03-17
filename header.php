@@ -4,57 +4,31 @@
  *
  * This is the template that displays all of the <head> section and everything up until main.
  *
- * 
- * @package Canada Info
- * @subpackage canada_info
- * @since 1.0.0
+ * @category   WordPress_Theme
+ * @package    Canada_Info
+ * @author     Vanstone Online <jason@vanstoneonline.com>
+ * @license    GPL 3.0 http://www.gnu.org/licenses/gpl-3.0.html
+ * @link       https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @since      1.0.0
  */
+
 ?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-    
-    <head>
-        <meta charset="<?php bloginfo( 'charset' , 'canada_info' ); ?>" />
-        <meta name="viewport" content="width=device-width, initial=scale=1" />
-        <?php wp_head(); ?>
-    </head>
+<!doctype html>
+<html <?php language_attributes(); ?> <?php candainfo_the_html_classes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<?php wp_head(); ?>
+</head>
 
-    <body id="cookieConsent" <?php body_class(); ?>>
-    
-    <div id="wrapper" class="container-fluid">  
+<body id="cookieConsent" <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 
-    <header id="header" class="row justify-start align-middle no-print"> 
-       
-            <?php theme_prefix_the_custom_logo()?>
-       
-        <div id="site-title">
-            <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
-            <h3 id="site-description"><?php bloginfo( 'description' ); ?></h3>
-        </div>  
-    </header>
-    
-    <div class="col-12 no-print">
-    <img src="<?php header_image(); ?>" class=".img-fluid header-image" alt="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" />
+<div id="wrapper" class="site container-fluid">  
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'canada-info' ); ?></a>
 
-    <!-- Top Navigation Menu -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark no-print">
-        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+	<?php get_template_part( 'template-parts/header/site-header' ); ?>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <?php
-            //make wp_mav_menu use bootstrap
-            wp_nav_menu( array( 
-                'theme_location' => 'primary', 
-                'menu_class' => 'navbar-nav',
-                'add_li_class' => 'nav-item col-md-4',
-                'container' => false
-                )); 
-            ?>
-        </div>
-    </nav>
-    </div>
-
-   
+	<!-- <div id="content" class="site-content"> -->
+		<!-- <div id="primary" class="content-area"> -->
+		<main>

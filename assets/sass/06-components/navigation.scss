@@ -59,7 +59,7 @@
 					display: flex;
 
 					.has-logo.has-title-and-tagline & {
-						animation-name: canada_info-close-button-transition;
+						animation-name: canadainfo-close-button-transition;
 						animation-duration: 0.3s;
 					}
 				}
@@ -521,7 +521,7 @@
 }
 
 // Close button animation for when a custom logo is present.
-@keyframes canada_info-close-button-transition {
+@keyframes canadainfo-close-button-transition {
 
 	from {
 		opacity: 0;

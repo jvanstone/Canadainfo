@@ -1,24 +1,65 @@
-<?php get_header(); ?>
-<main id="content">
-<?php if ( have_posts() ) : ?>
-<header class="header">
-<h1 class="entry-title"><?php printf( esc_html__( 'Search Results for: %s', 'canadianguide' ), get_search_query() ); ?></h1>
-</header>
-<?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-<?php else : ?>
-<article id="post-0" class="post no-results not-found">
-<header class="header">
-<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'canadianguide' ); ?></h1>
-</header>
-<div class="entry-content">
-<p><?php esc_html_e( 'Sorry, nothing matched your search. Please try again.', 'canadianguide' ); ?></p>
-<?php get_search_form(); ?>
-</div>
-</article>
-<?php endif; ?>
-</main>
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package WordPress_theme
+ * @subpackage canada_info
+ * @since  Canada Info 1.0
+ */
+
+get_header();
+
+if ( have_posts() ) {
+	?>
+	<header class="page-header alignwide">
+		<h1 class="page-title">
+			<?php
+			printf(
+				/* translators: %s: Search term. */
+				esc_html__( 'Results for "%s"', 'canada-info' ),
+				'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
+			);
+			?>
+		</h1>
+	</header><!-- .page-header -->
+
+	<div class="search-result-count default-max-width">
+		<?php
+		printf(
+			esc_html(
+				/* translators: %d: The number of search results. */
+				_n(
+					'We found %d result for your search.',
+					'We found %d results for your search.',
+					(int) $wp_query->found_posts,
+					'canada-info'
+				)
+			),
+			(int) $wp_query->found_posts
+		);
+		?>
+	</div><!-- .search-result-count -->
+	<?php
+	// Start the Loop.
+	while ( have_posts() ) {
+		the_post();
+
+		/*
+		 * Include the Post-Format-specific template for the content.
+		 * If you want to override this in a child theme, then include a file
+		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+		 */
+		get_template_part( 'template-parts/content/content-excerpt', get_post_format() );
+	} // End the loop.
+
+	// Previous/next page navigation.
+	twenty_twenty_one_the_posts_navigation();
+
+	// If no content, include the "No posts found" template.
+} else {
+	get_template_part( 'template-parts/content/content-none' );
+}
+
+get_footer();
