@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * 
- *  @since Canada_Info  1.0
+ * @subpackage canada_info
+ * @since Canada_Info 1.0
  */
 
 // If there is no featured-image, print the first image block found.

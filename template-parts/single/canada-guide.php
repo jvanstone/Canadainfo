@@ -5,9 +5,9 @@
  * Created by: Vanstone Online - Jason Vanstone
  *
 
- * @package Canada Info
- * 
- * @since 1.0.0
+  * @package WordPress
+ * @subpackage canada_info
+ * @since Canada_Info 1.0
  *
  */
 

@@ -3,10 +3,10 @@
  * The template for displaying archive pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- * @package WordPress
- * 
- * @since 1.0.0
  *
+ * @package WordPress
+ * @subpackage canada_info
+ * @since Canada_Info 1.0
  */
 
 get_header();

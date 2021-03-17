@@ -3,8 +3,8 @@
  * Displays the post header
  *
  * @package WordPress
- * 
- *  @since Canada_Info 1.0
+ * @subpackage canada_info
+ * @since Canada_Info 1.0
  */
 
 // Don't show the title if the post-format is `aside` or `status`.
