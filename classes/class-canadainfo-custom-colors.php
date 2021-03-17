@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Canada_Info
- *  @since Canada_Info  1.0
+ * @since Canada_Info  1.0
  */
 
 /**
@@ -64,7 +64,7 @@ class Canada_Info_Custom_Colors {
 	public function generate_custom_color_variables( $context = null ) {
 
 		$theme_css        = 'editor' === $context ? ':root .editor-styles-wrapper{' : ':root{';
-		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
+		$background_color = get_theme_mod( 'background_color', 'FFFFFF' );
 
 		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
 			$theme_css .= '--global--color-background: #' . $background_color . ';';
@@ -95,7 +95,7 @@ class Canada_Info_Custom_Colors {
 	 */
 	public function custom_color_variables() {
 		if ( 'd1e4dd' !== strtolower( get_theme_mod( 'background_color', 'D1E4DD' ) ) ) {
-			wp_add_inline_style( 'canada-info-style', $this->generate_custom_color_variables() );
+			wp_add_inline_style( 'candainfo-style', $this->generate_custom_color_variables() );
 		}
 	}
 
@@ -110,7 +110,7 @@ class Canada_Info_Custom_Colors {
 	 */
 	public function editor_custom_color_variables() {
 		wp_enqueue_style(
-			'canada-info-custom-color-overrides',
+			'candainfo-custom-color-overrides',
 			get_theme_file_uri( 'assets/css/custom-color-overrides.css' ),
 			array(),
 			(string) filemtime( get_theme_file_path( 'assets/css/custom-color-overrides.css' ) )
@@ -118,7 +118,7 @@ class Canada_Info_Custom_Colors {
 
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
-			wp_add_inline_style( 'canada-info-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
+			wp_add_inline_style( 'candainfo-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
 	}
 

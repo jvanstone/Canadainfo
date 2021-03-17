@@ -3,7 +3,7 @@
  * Displays the footer widget area.
  *
  * @package WordPress
- * @subpackage canada_info
+ * 
  *  @since Canada_Info  1.0
  */
 

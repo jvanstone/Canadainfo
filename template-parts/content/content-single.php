@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage canada_info
+ * 
  *  @since Canada_Info  1.0
  */
 
@@ -15,28 +15,26 @@
 
 	<header class="entry-header alignwide">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php canada_info_post_thumbnail(); ?>
+		<?php candainfo_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
-
+		content single
 	<div class="entry-content">
-
-	 hi
 		<?php
 		the_content();
 
 		wp_link_pages(
 			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'canada_info' ) . '">',
+				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'candainfo' ) . '">',
 				'after'    => '</nav>',
 				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'canada_info' ),
+				'pagelink' => esc_html__( 'Page %', 'candainfo' ),
 			)
 		);
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
-		<?php canada_info_entry_meta_footer(); ?>
+		<?php candainfo_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
@@ -44,4 +42,3 @@
 	<?php endif; ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
-

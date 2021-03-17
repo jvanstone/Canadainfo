@@ -17,13 +17,13 @@ if ( function_exists( 'register_block_style' ) ) {
 	 *
 	 * @return void
 	 */
-	function twenty_twenty_one_register_block_styles() {
+	function candainfo_register_block_styles() {
 		// Columns: Overlap.
 		register_block_style(
 			'core/columns',
 			array(
-				'name'  => 'canada_info-columns-overlap',
-				'label' => esc_html__( 'Overlap', 'canada_info' ),
+				'name'  => 'candainfo-columns-overlap',
+				'label' => esc_html__( 'Overlap', 'candainfo' ),
 			)
 		);
 
@@ -31,8 +31,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/cover',
 			array(
-				'name'  => 'canada_info-border',
-				'label' => esc_html__( 'Borders', 'canada_info' ),
+				'name'  => 'candainfo-border',
+				'label' => esc_html__( 'Borders', 'candainfo' ),
 			)
 		);
 
@@ -40,8 +40,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/group',
 			array(
-				'name'  => 'canada_info-border',
-				'label' => esc_html__( 'Borders', 'canada_info' ),
+				'name'  => 'candainfo-border',
+				'label' => esc_html__( 'Borders', 'candainfo' ),
 			)
 		);
 
@@ -49,8 +49,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/image',
 			array(
-				'name'  => 'canada_info-border',
-				'label' => esc_html__( 'Borders', 'canada_info' ),
+				'name'  => 'candainfo-border',
+				'label' => esc_html__( 'Borders', 'candainfo' ),
 			)
 		);
 
@@ -58,8 +58,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/image',
 			array(
-				'name'  => 'canada_info-image-frame',
-				'label' => esc_html__( 'Frame', 'canada_info' ),
+				'name'  => 'candainfo-image-frame',
+				'label' => esc_html__( 'Frame', 'candainfo' ),
 			)
 		);
 
@@ -67,8 +67,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/latest-posts',
 			array(
-				'name'  => 'canada_info-latest-posts-dividers',
-				'label' => esc_html__( 'Dividers', 'canada_info' ),
+				'name'  => 'candainfo-latest-posts-dividers',
+				'label' => esc_html__( 'Dividers', 'candainfo' ),
 			)
 		);
 
@@ -76,8 +76,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/latest-posts',
 			array(
-				'name'  => 'canada_info-latest-posts-borders',
-				'label' => esc_html__( 'Borders', 'canada_info' ),
+				'name'  => 'candainfo-latest-posts-borders',
+				'label' => esc_html__( 'Borders', 'candainfo' ),
 			)
 		);
 
@@ -85,8 +85,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/media-text',
 			array(
-				'name'  => 'canada_info-border',
-				'label' => esc_html__( 'Borders', 'canada_info' ),
+				'name'  => 'candainfo-border',
+				'label' => esc_html__( 'Borders', 'candainfo' ),
 			)
 		);
 
@@ -94,8 +94,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/separator',
 			array(
-				'name'  => 'canada_info-separator-thick',
-				'label' => esc_html__( 'Thick', 'canada_info' ),
+				'name'  => 'candainfo-separator-thick',
+				'label' => esc_html__( 'Thick', 'candainfo' ),
 			)
 		);
 
@@ -103,10 +103,10 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/social-links',
 			array(
-				'name'  => 'canada_info-social-icons-color',
-				'label' => esc_html__( 'Dark gray', 'canada_info' ),
+				'name'  => 'candainfo-social-icons-color',
+				'label' => esc_html__( 'Dark gray', 'candainfo' ),
 			)
 		);
 	}
-	add_action( 'init', 'twenty_twenty_one_register_block_styles' );
+	add_action( 'init', 'candainfo_register_block_styles' );
 }

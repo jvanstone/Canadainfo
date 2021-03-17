@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Canada_Info
- * @subpackage canada_info
+ * 
  *  @since Canada_Info  1.0
  */
 
@@ -16,11 +16,11 @@
 	<?php if ( ! is_front_page() ) : ?>
 		<header class="entry-header alignwide">
 			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
-			<?php canada_info_post_thumbnail(); ?>
+			<?php candainfo_post_thumbnail(); ?>
 		</header><!-- .entry-header -->
 	<?php elseif ( has_post_thumbnail() ) : ?>
 		<header class="entry-header alignwide">
-			<?php canada_info_post_thumbnail(); ?>
+			<?php candainfo_post_thumbnail(); ?>
 		</header><!-- .entry-header -->
 	<?php endif; ?>
 
@@ -30,10 +30,10 @@
 
 		wp_link_pages(
 			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'canada_info' ) . '">',
+				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'candainfo' ) . '">',
 				'after'    => '</nav>',
 				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'canada_info' ),
+				'pagelink' => esc_html__( 'Page %', 'candainfo' ),
 			)
 		);
 		?>
@@ -45,7 +45,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'canada_info' ),
+					esc_html__( 'Edit %s', 'candainfo' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',

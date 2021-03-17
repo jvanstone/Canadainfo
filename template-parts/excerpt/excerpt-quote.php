@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage canada_info
+ * 
  *  @since Canada_Info  1.0
  */
 
@@ -13,9 +13,9 @@ $content = get_the_content();
 
 // If there is no quote or pullquote print the content.
 if ( has_block( 'core/quote', $content ) ) {
-	canada_info_print_first_instance_of_block( 'core/quote', $content );
+	candainfo_print_first_instance_of_block( 'core/quote', $content );
 } elseif ( has_block( 'core/pullquote', $content ) ) {
-	canada_info_print_first_instance_of_block( 'core/pullquote', $content );
+	candainfo_print_first_instance_of_block( 'core/pullquote', $content );
 } else {
 	the_excerpt();
 }

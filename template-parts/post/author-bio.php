@@ -3,7 +3,7 @@
  * The template for displaying author info below posts.
  *
  * @package WordPress
- * @subpackage canada_info
+ * 
  *  @since Canada_Info  1.0
  */
 
@@ -16,7 +16,7 @@
 			<?php
 			printf(
 				/* translators: %s: Author name. */
-				esc_html__( 'By %s', 'canada_info' ),
+				esc_html__( 'By %s', 'candainfo' ),
 				get_the_author()
 			);
 			?>
@@ -28,7 +28,7 @@
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				sprintf(
 					/* translators: %s: Author name. */
-					esc_html__( 'View all of %s\'s posts.', 'canada_info' ),
+					esc_html__( 'View all of %s\'s posts.', 'candainfo' ),
 					get_the_author()
 				)
 			);

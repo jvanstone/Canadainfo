@@ -6,7 +6,7 @@
  *
  *
  * @package Canada Info
- * @subpackage canada_info
+ * 
  * @since 1.0.0
  */
 
@@ -15,7 +15,7 @@
 <footer id="colophon" class="site-footer no-print" role="contentinfo">
 	<button onclick="topFunction()" id="goTop" title="Go to top"><i class="fas fa-arrow-up"></i><br>Top</button>
 	<?php if ( has_nav_menu( 'footer' ) ) : ?>
-		<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'canada_info' ); ?>" class="footer-navigation">
+		<nav aria-label="<?php esc_attr_e( 'Secondary menu', 'candainfo' ); ?>" class="footer-navigation">
 			<ul class="footer-navigation-wrapper">
 				<?php
 				wp_nav_menu(
@@ -54,8 +54,8 @@
 			<?php
 			printf(
 				/* translators: %s: WordPress. */
-				esc_html__( 'Proudly powered by %s.', 'canada_info' ),
-				'<a href="' . esc_attr__( 'https://wordpress.org/', 'canada_info' ) . '">WordPress</a>'
+				esc_html__( 'Proudly powered by %s.', 'candainfo' ),
+				'<a href="' . esc_attr__( 'https://wordpress.org/', 'candainfo' ) . '">WordPress</a>'
 			);
 			?>
 		</div><!-- .powered-by -->

@@ -6,7 +6,7 @@
  *
  *
  * @package Canada Info
- * @subpackage  canada_info
+ * @subpackage  candainfo
  * @since 1.0.0
  */
 

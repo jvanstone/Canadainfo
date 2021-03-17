@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage canada_info
+ * 
  *  @since Canada_Info  1.0
  */
 
@@ -13,7 +13,7 @@
 // Otherwise this is legacy content, so print the excerpt.
 if ( has_block( 'core/paragraph', get_the_content() ) ) {
 
-	canada_info_print_first_instance_of_block( 'core/paragraph', get_the_content(), 2 );
+	candainfo_print_first_instance_of_block( 'core/paragraph', get_the_content(), 2 );
 } else {
 
 	the_excerpt();
