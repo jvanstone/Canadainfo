@@ -21,7 +21,7 @@ while ( have_posts() ) :
 		the_post_navigation(
 			array(
 				/* translators: %s: Parent post link. */
-				'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'canadainfo' ), '%title' ),
+				'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'canada_info' ), '%title' ),
 			)
 		);
 	}
@@ -32,16 +32,16 @@ while ( have_posts() ) :
 	}
 
 	// Previous/next post navigation.
-	$canadainfo_next = is_rtl() ? canadainfo_get_icon_svg( 'ui', 'arrow_left' ) : canadainfo_get_icon_svg( 'ui', 'arrow_right' );
-	$canadainfo_prev = is_rtl() ? canadainfo_get_icon_svg( 'ui', 'arrow_right' ) : canadainfo_get_icon_svg( 'ui', 'arrow_left' );
+	$canada_info_next = is_rtl() ? canada_info_get_icon_svg( 'ui', 'arrow_left' ) : canada_info_get_icon_svg( 'ui', 'arrow_right' );
+	$canada_info_prev = is_rtl() ? canada_info_get_icon_svg( 'ui', 'arrow_right' ) : canada_info_get_icon_svg( 'ui', 'arrow_left' );
 
-	$canadainfo_next_label     = esc_html__( 'Next post', 'canadainfo' );
-	$canadainfo_previous_label = esc_html__( 'Previous post', 'canadainfo' );
+	$canada_info_next_label     = esc_html__( 'Next post', 'canada_info' );
+	$canada_info_previous_label = esc_html__( 'Previous post', 'canada_info' );
 
 	the_post_navigation(
 		array(
-			'next_text' => '<p class="meta-nav">' . $canadainfo_next_label . $canadainfo_next . '</p><p class="post-title">%title</p>',
-			'prev_text' => '<p class="meta-nav">' . $canadainfo_prev . $canadainfo_previous_label . '</p><p class="post-title">%title</p>',
+			'next_text' => '<p class="meta-nav">' . $canada_info_next_label . $canada_info_next . '</p><p class="post-title">%title</p>',
+			'prev_text' => '<p class="meta-nav">' . $canada_info_prev . $canada_info_previous_label . '</p><p class="post-title">%title</p>',
 		)
 	);
 endwhile; // End of the loop.
