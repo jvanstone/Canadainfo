@@ -198,7 +198,7 @@ img{height:auto;max-width:100%;vertical-align:middle}
 .wp-block-latest-comments .wp-block-latest-comments__comment-meta{font-family:var(--heading--font-family)}
 .wp-block-latest-comments .wp-block-latest-comments__comment-date{color:var(--global--color-primary);font-size:var(--global--font-size-sm)}
 .wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p{font-size:var(--global--font-size-sm);line-height:var(--global--line-height-body);margin:0}
-.wp-block-latest-posts{padding-left:0;border:solid 1px red}
+.wp-block-latest-posts{padding-left:0}
 .wp-block-latest-posts:not(.is-grid)>li{margin-top:calc(1.666 * var(--global--spacing-vertical));margin-bottom:calc(1.666 * var(--global--spacing-vertical))}
 .wp-block-latest-posts:not(.is-grid)>li:first-child{margin-top:0}
 .wp-block-latest-posts:not(.is-grid)>li:last-child{margin-bottom:0}
@@ -225,6 +225,7 @@ img{height:auto;max-width:100%;vertical-align:middle}
 .wp-block-latest-posts.is-style-canadainfo-latest-posts-borders li{border:calc(3 * var(--separator--height)) solid var(--global--color-border);padding:var(--global--spacing-vertical) var(--global--spacing-horizontal)}
 .wp-block-latest-posts.is-style-canadainfo-latest-posts-borders li:last-child{padding-bottom:var(--global--spacing-vertical)}
 .wp-block-latest-posts.is-style-canadainfo-latest-posts-borders:not(.is-grid) li{margin-top:var(--global--spacing-horizontal);margin-bottom:var(--global--spacing-horizontal)}
+.about img{width:150px !important;height:auto}
 .gallery-item{display:inline-block;text-align:center;vertical-align:top;width:100%}
 .gallery-item a{display:block}
 .gallery-item a:focus img{outline-offset:-2px}

@@ -754,7 +754,7 @@ template {
 @media only screen and (min-width: 482px) {
 
 	.alignwide {
-		//max-width: calc(100vw - 100px);
+		max-width: calc(100vw - 100px);
 	}
 }
 

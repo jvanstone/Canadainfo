@@ -1,6 +1,5 @@
 .wp-block-latest-posts {
 	padding-left: 0;
-	border: solid 1px red;
 
 	// Vertical margins logic
 	&:not(.is-grid) > li {
@@ -166,5 +165,14 @@
 			margin-top: var(--global--spacing-horizontal);
 			margin-bottom: var(--global--spacing-horizontal);
 		}
+	}
+}
+
+
+.about {
+
+	img {
+		width: 150px !important;
+		height: auto;
 	}
 }
