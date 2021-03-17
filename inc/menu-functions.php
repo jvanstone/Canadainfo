@@ -25,19 +25,19 @@
  *
  * @return string Nav menu item start element.
  */
-function candainfo_add_sub_menu_toggle( $output, $item, $depth, $args ) {
+function canada_info_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 	if ( 0 === $depth && in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add toggle button.
-		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="candainfoExpandSubMenu(this)">';
-		$output .= '<span class="icon-plus">' . candainfo_get_icon_svg( 'ui', 'plus', 18 ) . '</span>';
-		$output .= '<span class="icon-minus">' . candainfo_get_icon_svg( 'ui', 'minus', 18 ) . '</span>';
+		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="canada_infoExpandSubMenu(this)">';
+		$output .= '<span class="icon-plus">' . canada_info_get_icon_svg( 'ui', 'plus', 18 ) . '</span>';
+		$output .= '<span class="icon-minus">' . canada_info_get_icon_svg( 'ui', 'minus', 18 ) . '</span>';
 		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'canada-info' ) . '</span>';
 		$output .= '</button>';
 	}
 	return $output;
 }
-add_filter( 'walker_nav_menu_start_el', 'candainfo_add_sub_menu_toggle', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'canada_info_add_sub_menu_toggle', 10, 4 );
 
 /**
  * Detects the social network from a URL and returns the SVG code for its icon.
@@ -49,7 +49,7 @@ add_filter( 'walker_nav_menu_start_el', 'candainfo_add_sub_menu_toggle', 10, 4 )
  *
  * @return string
  */
-function candainfo_get_social_link_svg( $uri, $size = 24 ) {
+function canada_info_get_social_link_svg( $uri, $size = 24 ) {
 	return Canada_Info_SVG_Icons::get_social_link_svg( $uri, $size );
 }
 
@@ -62,10 +62,10 @@ function candainfo_get_social_link_svg( $uri, $size = 24 ) {
  * @param stdClass $args        An object of wp_nav_menu() arguments.
  * @return string The menu item output with social icon.
  */
-function candainfo_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
+function canada_info_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	// Change SVG icon inside social links menu if there is supported URL.
 	if ( 'footer' === $args->theme_location ) {
-		$svg = candainfo_get_social_link_svg( $item->url, 24 );
+		$svg = canada_info_get_social_link_svg( $item->url, 24 );
 		if ( ! empty( $svg ) ) {
 			$item_output = str_replace( $args->link_before, $svg, $item_output );
 		}
@@ -74,7 +74,7 @@ function candainfo_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	return $item_output;
 }
 
-add_filter( 'walker_nav_menu_start_el', 'candainfo_nav_menu_social_icons', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'canada_info_nav_menu_social_icons', 10, 4 );
 
 /**
  * Filters the arguments for a single nav menu item.
@@ -87,7 +87,7 @@ add_filter( 'walker_nav_menu_start_el', 'candainfo_nav_menu_social_icons', 10, 4
  *
  * @return stdClass
  */
-function candainfo_add_menu_description_args( $args, $item, $depth ) {
+function canada_info_add_menu_description_args( $args, $item, $depth ) {
 	$args->link_after = '';
 	if ( 0 === $depth && isset( $item->description ) && $item->description ) {
 		// The extra <span> element is here for styling purposes: Allows the description to not be underlined on hover.
@@ -95,4 +95,4 @@ function candainfo_add_menu_description_args( $args, $item, $depth ) {
 	}
 	return $args;
 }
-add_filter( 'nav_menu_item_args', 'candainfo_add_menu_description_args', 10, 3 );
+add_filter( 'nav_menu_item_args', 'canada_info_add_menu_description_args', 10, 3 );

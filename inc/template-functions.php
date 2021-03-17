@@ -16,7 +16,7 @@
  *
  * @return array
  */
-function candainfo_body_classes( $classes ) {
+function canada_info_body_classes( $classes ) {
 
 	// Helps detect if JS is enabled or not.
 	$classes[] = 'no-js';
@@ -36,7 +36,7 @@ function candainfo_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'candainfo_body_classes' );
+add_filter( 'body_class', 'canada_info_body_classes' );
 
 /**
  * Adds custom class to the array of posts classes.
@@ -47,12 +47,12 @@ add_filter( 'body_class', 'candainfo_body_classes' );
  *
  * @return array
  */
-function candainfo_post_classes( $classes ) {
+function canada_info_post_classes( $classes ) {
 	$classes[] = 'entry';
 
 	return $classes;
 }
-add_filter( 'post_class', 'candainfo_post_classes', 10, 3 );
+add_filter( 'post_class', 'canada_info_post_classes', 10, 3 );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
@@ -61,12 +61,12 @@ add_filter( 'post_class', 'candainfo_post_classes', 10, 3 );
  *
  * @return void
  */
-function candainfo_pingback_header() {
+function canada_info_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'candainfo_pingback_header' );
+add_action( 'wp_head', 'canada_info_pingback_header' );
 
 /**
  * Remove the `no-js` class from body if JS is supported.
@@ -75,10 +75,10 @@ add_action( 'wp_head', 'candainfo_pingback_header' );
  *
  * @return void
  */
-function candainfo_supports_js() {
+function canada_info_supports_js() {
 	echo '<script>document.body.classList.remove("no-js");</script>';
 }
-add_action( 'wp_footer', 'candainfo_supports_js' );
+add_action( 'wp_footer', 'canada_info_supports_js' );
 
 /**
  * Changes comment form default fields.
@@ -89,14 +89,14 @@ add_action( 'wp_footer', 'candainfo_supports_js' );
  *
  * @return array
  */
-function candainfo_comment_form_defaults( $defaults ) {
+function canada_info_comment_form_defaults( $defaults ) {
 
 	// Adjust height of comment form.
 	$defaults['comment_field'] = preg_replace( '/rows="\d+"/', 'rows="5"', $defaults['comment_field'] );
 
 	return $defaults;
 }
-add_filter( 'comment_form_defaults', 'candainfo_comment_form_defaults' );
+add_filter( 'comment_form_defaults', 'canada_info_comment_form_defaults' );
 
 /**
  * Determines if post thumbnail can be displayed.
@@ -105,9 +105,9 @@ add_filter( 'comment_form_defaults', 'candainfo_comment_form_defaults' );
  *
  * @return bool
  */
-function candainfo_can_show_post_thumbnail() {
+function canada_info_can_show_post_thumbnail() {
 	return apply_filters(
-		'candainfo_one_can_show_post_thumbnail',
+		'canada_info_one_can_show_post_thumbnail',
 		! post_password_required() && ! is_attachment() && has_post_thumbnail()
 	);
 }
@@ -119,14 +119,14 @@ function candainfo_can_show_post_thumbnail() {
  *
  * @return int
  */
-function candainfo_get_avatar_size() {
+function canada_info_get_avatar_size() {
 	return 60;
 }
 
 /**
  * Creates continue reading text
  */
-function candainfo_continue_reading_text() {
+function canada_info_continue_reading_text() {
 	$continue_reading = sprintf(
 		/* translators: %s: Name of current post. */
 		esc_html__( 'Continue reading %s', 'canada-info' ),
@@ -139,28 +139,28 @@ function candainfo_continue_reading_text() {
 /**
  * Create the continue reading link for excerpt.
  */
-function candainfo_continue_reading_link_excerpt() {
+function canada_info_continue_reading_link_excerpt() {
 	if ( ! is_admin() ) {
-		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . candainfo_continue_reading_text() . '</a>';
+		return '&hellip; <a class="more-link" href="' . esc_url( get_permalink() ) . '">' . canada_info_continue_reading_text() . '</a>';
 	}
 }
 
 // Filter the excerpt more link.
-add_filter( 'excerpt_more', 'candainfo_continue_reading_link_excerpt' );
+add_filter( 'excerpt_more', 'canada_info_continue_reading_link_excerpt' );
 
 /**
  * Create the continue reading link.
  */
-function candainfo_continue_reading_link() {
+function canada_info_continue_reading_link() {
 	if ( ! is_admin() ) {
-		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '#more-' . esc_attr( get_the_ID() ) . '">' . candainfo_continue_reading_text() . '</a></div>';
+		return '<div class="more-link-container"><a class="more-link" href="' . esc_url( get_permalink() ) . '#more-' . esc_attr( get_the_ID() ) . '">' . canada_info_continue_reading_text() . '</a></div>';
 	}
 }
 
 // Filter the excerpt more link.
-add_filter( 'the_content_more_link', 'candainfo_continue_reading_link' );
+add_filter( 'the_content_more_link', 'canada_info_continue_reading_link' );
 
-if ( ! function_exists( 'candainfo_post_title' ) ) {
+if ( ! function_exists( 'canada_info_post_title' ) ) {
 	/**
 	 * Add a title to posts and pages that are missing titles.
 	 *
@@ -170,11 +170,11 @@ if ( ! function_exists( 'candainfo_post_title' ) ) {
 	 *
 	 * @return string
 	 */
-	function candainfo_post_title( $title ) {
+	function canada_info_post_title( $title ) {
 		return '' === $title ? esc_html_x( 'Untitled', 'Added to posts and pages that are missing titles', 'canada-info' ) : $title;
 	}
 }
-add_filter( 'the_title', 'candainfo_post_title' );
+add_filter( 'the_title', 'canada_info_post_title' );
 
 /**
  * Gets the SVG code for a given icon.
@@ -187,7 +187,7 @@ add_filter( 'the_title', 'candainfo_post_title' );
  *
  * @return string
  */
-function candainfo_get_icon_svg( $group, $icon, $size = 24 ) {
+function canada_info_get_icon_svg( $group, $icon, $size = 24 ) {
 	return Canada_Info_SVG_Icons::get_svg( $group, $icon, $size );
 }
 
@@ -198,12 +198,12 @@ function candainfo_get_icon_svg( $group, $icon, $size = 24 ) {
  *
  * @return string
  */
-function candainfo_change_calendar_nav_arrows( $calendar_output ) {
-	$calendar_output = str_replace( '&laquo; ', is_rtl() ? candainfo_get_icon_svg( 'ui', 'arrow_right' ) : candainfo_get_icon_svg( 'ui', 'arrow_left' ), $calendar_output );
-	$calendar_output = str_replace( ' &raquo;', is_rtl() ? candainfo_get_icon_svg( 'ui', 'arrow_left' ) : candainfo_get_icon_svg( 'ui', 'arrow_right' ), $calendar_output );
+function canada_info_change_calendar_nav_arrows( $calendar_output ) {
+	$calendar_output = str_replace( '&laquo; ', is_rtl() ? canada_info_get_icon_svg( 'ui', 'arrow_right' ) : canada_info_get_icon_svg( 'ui', 'arrow_left' ), $calendar_output );
+	$calendar_output = str_replace( ' &raquo;', is_rtl() ? canada_info_get_icon_svg( 'ui', 'arrow_left' ) : canada_info_get_icon_svg( 'ui', 'arrow_right' ), $calendar_output );
 	return $calendar_output;
 }
-add_filter( 'get_calendar', 'candainfo_change_calendar_nav_arrows' );
+add_filter( 'get_calendar', 'canada_info_change_calendar_nav_arrows' );
 
 /**
  * Get custom CSS.
@@ -214,14 +214,14 @@ add_filter( 'get_calendar', 'candainfo_change_calendar_nav_arrows' );
  *
  * @return string
  */
-function candainfo_get_non_latin_css( $type = 'front-end' ) {
+function canada_info_get_non_latin_css( $type = 'front-end' ) {
 
 	// Fetch site locale.
 	$locale = get_bloginfo( 'language' );
 
 	// Define fallback fonts for non-latin languages.
 	$font_family = apply_filters(
-		'candainfo_get_localized_font_family_types',
+		'canada_info_get_localized_font_family_types',
 		array(
 
 			// Arabic.
@@ -291,7 +291,7 @@ function candainfo_get_non_latin_css( $type = 'front-end' ) {
 
 	// Define elements to apply fallback fonts to.
 	$elements = apply_filters(
-		'candainfo_get_localized_font_family_elements',
+		'canada_info_get_localized_font_family_elements',
 		array(
 			'front-end'      => array( 'body', 'input', 'textarea', 'button', '.button', '.faux-button', '.wp-block-button__link', '.wp-block-file__button', '.has-drop-cap:not(:focus)::first-letter', '.has-drop-cap:not(:focus)::first-letter', '.entry-content .wp-block-archives', '.entry-content .wp-block-categories', '.entry-content .wp-block-cover-image', '.entry-content .wp-block-latest-comments', '.entry-content .wp-block-latest-posts', '.entry-content .wp-block-pullquote', '.entry-content .wp-block-quote.is-large', '.entry-content .wp-block-quote.is-style-large', '.entry-content .wp-block-archives *', '.entry-content .wp-block-categories *', '.entry-content .wp-block-latest-posts *', '.entry-content .wp-block-latest-comments *', '.entry-content p', '.entry-content ol', '.entry-content ul', '.entry-content dl', '.entry-content dt', '.entry-content cite', '.entry-content figcaption', '.entry-content .wp-caption-text', '.comment-content p', '.comment-content ol', '.comment-content ul', '.comment-content dl', '.comment-content dt', '.comment-content cite', '.comment-content figcaption', '.comment-content .wp-caption-text', '.widget_text p', '.widget_text ol', '.widget_text ul', '.widget_text dl', '.widget_text dt', '.widget-content .rssSummary', '.widget-content cite', '.widget-content figcaption', '.widget-content .wp-caption-text' ),
 			'block-editor'   => array( '.editor-styles-wrapper > *', '.editor-styles-wrapper p', '.editor-styles-wrapper ol', '.editor-styles-wrapper ul', '.editor-styles-wrapper dl', '.editor-styles-wrapper dt', '.editor-post-title__block .editor-post-title__input', '.editor-styles-wrapper .wp-block h1', '.editor-styles-wrapper .wp-block h2', '.editor-styles-wrapper .wp-block h3', '.editor-styles-wrapper .wp-block h4', '.editor-styles-wrapper .wp-block h5', '.editor-styles-wrapper .wp-block h6', '.editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter', '.editor-styles-wrapper cite', '.editor-styles-wrapper figcaption', '.editor-styles-wrapper .wp-caption-text' ),
@@ -305,12 +305,12 @@ function candainfo_get_non_latin_css( $type = 'front-end' ) {
 	}
 
 	// Include file if function doesn't exist.
-	if ( ! function_exists( 'candainfo_generate_css' ) ) {
+	if ( ! function_exists( 'canada_info_generate_css' ) ) {
 		require_once get_theme_file_path( 'inc/custom-css.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 	}
 
 	// Return the specified styles.
-	return candainfo_generate_css( // @phpstan-ignore-line.
+	return canada_info_generate_css( // @phpstan-ignore-line.
 		implode( ',', $elements[ $type ] ),
 		'font-family',
 		implode( ',', $font_family[ $locale ] ),
@@ -332,7 +332,7 @@ function candainfo_get_non_latin_css( $type = 'front-end' ) {
  *
  * @return bool Returns true if a block was located & printed, otherwise false.
  */
-function candainfo_print_first_instance_of_block( $block_name, $content = null, $instances = 1 ) {
+function canada_info_print_first_instance_of_block( $block_name, $content = null, $instances = 1 ) {
 	$instances_count = 0;
 	$blocks_content  = '';
 
@@ -391,7 +391,7 @@ function candainfo_print_first_instance_of_block( $block_name, $content = null, 
  * @param int|WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
  * @return string HTML content for password form for password protected post.
  */
-function candainfo_password_form( $post = 0 ) {
+function canada_info_password_form( $post = 0 ) {
 	$post   = get_post( $post );
 	$label  = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
 	$output = '<p class="post-password-message">' . esc_html__( 'This content is password protected. Please enter a password to view.', 'canada-info' ) . '</p>
@@ -400,7 +400,7 @@ function candainfo_password_form( $post = 0 ) {
 	';
 	return $output;
 }
-add_filter( 'the_password_form', 'candainfo_password_form' );
+add_filter( 'the_password_form', 'canada_info_password_form' );
 
 /**
  * Filters the list of attachment image attributes.
@@ -415,7 +415,7 @@ add_filter( 'the_password_form', 'candainfo_password_form' );
  *
  * @return array
  */
-function candainfo_get_attachment_image_attributes( $attr, $attachment, $size ) {
+function canada_info_get_attachment_image_attributes( $attr, $attachment, $size ) {
 
 	if ( is_admin() ) {
 		return $attr;
@@ -448,4 +448,4 @@ function candainfo_get_attachment_image_attributes( $attr, $attachment, $size ) 
 
 	return $attr;
 }
-add_filter( 'wp_get_attachment_image_attributes', 'candainfo_get_attachment_image_attributes', 10, 3 );
+add_filter( 'wp_get_attachment_image_attributes', 'canada_info_get_attachment_image_attributes', 10, 3 );
