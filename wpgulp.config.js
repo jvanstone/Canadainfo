@@ -21,10 +21,21 @@ const injectChanges = true;
 
 // >>>>> Style options.
 // Path to main .scss file.
+//const styleSRC = './assets/sass/style.scss';
+
+// Path to place the compiled CSS file. Default set to root folder.
+//const styleDestination = './';
+
+
+// Path to main editor.scss file
 const styleSRC = './assets/sass/style.scss';
 
 // Path to place the compiled CSS file. Default set to root folder.
-const styleDestination = './';
+const styleDestination = './assets/css/';
+
+
+
+
 
 // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 const outputStyle = 'compact';
