@@ -687,7 +687,7 @@ require get_template_directory() . '/inc/block-styles.php';
  */
 function canada_info_customize_preview_init() {
 	wp_enqueue_script(
-		'canda-info-customize-helpers',
+		'canada-info-customize-helpers',
 		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
 		array(),
 		wp_get_theme()->get( 'Version' ),
@@ -695,14 +695,14 @@ function canada_info_customize_preview_init() {
 	);
 
 	wp_enqueue_script(
-		'canda-info-customize-preview',
+		'canada-info-customize-preview',
 		get_theme_file_uri( '/assets/js/customize-preview.js' ),
 		array( 'customize-preview', 'customize-selective-refresh', 'jquery', 'canada-info-customize-helpers' ),
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
 }
-add_action( 'customize_preview_init', 'canada-info_customize_preview_init' );
+add_action( 'customize_preview_init', 'canada_info_customize_preview_init' );
 
 /**
  * Enqueue scripts for the customizer.
@@ -714,14 +714,14 @@ add_action( 'customize_preview_init', 'canada-info_customize_preview_init' );
 function canada_info_customize_controls_enqueue_scripts() {
 
 	wp_enqueue_script(
-		'canda-info-customize-helpers',
+		'canada-info-customize-helpers',
 		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
 		array(),
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
 }
-add_action( 'customize_controls_enqueue_scripts', 'canada-info_customize_controls_enqueue_scripts' );
+add_action( 'customize_controls_enqueue_scripts', 'canada_info_customize_controls_enqueue_scripts' );
 
 /**
  * Calculate classes for the main <html> element.
