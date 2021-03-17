@@ -5,21 +5,21 @@ function toggleDarkMode() { // jshint ignore:line
 		toggler.setAttribute( 'aria-pressed', 'true' );
 		document.documentElement.classList.add( 'is-dark-theme' );
 		document.body.classList.add( 'is-dark-theme' );
-		window.localStorage.setItem( 'candainfoDarkMode', 'yes' );
+		window.localStorage.setItem( 'canadainfoDarkMode', 'yes' );
 	} else {
 		toggler.setAttribute( 'aria-pressed', 'false' );
 		document.documentElement.classList.remove( 'is-dark-theme' );
 		document.body.classList.remove( 'is-dark-theme' );
-		window.localStorage.setItem( 'candainfoDarkMode', 'no' );
+		window.localStorage.setItem( 'canadainfoDarkMode', 'no' );
 	}
 }
 
-function candainfoIsDarkMode() {
+function canadainfoIsDarkMode() {
 	var isDarkMode = window.matchMedia( '(prefers-color-scheme: dark)' ).matches;
 
-	if ( 'yes' === window.localStorage.getItem( 'candainfoDarkMode' ) ) {
+	if ( 'yes' === window.localStorage.getItem( 'canadainfoDarkMode' ) ) {
 		isDarkMode = true;
-	} else if ( 'no' === window.localStorage.getItem( 'candainfoDarkMode' ) ) {
+	} else if ( 'no' === window.localStorage.getItem( 'canadainfoDarkMode' ) ) {
 		isDarkMode = false;
 	}
 
@@ -28,7 +28,7 @@ function candainfoIsDarkMode() {
 
 function darkModeInitialLoad() {
 	var toggler = document.getElementById( 'dark-mode-toggler' ),
-		isDarkMode = candainfoIsDarkMode();
+		isDarkMode = canadainfoIsDarkMode();
 
 	if ( isDarkMode ) {
 		document.documentElement.classList.add( 'is-dark-theme' );

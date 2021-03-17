@@ -14,7 +14,7 @@
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php candainfo_post_thumbnail(); ?>
+		<?php canada_info_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 		content single
 	<div class="entry-content">
@@ -33,7 +33,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
-		<?php candainfo_entry_meta_footer(); ?>
+		<?php canada_info_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>

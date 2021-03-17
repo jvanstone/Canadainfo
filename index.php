@@ -26,7 +26,7 @@ if ( have_posts() ) {
 		get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) );
 	}
 	// Previous/next page navigation.
-	candainfo_the_posts_navigation();
+	canada_info_the_posts_navigation();
 
 } else {
 

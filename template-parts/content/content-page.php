@@ -15,11 +15,11 @@
 	<?php if ( ! is_front_page() ) : ?>
 		<header class="entry-header">
 			<?php get_template_part( 'template-parts/header/entry-header' ); ?>
-			<?php candainfo_post_thumbnail(); ?>
+			<?php canada_info_post_thumbnail(); ?>
 		</header><!-- .entry-header -->
 	<?php elseif ( has_post_thumbnail() ) : ?>
 		<header class="entry-header">
-			<?php candainfo_post_thumbnail(); ?>
+			<?php canada_info_post_thumbnail(); ?>
 		</header><!-- .entry-header -->
 	<?php endif; ?>
 

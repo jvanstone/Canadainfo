@@ -19,14 +19,14 @@
 			<?php the_title( sprintf( '<h2 class="entry-title default-max-width"><a href="%s">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		<?php endif; ?>
 
-		<?php candainfo_post_thumbnail(); ?>
+		<?php canada_info_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 
 		<?php
 		the_content(
-			candainfo_continue_reading_text()
+			canada_info_continue_reading_text()
 		);
 
 		wp_link_pages(
@@ -42,6 +42,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
-		<?php candainfo_entry_meta_footer(); ?>
+		<?php canada_info_entry_meta_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

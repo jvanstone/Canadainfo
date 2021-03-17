@@ -34,7 +34,7 @@ class Canada_Info_Dark_Mode {
 		add_action( 'customize_register', array( $this, 'customizer_controls' ) );
 
 		// Add HTML classes.
-		add_filter( 'candainfo_html_classes', array( $this, 'html_classes' ) );
+		add_filter( 'canada_info_html_classes', array( $this, 'html_classes' ) );
 
 		// Add classes to <body> in the dashboard.
 		add_filter( 'admin_body_class', array( $this, 'admin_body_classes' ) );

@@ -18,10 +18,10 @@
  *
  * @return void
  */
-function candainfo_switch_theme() {
-	add_action( 'admin_notices', 'candainfo_upgrade_notice' );
+function canada_info_switch_theme() {
+	add_action( 'admin_notices', 'canada_info_upgrade_notice' );
 }
-add_action( 'after_switch_theme', 'candainfo_switch_theme' );
+add_action( 'after_switch_theme', 'canada_info_switch_theme' );
 
 /**
  * Adds a message for unsuccessful theme switch.
@@ -35,7 +35,7 @@ add_action( 'after_switch_theme', 'candainfo_switch_theme' );
  *
  * @return void
  */
-function candainfo_upgrade_notice() {
+function canada_info_upgrade_notice() {
 	echo '<div class="error"><p>';
 	printf(
 		/* translators: %s: WordPress Version. */
@@ -54,7 +54,7 @@ function candainfo_upgrade_notice() {
  *
  * @return void
  */
-function candainfo_customize() {
+function canada_info_customize() {
 	wp_die(
 		sprintf(
 			/* translators: %s: WordPress Version. */
@@ -67,7 +67,7 @@ function candainfo_customize() {
 		)
 	);
 }
-add_action( 'load-customize.php', 'candainfo_customize' );
+add_action( 'load-customize.php', 'canada_info_customize' );
 
 /**
  * Prevents the Theme Preview from being loaded on WordPress versions prior to 5.3.
@@ -78,7 +78,7 @@ add_action( 'load-customize.php', 'candainfo_customize' );
  *
  * @return void
  */
-function candainfo_preview() {
+function canada_info_preview() {
 	if ( isset( $_GET['preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 		wp_die(
 			sprintf(
@@ -89,4 +89,4 @@ function candainfo_preview() {
 		);
 	}
 }
-add_action( 'template_redirect', 'candainfo_preview' );
+add_action( 'template_redirect', 'canada_info_preview' );

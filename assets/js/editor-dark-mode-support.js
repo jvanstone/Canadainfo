@@ -1,8 +1,8 @@
-/* global candainfoIsDarkMode, setTimeout */
+/* global canadainfoIsDarkMode, setTimeout */
 
 // Check the color scheme preference and inject the classes if necessary.
 if ( document.body.classList.contains( 'canadainfo-supports-dark-theme' ) ) {
-	candainfoDarkModeEditorInit();
+	canadainfoDarkModeEditorInit();
 }
 
 /**
@@ -15,20 +15,20 @@ if ( document.body.classList.contains( 'canadainfo-supports-dark-theme' ) ) {
  * @param {number} attempt Track the number of tries
  * @return {void}
  */
-function candainfoDarkModeEditorInit( attempt ) {
+function canadainfoDarkModeEditorInit( attempt ) {
 	var container = document.querySelector( '.block-editor__typewriter' ),
 		maxAttempts = 8;
 
 	// Set the initial attempt if it's undefined.
 	attempt = attempt || 0;
 
-	if ( candainfoIsDarkMode() ) {
+	if ( canadainfoIsDarkMode() ) {
 		if ( null === container ) {
 			// Try again.
 			if ( attempt < maxAttempts ) {
 				setTimeout(
 					function() {
-						candainfoDarkModeEditorInit( attempt + 1 );
+						canadainfoDarkModeEditorInit( attempt + 1 );
 					},
 					// Double the delay, give the server some time to breathe.
 					25 * Math.pow( 2, attempt )

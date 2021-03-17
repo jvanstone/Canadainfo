@@ -1,9 +1,9 @@
-/* global candainfoGetHexLum, jQuery */
+/* global canadainfoGetHexLum, jQuery */
 ( function() {
 	// Add listener for the "background_color" control.
 	wp.customize( 'background_color', function( value ) {
 		value.bind( function( to ) {
-			var lum = candainfoGetHexLum( to ),
+			var lum = canadainfoGetHexLum( to ),
 				isDark = 127 > lum,
 				textColor = ! isDark ? 'var(--global--color-dark-gray)' : 'var(--global--color-light-gray)',
 				tableColor = ! isDark ? 'var(--global--color-light-gray)' : 'var(--global--color-dark-gray)',

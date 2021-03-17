@@ -16,7 +16,7 @@
 if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
-if ( ! function_exists( 'candainfo_setup' ) ) {
+if ( ! function_exists( 'canada_info_setup' ) ) {
 
 		/**
 		 * Sets up theme defaults and registers support for various WordPress features.
@@ -29,7 +29,7 @@ if ( ! function_exists( 'candainfo_setup' ) ) {
 		 *
 		 * @return true
 		 */
-	function candainfo_setup() {
+	function canada_info_setup() {
 		/*
 		*  Make theme available for translation.
 		*  Translations can be filed in the /languages/ directory.
@@ -381,7 +381,7 @@ if ( ! function_exists( 'candainfo_setup' ) ) {
 		*/
 		if ( is_customize_preview() ) {
 			require get_template_directory() . '/inc/starter-content.php';
-			add_theme_support( 'starter-content', candainfo_get_starter_content() );
+			add_theme_support( 'starter-content', canada_info_get_starter_content() );
 		}
 
 		// Add support for responsive embedded content.
@@ -438,7 +438,7 @@ if ( ! function_exists( 'candainfo_setup' ) ) {
 		add_action( 'init', 'cg_register_taxonomy_guide' );
 	}
 }
-add_action( 'after_setup_theme', 'candainfo_setup' );
+add_action( 'after_setup_theme', 'canada_info_setup' );
 
 
 /**
@@ -450,7 +450,7 @@ add_action( 'after_setup_theme', 'candainfo_setup' );
  *
  * @return void
  */
-function candainfo_widgets_init() {
+function canada_info_widgets_init() {
 
 	register_sidebar(
 		array(
@@ -464,7 +464,7 @@ function candainfo_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'candainfo_widgets_init' );
+add_action( 'widgets_init', 'canada_info_widgets_init' );
 
 
 /**
@@ -474,7 +474,7 @@ add_action( 'widgets_init', 'candainfo_widgets_init' );
  *
  * @return void
  */
-function candainfo_scripts() {
+function canada_info_scripts() {
 
 	// Load Bootstrap CSS First to allow for Customization in style.css.
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css', array(), wp_get_theme()->get( 'Version' ) );
@@ -514,7 +514,7 @@ function candainfo_scripts() {
 	// wp_dequeue_style( 'wp-block-library-theme' ); .
 	// wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS.
 }
-add_action( 'wp_enqueue_scripts', 'candainfo_scripts' );
+add_action( 'wp_enqueue_scripts', 'canada_info_scripts' );
 
 
 /*******
@@ -522,7 +522,7 @@ add_action( 'wp_enqueue_scripts', 'candainfo_scripts' );
  *
  * @link https://codex.wordpress.org/Customizing_the_Login_Form
  */
-function candainfo_logo() { ?>
+function canada_info_logo() { ?>
 	<style type="text/css">
 	#login h1 a, .login h1 a {
 		background-image: url(<?php esc_url( get_stylesheet_directory_uri() ); ?>/assets/img/site-login-logo.png);
@@ -535,7 +535,7 @@ function candainfo_logo() { ?>
 	</style>
 	<?php
 }
-add_action( 'login_enqueue_scripts', 'candainfo_logo' );
+add_action( 'login_enqueue_scripts', 'canada_info_logo' );
 
 /*******
  * Change the login screen to show a custom logo
@@ -603,12 +603,12 @@ add_filter( 'the_content', 'add_custom_table_class' );
  *
  * @return void
  */
-function candainfo_block_editor_script() {
+function canada_info_block_editor_script() {
 
 	wp_enqueue_script( 'canada-info-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
 
-add_action( 'enqueue_block_editor_assets', 'candainfo_block_editor_script' );
+add_action( 'enqueue_block_editor_assets', 'canada_info_block_editor_script' );
 
 /**
  * Fix skip link focus in IE11.
@@ -618,7 +618,7 @@ add_action( 'enqueue_block_editor_assets', 'candainfo_block_editor_script' );
  *
  * @link https://git.io/vWdr2
  */
-function candainfo_skip_link_focus_fix() {
+function canada_info_skip_link_focus_fix() {
 
 	// If SCRIPT_DEBUG is defined and true, print the unminified file.
 	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
@@ -634,7 +634,7 @@ function candainfo_skip_link_focus_fix() {
 	</script>
 	<?php
 }
-add_action( 'wp_print_footer_scripts', 'candainfo_skip_link_focus_fix' );
+add_action( 'wp_print_footer_scripts', 'canada_info_skip_link_focus_fix' );
 
 /** Enqueue non-latin language styles
  *
@@ -642,14 +642,14 @@ add_action( 'wp_print_footer_scripts', 'candainfo_skip_link_focus_fix' );
  *
  * @return void
  */
-function candainfo_non_latin_languages() {
-	$custom_css = candainfo_get_non_latin_css( 'front-end' );
+function canada_info_non_latin_languages() {
+	$custom_css = canada_info_get_non_latin_css( 'front-end' );
 
 	if ( $custom_css ) {
 		wp_add_inline_style( 'canada-info-style', $custom_css );
 	}
 } 
-add_action( 'wp_enqueue_scripts', 'candainfo_non_latin_languages' );
+add_action( 'wp_enqueue_scripts', 'canada_info_non_latin_languages' );
 
 // SVG Icons class.
 require get_template_directory() . '/classes/class-canada-info-svg-icons.php';
@@ -685,7 +685,7 @@ require get_template_directory() . '/inc/block-styles.php';
  *
  * @return void
  */
-function candainfo_customize_preview_init() {
+function canada_info_customize_preview_init() {
 	wp_enqueue_script(
 		'canda-info-customize-helpers',
 		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
@@ -711,7 +711,7 @@ add_action( 'customize_preview_init', 'canada-info_customize_preview_init' );
  *
  * @return void
  */
-function candainfo_customize_controls_enqueue_scripts() {
+function canada_info_customize_controls_enqueue_scripts() {
 
 	wp_enqueue_script(
 		'canda-info-customize-helpers',
@@ -730,8 +730,8 @@ add_action( 'customize_controls_enqueue_scripts', 'canada-info_customize_control
  *
  * @return void
  */
-function candainfo_the_html_classes() {
-	$classes = apply_filters( 'candainfo_html_classes', '' );
+function canada_info_the_html_classes() {
+	$classes = apply_filters( 'canada_info_html_classes', '' );
 	if ( ! $classes ) {
 		return;
 	}
@@ -745,7 +745,7 @@ function candainfo_the_html_classes() {
  *
  * @return void
  */
-function candainfo_add_ie_class() {
+function canada_info_add_ie_class() {
 	?>
 	<script>
 	if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/' ) ) {
@@ -754,4 +754,4 @@ function candainfo_add_ie_class() {
 	</script>
 	<?php
 }
-add_action( 'wp_footer', 'candainfo_add_ie_class' );
+add_action( 'wp_footer', 'canada_info_add_ie_class' );

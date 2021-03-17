@@ -221,7 +221,7 @@ class Canada_Info_SVG_Icons {
 			 *
 			 * @param array $social_icons_map Array of default social icons.
 			 */
-			$map = apply_filters( 'candainfo_social_icons_map', self::$social_icons_map );
+			$map = apply_filters( 'canada_info_social_icons_map', self::$social_icons_map );
 
 			/**
 			 * Filters Twenty Twenty-One's array of social icons.
@@ -230,7 +230,7 @@ class Canada_Info_SVG_Icons {
 			 *
 			 * @param array $social_icons Array of default social icons.
 			 */
-			$social_icons = apply_filters( 'candainfo_svg_icons_social', self::$social_icons );
+			$social_icons = apply_filters( 'canada_info_svg_icons_social', self::$social_icons );
 
 			foreach ( array_keys( $social_icons ) as $icon ) {
 				$domains            = array_key_exists( $icon, $map ) ? $map[ $icon ] : array( sprintf( '%s.com', $icon ) );

@@ -12,11 +12,11 @@
 $content = get_the_content();
 
 if ( has_block( 'core/video', $content ) ) {
-	candainfo_print_first_instance_of_block( 'core/video', $content );
+	canada_info_print_first_instance_of_block( 'core/video', $content );
 } elseif ( has_block( 'core/embed', $content ) ) {
-	candainfo_print_first_instance_of_block( 'core/embed', $content );
+	canada_info_print_first_instance_of_block( 'core/embed', $content );
 } else {
-	candainfo_print_first_instance_of_block( 'core-embed/*', $content );
+	canada_info_print_first_instance_of_block( 'core-embed/*', $content );
 }
 
 // Add the excerpt.

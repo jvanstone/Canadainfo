@@ -11,7 +11,7 @@
  *
  * @return {void}
  */
-function candainfoResponsiveEmbeds() {
+function canadainfoResponsiveEmbeds() {
 	var proportion, parentWidth;
 
 	// Loop iframe elements.
@@ -30,7 +30,7 @@ function candainfoResponsiveEmbeds() {
 }
 
 // Run on initial load.
-candainfoResponsiveEmbeds();
+canadainfoResponsiveEmbeds();
 
 // Run on resize.
-window.onresize = candainfoResponsiveEmbeds;
+window.onresize = canadainfoResponsiveEmbeds;

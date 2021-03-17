@@ -21,7 +21,7 @@
  *
  * @return string
  */
-function candainfo_generate_css( $selector, $style, $value, $prefix = '', $suffix = '', $echo = true ) {
+function canada_info_generate_css( $selector, $style, $value, $prefix = '', $suffix = '', $echo = true ) {
 
 	// Bail early if there is no $selector elements or properties and $value.
 	if ( ! $value || ! $selector ) {
