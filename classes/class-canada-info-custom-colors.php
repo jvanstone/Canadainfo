@@ -118,7 +118,7 @@ class Canada_Info_Custom_Colors {
 
 		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
 		if ( 'd1e4dd' !== strtolower( $background_color ) ) {
-			wp_add_inline_style( 'canadainfo-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
+			wp_add_inline_style( 'canada-info-custom-color-overrides', $this->generate_custom_color_variables( 'editor' ) );
 		}
 	}
 

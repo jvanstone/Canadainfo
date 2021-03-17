@@ -178,7 +178,7 @@ class Canada_Info_SVG_Icons {
 		 *
 		 * @param array $arr Array of icons.
 		 */
-		$arr = apply_filters( "canadainfo_svg_icons_{$group}", $arr );
+		$arr = apply_filters( "canada_info_svg_icons_{$group}", $arr );
 
 		$svg = '';
 		if ( array_key_exists( $icon, $arr ) ) {

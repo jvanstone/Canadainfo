@@ -3,8 +3,7 @@
  * Displays the footer widget area.
  *
  * @package WordPress
- * 
- *  @since Canada_Info  1.0
+ * @since Canada_Info  1.0
  */
 
 if ( is_active_sidebar( 'sidebar-1' ) ) : ?>

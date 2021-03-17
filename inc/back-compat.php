@@ -39,7 +39,7 @@ function candainfo_upgrade_notice() {
 	echo '<div class="error"><p>';
 	printf(
 		/* translators: %s: WordPress Version. */
-		esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'canadainfo' ),
+		esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'canada-info' ),
 		esc_html( $GLOBALS['wp_version'] )
 	);
 	echo '</p></div>';
@@ -58,7 +58,7 @@ function candainfo_customize() {
 	wp_die(
 		sprintf(
 			/* translators: %s: WordPress Version. */
-			esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'canadainfo' ),
+			esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'canada-info' ),
 			esc_html( $GLOBALS['wp_version'] )
 		),
 		'',
@@ -83,7 +83,7 @@ function candainfo_preview() {
 		wp_die(
 			sprintf(
 				/* translators: %s: WordPress Version. */
-				esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'canadainfo' ),
+				esc_html__( 'This theme requires WordPress 5.3 or newer. You are running version %s. Please upgrade.', 'canada-info' ),
 				esc_html( $GLOBALS['wp_version'] )
 			)
 		);

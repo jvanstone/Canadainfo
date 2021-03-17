@@ -32,7 +32,7 @@ function candainfo_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="candainfoExpandSubMenu(this)">';
 		$output .= '<span class="icon-plus">' . candainfo_get_icon_svg( 'ui', 'plus', 18 ) . '</span>';
 		$output .= '<span class="icon-minus">' . candainfo_get_icon_svg( 'ui', 'minus', 18 ) . '</span>';
-		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'canadainfo' ) . '</span>';
+		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'canada-info' ) . '</span>';
 		$output .= '</button>';
 	}
 	return $output;

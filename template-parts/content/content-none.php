@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * 
+ *
  *  @since Canada_Info  1.0
  */
 
@@ -19,7 +19,7 @@
 				<?php
 				printf(
 					/* translators: %s: Search term. */
-					esc_html__( 'Results for "%s"', 'canadainfo' ),
+					esc_html__( 'Results for "%s"', 'canada-info' ),
 					'<span class="page-description search-term">' . esc_html( get_search_query() ) . '</span>'
 				);
 				?>
@@ -27,7 +27,7 @@
 
 		<?php else : ?>
 
-			<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'canadainfo' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Nothing here', 'canada-info' ); ?></h1>
 
 		<?php endif; ?>
 	</header><!-- .page-header -->
@@ -40,7 +40,7 @@
 			printf(
 				'<p>' . wp_kses(
 					/* translators: %s: Link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'canadainfo' ),
+					__( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'canada-info' ),
 					array(
 						'a' => array(
 							'href' => array(),
@@ -53,12 +53,12 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'canadainfo' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'canada-info' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'canadainfo' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'canada-info' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>

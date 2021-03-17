@@ -77,7 +77,7 @@ if ( ! class_exists( 'Canada_Info_Customize' ) ) {
 				array(
 					'type'    => 'checkbox',
 					'section' => 'title_tagline',
-					'label'   => esc_html__( 'Display Site Title & Tagline', 'canadainfo' ),
+					'label'   => esc_html__( 'Display Site Title & Tagline', 'canada-info' ),
 				)
 			);
 
@@ -87,7 +87,7 @@ if ( ! class_exists( 'Canada_Info_Customize' ) ) {
 			$wp_customize->add_section(
 				'excerpt_settings',
 				array(
-					'title'    => esc_html__( 'Excerpt Settings', 'canadainfo' ),
+					'title'    => esc_html__( 'Excerpt Settings', 'canada-info' ),
 					'priority' => 120,
 				)
 			);
@@ -108,10 +108,10 @@ if ( ! class_exists( 'Canada_Info_Customize' ) ) {
 				array(
 					'type'    => 'radio',
 					'section' => 'excerpt_settings',
-					'label'   => esc_html__( 'On Archive Pages, posts show:', 'canadainfo' ),
+					'label'   => esc_html__( 'On Archive Pages, posts show:', 'canada-info' ),
 					'choices' => array(
-						'excerpt' => esc_html__( 'Summary', 'canadainfo' ),
-						'full'    => esc_html__( 'Full text', 'canadainfo' ),
+						'excerpt' => esc_html__( 'Summary', 'canada-info' ),
+						'full'    => esc_html__( 'Full text', 'canada-info' ),
 					),
 				)
 			);
@@ -140,7 +140,7 @@ if ( ! class_exists( 'Canada_Info_Customize' ) ) {
 					$wp_customize,
 					'background_color',
 					array(
-						'label'   => esc_html_x( 'Background color', 'Customizer control', 'canadainfo' ),
+						'label'   => esc_html_x( 'Background color', 'Customizer control', 'canada-info' ),
 						'section' => 'colors',
 						'palette' => $colors,
 					)

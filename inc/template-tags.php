@@ -26,7 +26,7 @@ if ( ! function_exists( 'candainfo_posted_on' ) ) {
 		echo '<span class="posted-on">';
 		printf(
 			/* translators: %s: Publish date. */
-			esc_html__( 'Published %s', 'canadainfo' ),
+			esc_html__( 'Published %s', 'canada-info' ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
 		echo '</span>';
@@ -46,7 +46,7 @@ if ( ! function_exists( 'candainfo_posted_by' ) ) {
 			echo '<span class="byline">';
 			printf(
 				/* translators: %s: Author name. */
-				esc_html__( 'By %s', 'canadainfo' ),
+				esc_html__( 'By %s', 'canada-info' ),
 				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a>'
 			);
 			echo '</span>';
@@ -74,7 +74,7 @@ if ( ! function_exists( 'candainfo_entry_meta_footer' ) ) {
 		if ( ! is_single() ) {
 
 			if ( is_sticky() ) {
-				echo '<p>' . esc_html_x( 'Featured post', 'Label for sticky posts', 'canadainfo' ) . '</p>';
+				echo '<p>' . esc_html_x( 'Featured post', 'Label for sticky posts', 'canada-info' ) . '</p>';
 			}
 
 			$post_format = get_post_format();
@@ -89,7 +89,7 @@ if ( ! function_exists( 'candainfo_entry_meta_footer' ) ) {
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'canadainfo' ),
+					esc_html__( 'Edit %s', 'canada-info' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
@@ -101,21 +101,21 @@ if ( ! function_exists( 'candainfo_entry_meta_footer' ) ) {
 				echo '<div class="post-taxonomies">';
 
 				/* translators: Used between list items, there is a space after the comma. */
-				$categories_list = get_the_category_list( __( ', ', 'canadainfo' ) );
+				$categories_list = get_the_category_list( __( ', ', 'canada-info' ) );
 				if ( $categories_list ) {
 					printf(
 						/* translators: %s: List of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'canadainfo' ) . ' </span>',
+						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'canada-info' ) . ' </span>',
 						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
 
 				/* translators: Used between list items, there is a space after the comma. */
-				$tags_list = get_the_tag_list( '', __( ', ', 'canadainfo' ) );
+				$tags_list = get_the_tag_list( '', __( ', ', 'canada-info' ) );
 				if ( $tags_list ) {
 					printf(
 						/* translators: %s: List of tags. */
-						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'canadainfo' ) . '</span>',
+						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'canada-info' ) . '</span>',
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
@@ -132,7 +132,7 @@ if ( ! function_exists( 'candainfo_entry_meta_footer' ) ) {
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'canadainfo' ),
+					esc_html__( 'Edit %s', 'canada-info' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',
@@ -145,21 +145,21 @@ if ( ! function_exists( 'candainfo_entry_meta_footer' ) ) {
 				echo '<div class="post-taxonomies">';
 
 				/* translators: Used between list items, there is a space after the comma. */
-				$categories_list = get_the_category_list( __( ', ', 'canadainfo' ) );
+				$categories_list = get_the_category_list( __( ', ', 'canada-info' ) );
 				if ( $categories_list ) {
 					printf(
 						/* translators: %s: List of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'canadainfo' ) . ' </span>',
+						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'canada-info' ) . ' </span>',
 						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
 
 				/* translators: Used between list items, there is a space after the comma. */
-				$tags_list = get_the_tag_list( '', __( ', ', 'canadainfo' ) );
+				$tags_list = get_the_tag_list( '', __( ', ', 'canada-info' ) );
 				if ( $tags_list ) {
 					printf(
 						/* translators: %s: List of tags. */
-						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'canadainfo' ) . '</span>',
+						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'canada-info' ) . '</span>',
 						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
 					);
 				}
@@ -225,13 +225,13 @@ if ( ! function_exists( 'candainfo_the_posts_navigation' ) ) {
 	function candainfo_the_posts_navigation() {
 		the_posts_pagination(
 			array(
-				'before_page_number' => esc_html__( 'Page', 'canadainfo' ) . ' ',
+				'before_page_number' => esc_html__( 'Page', 'canada-info' ) . ' ',
 				'mid_size'           => 0,
 				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? candainfo_get_icon_svg( 'ui', 'arrow_right' ) : candainfo_get_icon_svg( 'ui', 'arrow_left' ),
 					wp_kses(
-						__( 'Newer <span class="nav-short">posts</span>', 'canadainfo' ),
+						__( 'Newer <span class="nav-short">posts</span>', 'canada-info' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -242,7 +242,7 @@ if ( ! function_exists( 'candainfo_the_posts_navigation' ) ) {
 				'next_text'          => sprintf(
 					'<span class="nav-next-text">%s</span> %s',
 					wp_kses(
-						__( 'Older <span class="nav-short">posts</span>', 'canadainfo' ),
+						__( 'Older <span class="nav-short">posts</span>', 'canada-info' ),
 						array(
 							'span' => array(
 								'class' => array(),

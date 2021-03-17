@@ -3,8 +3,7 @@
  * Displays the site navigation.
  *
  * @package WordPress
- * 
- *  @since Canada_Info  1.0
+ * @since Canada_Info  1.0
  */
 
 ?>

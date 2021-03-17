@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * 
+ *
  *  @since Canada_Info  1.0
  */
 

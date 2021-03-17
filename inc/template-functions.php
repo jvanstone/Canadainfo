@@ -129,7 +129,7 @@ function candainfo_get_avatar_size() {
 function candainfo_continue_reading_text() {
 	$continue_reading = sprintf(
 		/* translators: %s: Name of current post. */
-		esc_html__( 'Continue reading %s', 'canadainfo' ),
+		esc_html__( 'Continue reading %s', 'canada-info' ),
 		the_title( '<span class="screen-reader-text">', '</span>', false )
 	);
 
@@ -171,7 +171,7 @@ if ( ! function_exists( 'candainfo_post_title' ) ) {
 	 * @return string
 	 */
 	function candainfo_post_title( $title ) {
-		return '' === $title ? esc_html_x( 'Untitled', 'Added to posts and pages that are missing titles', 'canadainfo' ) : $title;
+		return '' === $title ? esc_html_x( 'Untitled', 'Added to posts and pages that are missing titles', 'canada-info' ) : $title;
 	}
 }
 add_filter( 'the_title', 'candainfo_post_title' );
@@ -394,9 +394,9 @@ function candainfo_print_first_instance_of_block( $block_name, $content = null, 
 function candainfo_password_form( $post = 0 ) {
 	$post   = get_post( $post );
 	$label  = 'pwbox-' . ( empty( $post->ID ) ? wp_rand() : $post->ID );
-	$output = '<p class="post-password-message">' . esc_html__( 'This content is password protected. Please enter a password to view.', 'canadainfo' ) . '</p>
+	$output = '<p class="post-password-message">' . esc_html__( 'This content is password protected. Please enter a password to view.', 'canada-info' ) . '</p>
 	<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" class="post-password-form" method="post">
-	<label class="post-password-form__label" for="' . esc_attr( $label ) . '">' . esc_html_x( 'Password', 'Post password form', 'canadainfo' ) . '</label><input class="post-password-form__input" name="post_password" id="' . esc_attr( $label ) . '" type="password" size="20" /><input type="submit" class="post-password-form__submit" name="' . esc_attr_x( 'Submit', 'Post password form', 'canadainfo' ) . '" value="' . esc_attr_x( 'Enter', 'Post password form', 'canadainfo' ) . '" /></form>
+	<label class="post-password-form__label" for="' . esc_attr( $label ) . '">' . esc_html_x( 'Password', 'Post password form', 'canada-info' ) . '</label><input class="post-password-form__input" name="post_password" id="' . esc_attr( $label ) . '" type="password" size="20" /><input type="submit" class="post-password-form__submit" name="' . esc_attr_x( 'Submit', 'Post password form', 'canada-info' ) . '" value="' . esc_attr_x( 'Enter', 'Post password form', 'canada-info' ) . '" /></form>
 	';
 	return $output;
 }

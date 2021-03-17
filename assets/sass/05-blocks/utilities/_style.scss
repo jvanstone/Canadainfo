@@ -22,8 +22,8 @@
 // Targeting the .entry-content class is necessary to ensure these styles
 // only apply when the block isn't nested.
 .entry-content > .alignleft {
-	max-width: var(--responsive--aligndefault-width);
-	@extend %responsive-alignleft;
+	//max-width: var(--responsive--aligndefault-width);
+	//@extend %responsive-alignleft;
 }
 
 @include media(mobile) {
@@ -39,7 +39,7 @@
 	}
 
 	.entry-content > .alignleft {
-		max-width: calc(50% - var(--responsive--alignleft-margin));
+		//max-width: calc(50% - var(--responsive--alignleft-margin));
 	}
 }
 
