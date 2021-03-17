@@ -6,7 +6,6 @@
  *
  * @category   WordPress_Theme
  * @package    Canada_Info
- * 
  * @author     Vanstone Online <jason@vanstoneonline.com>
  * @license    GPL 3.0 http://www.gnu.org/licenses/gpl-3.0.html
  * @link       https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -35,9 +34,9 @@ if ( ! function_exists( 'candainfo_setup' ) ) {
 		*  Make theme available for translation.
 		*  Translations can be filed in the /languages/ directory.
 		*  If you're building a theme based on Twenty Twenty-One, use a find and replace
-		*  to change 'candainfo' to the name of your theme in all the template files.
+		*  to change 'canadainfo' to the name of your theme in all the template files.
 		*/
-		load_theme_textdomain( 'candainfo', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'canadainfo', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -78,8 +77,8 @@ if ( ! function_exists( 'candainfo_setup' ) ) {
 
 		register_nav_menus(
 			array(
-				'primary' => esc_html__( 'Primary menu', 'candainfo' ),
-				'footer'  => __( 'Secondary menu', 'candainfo' ),
+				'primary' => esc_html__( 'Primary menu', 'canadainfo' ),
+				'footer'  => __( 'Secondary menu', 'canadainfo' ),
 			)
 		);
 
@@ -209,44 +208,44 @@ if ( ! function_exists( 'candainfo_setup' ) ) {
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => esc_html__( 'Extra small', 'candainfo' ),
-					'shortName' => esc_html_x( 'XS', 'Font size', 'candainfo' ),
+					'name'      => esc_html__( 'Extra small', 'canadainfo' ),
+					'shortName' => esc_html_x( 'XS', 'Font size', 'canadainfo' ),
 					'size'      => 16,
 					'slug'      => 'extra-small',
 				),
 				array(
-					'name'      => esc_html__( 'Small', 'candainfo' ),
-					'shortName' => esc_html_x( 'S', 'Font size', 'candainfo' ),
+					'name'      => esc_html__( 'Small', 'canadainfo' ),
+					'shortName' => esc_html_x( 'S', 'Font size', 'canadainfo' ),
 					'size'      => 18,
 					'slug'      => 'small',
 				),
 				array(
-					'name'      => esc_html__( 'Normal', 'candainfo' ),
-					'shortName' => esc_html_x( 'M', 'Font size', 'candainfo' ),
+					'name'      => esc_html__( 'Normal', 'canadainfo' ),
+					'shortName' => esc_html_x( 'M', 'Font size', 'canadainfo' ),
 					'size'      => 20,
 					'slug'      => 'normal',
 				),
 				array(
-					'name'      => esc_html__( 'Large', 'candainfo' ),
-					'shortName' => esc_html_x( 'L', 'Font size', 'candainfo' ),
+					'name'      => esc_html__( 'Large', 'canadainfo' ),
+					'shortName' => esc_html_x( 'L', 'Font size', 'canadainfo' ),
 					'size'      => 24,
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => esc_html__( 'Extra large', 'candainfo' ),
-					'shortName' => esc_html_x( 'XL', 'Font size', 'candainfo' ),
+					'name'      => esc_html__( 'Extra large', 'canadainfo' ),
+					'shortName' => esc_html_x( 'XL', 'Font size', 'canadainfo' ),
 					'size'      => 40,
 					'slug'      => 'extra-large',
 				),
 				array(
-					'name'      => esc_html__( 'Huge', 'candainfo' ),
-					'shortName' => esc_html_x( 'XXL', 'Font size', 'candainfo' ),
+					'name'      => esc_html__( 'Huge', 'canadainfo' ),
+					'shortName' => esc_html_x( 'XXL', 'Font size', 'canadainfo' ),
 					'size'      => 96,
 					'slug'      => 'huge',
 				),
 				array(
-					'name'      => esc_html__( 'Gigantic', 'candainfo' ),
-					'shortName' => esc_html_x( 'XXXL', 'Font size', 'candainfo' ),
+					'name'      => esc_html__( 'Gigantic', 'canadainfo' ),
+					'shortName' => esc_html_x( 'XXXL', 'Font size', 'canadainfo' ),
 					'size'      => 144,
 					'slug'      => 'gigantic',
 				),
@@ -277,52 +276,52 @@ if ( ! function_exists( 'candainfo_setup' ) ) {
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => esc_html__( 'Black', 'candainfo' ),
+					'name'  => esc_html__( 'Black', 'canadainfo' ),
 					'slug'  => 'black',
 					'color' => $black,
 				),
 				array(
-					'name'  => esc_html__( 'Dark gray', 'candainfo' ),
+					'name'  => esc_html__( 'Dark gray', 'canadainfo' ),
 					'slug'  => 'dark-gray',
 					'color' => $dark_gray,
 				),
 				array(
-					'name'  => esc_html__( 'Gray', 'candainfo' ),
+					'name'  => esc_html__( 'Gray', 'canadainfo' ),
 					'slug'  => 'gray',
 					'color' => $gray,
 				),
 				array(
-					'name'  => esc_html__( 'Green', 'candainfo' ),
+					'name'  => esc_html__( 'Green', 'canadainfo' ),
 					'slug'  => 'green',
 					'color' => $green,
 				),
 				array(
-					'name'  => esc_html__( 'Blue', 'candainfo' ),
+					'name'  => esc_html__( 'Blue', 'canadainfo' ),
 					'slug'  => 'blue',
 					'color' => $blue,
 				),
 				array(
-					'name'  => esc_html__( 'Purple', 'candainfo' ),
+					'name'  => esc_html__( 'Purple', 'canadainfo' ),
 					'slug'  => 'purple',
 					'color' => $purple,
 				),
 				array(
-					'name'  => esc_html__( 'Red', 'candainfo' ),
+					'name'  => esc_html__( 'Red', 'canadainfo' ),
 					'slug'  => 'red',
 					'color' => $red,
 				),
 				array(
-					'name'  => esc_html__( 'Orange', 'candainfo' ),
+					'name'  => esc_html__( 'Orange', 'canadainfo' ),
 					'slug'  => 'orange',
 					'color' => $orange,
 				),
 				array(
-					'name'  => esc_html__( 'Yellow', 'candainfo' ),
+					'name'  => esc_html__( 'Yellow', 'canadainfo' ),
 					'slug'  => 'yellow',
 					'color' => $yellow,
 				),
 				array(
-					'name'  => esc_html__( 'White', 'candainfo' ),
+					'name'  => esc_html__( 'White', 'canadainfo' ),
 					'slug'  => 'white',
 					'color' => $white,
 				),
@@ -333,42 +332,42 @@ if ( ! function_exists( 'candainfo_setup' ) ) {
 			'editor-gradient-presets',
 			array(
 				array(
-					'name'     => esc_html__( 'Purple to yellow', 'candainfo' ),
+					'name'     => esc_html__( 'Purple to yellow', 'canadainfo' ),
 					'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $yellow . ' 100%)',
 					'slug'     => 'purple-to-yellow',
 				),
 				array(
-					'name'     => esc_html__( 'Yellow to purple', 'candainfo' ),
+					'name'     => esc_html__( 'Yellow to purple', 'canadainfo' ),
 					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $purple . ' 100%)',
 					'slug'     => 'yellow-to-purple',
 				),
 				array(
-					'name'     => esc_html__( 'Green to yellow', 'candainfo' ),
+					'name'     => esc_html__( 'Green to yellow', 'canadainfo' ),
 					'gradient' => 'linear-gradient(160deg, ' . $green . ' 0%, ' . $yellow . ' 100%)',
 					'slug'     => 'green-to-yellow',
 				),
 				array(
-					'name'     => esc_html__( 'Yellow to green', 'candainfo' ),
+					'name'     => esc_html__( 'Yellow to green', 'canadainfo' ),
 					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $green . ' 100%)',
 					'slug'     => 'yellow-to-green',
 				),
 				array(
-					'name'     => esc_html__( 'Red to yellow', 'candainfo' ),
+					'name'     => esc_html__( 'Red to yellow', 'canadainfo' ),
 					'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $yellow . ' 100%)',
 					'slug'     => 'red-to-yellow',
 				),
 				array(
-					'name'     => esc_html__( 'Yellow to red', 'candainfo' ),
+					'name'     => esc_html__( 'Yellow to red', 'canadainfo' ),
 					'gradient' => 'linear-gradient(160deg, ' . $yellow . ' 0%, ' . $red . ' 100%)',
 					'slug'     => 'yellow-to-red',
 				),
 				array(
-					'name'     => esc_html__( 'Purple to red', 'candainfo' ),
+					'name'     => esc_html__( 'Purple to red', 'canadainfo' ),
 					'gradient' => 'linear-gradient(160deg, ' . $purple . ' 0%, ' . $red . ' 100%)',
 					'slug'     => 'purple-to-red',
 				),
 				array(
-					'name'     => esc_html__( 'Red to purple', 'candainfo' ),
+					'name'     => esc_html__( 'Red to purple', 'canadainfo' ),
 					'gradient' => 'linear-gradient(160deg, ' . $red . ' 0%, ' . $purple . ' 100%)',
 					'slug'     => 'red-to-purple',
 				),
@@ -429,9 +428,9 @@ if ( ! function_exists( 'candainfo_setup' ) ) {
 				'show_in_rest'      => true,
 				'query_var'         => true,
 				'rewrite'           => [ 'slug' => 'guide',
-										'with_front'   =>true, // Don't display the category base before "/locations/".
+										'with_front'   => true, // Don't display the category base before "/locations/".
 										'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/" .
-				],
+				]
 			);
 			register_taxonomy( 'guide', [ 'post' ], $args );
 		}
@@ -454,9 +453,9 @@ function candainfo_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Footer', 'candainfo' ),
+			'name'          => esc_html__( 'Footer', 'canadainfo' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'candainfo' ),
+			'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'canadainfo' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -507,7 +506,7 @@ function candainfo_scripts() {
 	wp_enqueue_script( 'Popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'Javascript', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'top', get_stylesheet_directory_uri() . '/assets/js/top.js', array(), wp_get_theme()->get( 'Version' ), true );
-	//wp_enqueue_script( 'star-rating', get_stylesheet_directory_uri() . '/jquery-bar-rating-master/jquery.barrating.js', array(), wp_get_theme()->get( 'Version' ), true );
+	// wp_enqueue_script( 'star-rating', get_stylesheet_directory_uri() . '/jquery-bar-rating-master/jquery.barrating.js', array(), wp_get_theme()->get( 'Version' ), true );   Hiding this.
 
 	// Remove unwanted stylesheets that are part of the basic WordPress build.
 	wp_dequeue_style( 'wp-block-library' );
@@ -533,7 +532,8 @@ function candainfo_logo() { ?>
 		padding-bottom: 30px;
 	}
 	</style>
-<?php }
+	<?php
+}
 add_action( 'login_enqueue_scripts', 'candainfo_logo' );
 
 /*******
@@ -604,7 +604,7 @@ add_filter( 'the_content', 'add_custom_table_class' );
  */
 function candainfo_block_editor_script() {
 
-	wp_enqueue_script( 'candainfo-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'canadainfo-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
 
 add_action( 'enqueue_block_editor_assets', 'candainfo_block_editor_script' );
@@ -645,17 +645,17 @@ add_action( 'wp_print_footer_scripts', 'candainfo_skip_link_focus_fix' );
 	$custom_css = candainfo_get_non_latin_css( 'front-end' );
 
 	if ( $custom_css ) {
-		wp_add_inline_style( 'candainfo-style', $custom_css );
+		wp_add_inline_style( 'canadainfo-style', $custom_css );
 	}
 } */
 // add_action( 'wp_enqueue_scripts', 'candainfo_non_latin_languages' );
 
 // SVG Icons class.
-//require get_template_directory() . '/classes/class-candainfo-svg-icons.php';
+require get_template_directory() . '/classes/class-canada-info-svg-icons.php';
 
 // Custom color classes.
-// require get_template_directory() . '/classes/class-candainfo-custom-colors.php';
-// new Canada_Info_Custom_Colors();
+require get_template_directory() . '/classes/class-canada-info-custom-colors.php';
+new Canada_Info_Custom_Colors();
 
 // Enhance the theme by hooking into WordPress.
 require get_template_directory() . '/inc/template-functions.php';
@@ -667,8 +667,8 @@ require get_template_directory() . '/inc/menu-functions.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 // Customizer additions.
-// require get_template_directory() . '/classes/class-candainfo-customize.php';
-// new Canada_Info_Customize();
+require get_template_directory() . '/classes/class-canada-info-customize.php';
+new Canada_Info_Customize();
 
 // Block Patterns.
 require get_template_directory() . '/inc/block-patterns.php';
@@ -686,7 +686,7 @@ require get_template_directory() . '/inc/block-styles.php';
  */
 function candainfo_customize_preview_init() {
 	wp_enqueue_script(
-		'candainfo-customize-helpers',
+		'canda-info-customize-helpers',
 		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
 		array(),
 		wp_get_theme()->get( 'Version' ),
@@ -694,14 +694,14 @@ function candainfo_customize_preview_init() {
 	);
 
 	wp_enqueue_script(
-		'candainfo-customize-preview',
+		'canda-info-customize-preview',
 		get_theme_file_uri( '/assets/js/customize-preview.js' ),
-		array( 'customize-preview', 'customize-selective-refresh', 'jquery', 'candainfo-customize-helpers' ),
+		array( 'customize-preview', 'customize-selective-refresh', 'jquery', 'canadainfo-customize-helpers' ),
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
 }
-add_action( 'customize_preview_init', 'candainfo_customize_preview_init' );
+add_action( 'customize_preview_init', 'canada-info_customize_preview_init' );
 
 /**
  * Enqueue scripts for the customizer.
@@ -713,14 +713,14 @@ add_action( 'customize_preview_init', 'candainfo_customize_preview_init' );
 function candainfo_customize_controls_enqueue_scripts() {
 
 	wp_enqueue_script(
-		'candainfo-customize-helpers',
+		'canda-info-customize-helpers',
 		get_theme_file_uri( '/assets/js/customize-helpers.js' ),
 		array(),
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
 }
-add_action( 'customize_controls_enqueue_scripts', 'candainfo_customize_controls_enqueue_scripts' );
+add_action( 'customize_controls_enqueue_scripts', 'canada-info_customize_controls_enqueue_scripts' );
 
 /**
  * Calculate classes for the main <html> element.
@@ -754,31 +754,3 @@ function candainfo_add_ie_class() {
 	<?php
 }
 add_action( 'wp_footer', 'candainfo_add_ie_class' );
-
-/*
-* Define a constant path to our single template folder
-*/
-define( 'SINGLE_PATH', get_template_directory() . '/template-parts/guide' );
-
-/**
-* Filter the single_template with our custom function
-*/
-add_filter( 'guide_template', 'single_guide_template' );
-
-
-/**
-* Single template function which will choose our template
-*/
-function single__guide_template( $single ) {
-	global $wp_query, $post;
-	/**
-	* Checks for single template by category
-	* Check by category slug and ID
-	*/
-	foreach ( (array) get_the_category() as $cat ) :
-		if( file_exists( SINGLE_PATH . '/single-cat-' . $cat->slug . '.php' ) )
-			return SINGLE_PATH . '/single-cat-' . $cat->slug . '.php';
-		elseif ( file_exists( SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php' ) )
-			return SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php';
-	endforeach;
-}

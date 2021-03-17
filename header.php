@@ -6,7 +6,6 @@
  *
  * @category   WordPress_Theme
  * @package    Canada_Info
- * 
  * @author     Vanstone Online <jason@vanstoneonline.com>
  * @license    GPL 3.0 http://www.gnu.org/licenses/gpl-3.0.html
  * @link       https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -26,7 +25,7 @@
 <?php wp_body_open(); ?>
 
 <div id="wrapper" class="site container-fluid">  
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'candainfo' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'canadainfo' ); ?></a>
 
 	<?php get_template_part( 'template-parts/header/site-header' ); ?>
 

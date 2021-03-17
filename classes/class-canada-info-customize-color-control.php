@@ -22,7 +22,7 @@ class Canada_Info_Customize_Color_Control extends WP_Customize_Color_Control {
 	 *
 	 * @var string
 	 */
-	public $type = 'candainfo-one-color';
+	public $type = 'canadainfo-one-color';
 
 	/**
 	 * Colorpicker palette
@@ -49,7 +49,7 @@ class Canada_Info_Customize_Color_Control extends WP_Customize_Color_Control {
 
 		// Enqueue the script.
 		wp_enqueue_script(
-			'candainfo-control-color',
+			'canadainfo-control-color',
 			get_theme_file_uri( 'assets/js/palette-colorpicker.js' ),
 			array( 'customize-controls', 'jquery', 'customize-base', 'wp-color-picker' ),
 			(string) filemtime( get_theme_file_path( 'assets/js/palette-colorpicker.js' ) ),

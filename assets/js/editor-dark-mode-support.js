@@ -1,7 +1,7 @@
 /* global candainfoIsDarkMode, setTimeout */
 
 // Check the color scheme preference and inject the classes if necessary.
-if ( document.body.classList.contains( 'candainfo-supports-dark-theme' ) ) {
+if ( document.body.classList.contains( 'canadainfo-supports-dark-theme' ) ) {
 	candainfoDarkModeEditorInit();
 }
 

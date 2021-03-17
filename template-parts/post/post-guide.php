@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * 
+ *
  *  @since Canada_Info  1.0
  */
 
@@ -24,7 +24,6 @@
 
 	<div class="entry-content">
 
-     Hello
 		<?php
 		the_content(
 			candainfo_continue_reading_text()
@@ -32,10 +31,10 @@
 
 		wp_link_pages(
 			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'candainfo' ) . '">',
+				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'canadainfo' ) . '">',
 				'after'    => '</nav>',
 				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'candainfo' ),
+				'pagelink' => esc_html__( 'Page %', 'canadainfo' ),
 			)
 		);
 

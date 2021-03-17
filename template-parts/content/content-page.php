@@ -30,10 +30,10 @@
 
 		wp_link_pages(
 			array(
-				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'candainfo' ) . '">',
+				'before'   => '<nav class="page-links" aria-label="' . esc_attr__( 'Page', 'canadainfo' ) . '">',
 				'after'    => '</nav>',
 				/* translators: %: Page number. */
-				'pagelink' => esc_html__( 'Page %', 'candainfo' ),
+				'pagelink' => esc_html__( 'Page %', 'canadainfo' ),
 			)
 		);
 		?>
@@ -45,7 +45,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'candainfo' ),
+					esc_html__( 'Edit %s', 'canadainfo' ),
 					'<span class="screen-reader-text">' . get_the_title() . '</span>'
 				),
 				'<span class="edit-link">',

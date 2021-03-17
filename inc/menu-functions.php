@@ -32,7 +32,7 @@ function candainfo_add_sub_menu_toggle( $output, $item, $depth, $args ) {
 		$output .= '<button class="sub-menu-toggle" aria-expanded="false" onClick="candainfoExpandSubMenu(this)">';
 		$output .= '<span class="icon-plus">' . candainfo_get_icon_svg( 'ui', 'plus', 18 ) . '</span>';
 		$output .= '<span class="icon-minus">' . candainfo_get_icon_svg( 'ui', 'minus', 18 ) . '</span>';
-		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'candainfo' ) . '</span>';
+		$output .= '<span class="screen-reader-text">' . esc_html__( 'Open menu', 'canadainfo' ) . '</span>';
 		$output .= '</button>';
 	}
 	return $output;
@@ -50,7 +50,7 @@ add_filter( 'walker_nav_menu_start_el', 'candainfo_add_sub_menu_toggle', 10, 4 )
  * @return string
  */
 function candainfo_get_social_link_svg( $uri, $size = 24 ) {
-	//return Canada_Info_SVG_Icons::get_social_link_svg( $uri, $size );
+	return Canada_Info_SVG_Icons::get_social_link_svg( $uri, $size );
 }
 
 /**

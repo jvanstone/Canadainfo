@@ -2,9 +2,9 @@
 /**
  * SVG Icons class
  *
- * @package WordPress
+ * @package WordPress_Theme
  * @subpackage Canada_Info
- *  @since Canada_Info 1.0
+ * @since Canada_Info 1.0
  */
 
 /**
@@ -178,7 +178,7 @@ class Canada_Info_SVG_Icons {
 		 *
 		 * @param array $arr Array of icons.
 		 */
-		$arr = apply_filters( "candainfo_svg_icons_{$group}", $arr );
+		$arr = apply_filters( "canadainfo_svg_icons_{$group}", $arr );
 
 		$svg = '';
 		if ( array_key_exists( $icon, $arr ) ) {

@@ -22,8 +22,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/columns',
 			array(
-				'name'  => 'candainfo-columns-overlap',
-				'label' => esc_html__( 'Overlap', 'candainfo' ),
+				'name'  => 'canadainfo-columns-overlap',
+				'label' => esc_html__( 'Overlap', 'canadainfo' ),
 			)
 		);
 
@@ -31,8 +31,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/cover',
 			array(
-				'name'  => 'candainfo-border',
-				'label' => esc_html__( 'Borders', 'candainfo' ),
+				'name'  => 'canadainfo-border',
+				'label' => esc_html__( 'Borders', 'canadainfo' ),
 			)
 		);
 
@@ -40,8 +40,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/group',
 			array(
-				'name'  => 'candainfo-border',
-				'label' => esc_html__( 'Borders', 'candainfo' ),
+				'name'  => 'canadainfo-border',
+				'label' => esc_html__( 'Borders', 'canadainfo' ),
 			)
 		);
 
@@ -49,8 +49,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/image',
 			array(
-				'name'  => 'candainfo-border',
-				'label' => esc_html__( 'Borders', 'candainfo' ),
+				'name'  => 'canadainfo-border',
+				'label' => esc_html__( 'Borders', 'canadainfo' ),
 			)
 		);
 
@@ -58,8 +58,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/image',
 			array(
-				'name'  => 'candainfo-image-frame',
-				'label' => esc_html__( 'Frame', 'candainfo' ),
+				'name'  => 'canadainfo-image-frame',
+				'label' => esc_html__( 'Frame', 'canadainfo' ),
 			)
 		);
 
@@ -67,8 +67,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/latest-posts',
 			array(
-				'name'  => 'candainfo-latest-posts-dividers',
-				'label' => esc_html__( 'Dividers', 'candainfo' ),
+				'name'  => 'canadainfo-latest-posts-dividers',
+				'label' => esc_html__( 'Dividers', 'canadainfo' ),
 			)
 		);
 
@@ -76,8 +76,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/latest-posts',
 			array(
-				'name'  => 'candainfo-latest-posts-borders',
-				'label' => esc_html__( 'Borders', 'candainfo' ),
+				'name'  => 'canadainfo-latest-posts-borders',
+				'label' => esc_html__( 'Borders', 'canadainfo' ),
 			)
 		);
 
@@ -85,8 +85,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/media-text',
 			array(
-				'name'  => 'candainfo-border',
-				'label' => esc_html__( 'Borders', 'candainfo' ),
+				'name'  => 'canadainfo-border',
+				'label' => esc_html__( 'Borders', 'canadainfo' ),
 			)
 		);
 
@@ -94,8 +94,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/separator',
 			array(
-				'name'  => 'candainfo-separator-thick',
-				'label' => esc_html__( 'Thick', 'candainfo' ),
+				'name'  => 'canadainfo-separator-thick',
+				'label' => esc_html__( 'Thick', 'canadainfo' ),
 			)
 		);
 
@@ -103,8 +103,8 @@ if ( function_exists( 'register_block_style' ) ) {
 		register_block_style(
 			'core/social-links',
 			array(
-				'name'  => 'candainfo-social-icons-color',
-				'label' => esc_html__( 'Dark gray', 'candainfo' ),
+				'name'  => 'canadainfo-social-icons-color',
+				'label' => esc_html__( 'Dark gray', 'canadainfo' ),
 			)
 		);
 	}

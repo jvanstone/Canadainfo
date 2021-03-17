@@ -77,7 +77,7 @@ if ( ! class_exists( 'Canada_Info_Customize' ) ) {
 				array(
 					'type'    => 'checkbox',
 					'section' => 'title_tagline',
-					'label'   => esc_html__( 'Display Site Title & Tagline', 'candainfo' ),
+					'label'   => esc_html__( 'Display Site Title & Tagline', 'canadainfo' ),
 				)
 			);
 
@@ -87,7 +87,7 @@ if ( ! class_exists( 'Canada_Info_Customize' ) ) {
 			$wp_customize->add_section(
 				'excerpt_settings',
 				array(
-					'title'    => esc_html__( 'Excerpt Settings', 'candainfo' ),
+					'title'    => esc_html__( 'Excerpt Settings', 'canadainfo' ),
 					'priority' => 120,
 				)
 			);
@@ -108,17 +108,17 @@ if ( ! class_exists( 'Canada_Info_Customize' ) ) {
 				array(
 					'type'    => 'radio',
 					'section' => 'excerpt_settings',
-					'label'   => esc_html__( 'On Archive Pages, posts show:', 'candainfo' ),
+					'label'   => esc_html__( 'On Archive Pages, posts show:', 'canadainfo' ),
 					'choices' => array(
-						'excerpt' => esc_html__( 'Summary', 'candainfo' ),
-						'full'    => esc_html__( 'Full text', 'candainfo' ),
+						'excerpt' => esc_html__( 'Summary', 'canadainfo' ),
+						'full'    => esc_html__( 'Full text', 'canadainfo' ),
 					),
 				)
 			);
 
 			// Background color.
 			// Include the custom control class.
-			include_once get_theme_file_path( 'classes/class-candainfo-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+			include_once get_theme_file_path( 'classes/class-canada-info-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 			// Register the custom control.
 			$wp_customize->register_control_type( 'Canada_Info_Customize_Color_Control' );
@@ -140,7 +140,7 @@ if ( ! class_exists( 'Canada_Info_Customize' ) ) {
 					$wp_customize,
 					'background_color',
 					array(
-						'label'   => esc_html_x( 'Background color', 'Customizer control', 'candainfo' ),
+						'label'   => esc_html_x( 'Background color', 'Customizer control', 'canadainfo' ),
 						'section' => 'colors',
 						'palette' => $colors,
 					)

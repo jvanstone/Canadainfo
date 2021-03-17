@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Canada Info
- * @subpackage  candainfo
+ * @subpackage  canadainfo
  * @since 1.0.0
  */
 
@@ -28,7 +28,7 @@ $description = get_the_archive_description();
 		<?php get_template_part( 'template-parts/content/content', get_theme_mod( 'display_excerpt_or_full_post', 'excerpt' ) ); ?>
 	<?php endwhile; ?>
 
-	<?php mj_wedding_the_posts_navigation(); ?>
+	<?php canadainfo_the_posts_navigation(); ?>
 
 <?php else : ?>
 	<?php get_template_part( 'template-parts/content/content-none' ); ?>

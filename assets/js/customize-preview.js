@@ -7,7 +7,7 @@
 				isDark = 127 > lum,
 				textColor = ! isDark ? 'var(--global--color-dark-gray)' : 'var(--global--color-light-gray)',
 				tableColor = ! isDark ? 'var(--global--color-light-gray)' : 'var(--global--color-dark-gray)',
-				stylesheetID = 'candainfo-customizer-inline-styles',
+				stylesheetID = 'canadainfo-customizer-inline-styles',
 				stylesheet,
 				styles;
 

@@ -22,7 +22,7 @@ class Canada_Info_Customize_Notice_Control extends WP_Customize_Control {
 	 *
 	 * @var string
 	 */
-	public $type = 'candainfo-one-notice';
+	public $type = 'canadainfo-one-notice';
 
 	/**
 	 * Renders the control content.
@@ -38,9 +38,9 @@ class Canada_Info_Customize_Notice_Control extends WP_Customize_Control {
 	public function render_content() {
 		?>
 		<div class="notice notice-warning">
-			<p><?php esc_html_e( 'To access the Dark Mode settings, select a light background color.', 'candainfo' ); ?></p>
-			<p><a href="<?php echo esc_url( __( 'https://wordpress.org/support/article/twenty-twenty-one/#dark-mode-support', 'candainfo' ) ); ?>">
-				<?php esc_html_e( 'Learn more about Dark Mode.', 'candainfo' ); ?>
+			<p><?php esc_html_e( 'To access the Dark Mode settings, select a light background color.', 'canadainfo' ); ?></p>
+			<p><a href="<?php echo esc_url( __( 'https://wordpress.org/support/article/twenty-twenty-one/#dark-mode-support', 'canadainfo' ) ); ?>">
+				<?php esc_html_e( 'Learn more about Dark Mode.', 'canadainfo' ); ?>
 			</a></p>
 		</div>
 		<?php
