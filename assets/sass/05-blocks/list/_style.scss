@@ -60,19 +60,25 @@ ul.list-box {
     list-style-type: none;
     //border: var(--global-border);
     
-}
+	li {
+		margin: 1rem; 
+		padding: 1rem;
+		min-width: 12rem;
+		flex-basis: 10rem;
+		min-height: 5rem;
+		height: auto;
+		border: var(--global-border);
+		text-align: center;
+		box-shadow: 2px 5px #888888;
+		line-height: var(--global--line-height-body);
+	}
 
-ul.list-box li {
-    margin: 1rem; 
-    padding: 1rem;
-    min-width: 12rem;
-    flex-basis: 10rem;
-    min-height: 5rem;
-    height: auto;
-    border: var(--global-border);
-    text-align: center;
-    box-shadow: 2px 5px #888888;
-    line-height: var(--global--line-height-body);
+	a > .btn {
+		width: 100%;
+		height: auto;
+		background-color: var(--global--color-purple-med);
+
+	}
 }
 
 
