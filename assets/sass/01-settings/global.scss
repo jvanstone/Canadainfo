@@ -62,7 +62,7 @@ $baseline-unit: 10px;
 	--latest-posts--description-font-size: var(--global--font-size-sm);
 
 	--list--font-family: var(--global--font-secondary);
-	--definition-term--font-family: var(--global--font-primary);
+	--definition-term--font-family: var(--global--font-secondary);
 
 	/* Colors */  
 	--global--color-black: #000;
@@ -267,8 +267,3 @@ $baseline-unit: 10px;
 	--heading--font-size-h2: 3rem; // 48px / 16px
 }
 }
-
-
-
-
-

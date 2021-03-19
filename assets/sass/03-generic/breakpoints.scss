@@ -6,7 +6,7 @@
  * Required Variables
  */
 
- $default_width: 1000px;
+ $default_width: 800px;
  $max_content_width: 1240px;
  $breakpoint_sm: 482px;
  $breakpoint_md: 592px;
@@ -93,7 +93,7 @@
  @include media(mobile) {
  
      :root {
-         --responsive--aligndefault-width: min(calc(100vw - 4 * var(--global--spacing-horizontal)), #{$default_width});
+         --responsive--aligndefault-width: min(calc(100vw - 4 * var(--global--spacing-horizontal)), #{$default_width}, 800);
          --responsive--alignwide-width: calc(100vw - 4 * var(--global--spacing-horizontal));
          --responsive--alignright-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
          --responsive--alignleft-margin: calc(0.5 * (100vw - var(--responsive--aligndefault-width)));
@@ -103,7 +103,7 @@
  @include media(desktop) {
  
      :root {
-         --responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), #{$default_width});
+         --responsive--aligndefault-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), #{$default_width}, 800);
          --responsive--alignwide-width: min(calc(100vw - 8 * var(--global--spacing-horizontal)), #{$max_content_width});
      }
  }
@@ -215,4 +215,3 @@
  .full-max-width {
      @extend %responsive-alignfull-width;
  }
- 

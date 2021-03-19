@@ -18,7 +18,8 @@ var options = {
 	fixedCookieTypeDesc: 'These are essential for the website to work correctly.'
 };
 
-$( document ).ready( function() {
+$(document).ready(function () {
+	'use:strict';
 	$( 'body' ).ihavecookies( options );
 
 	if ( true === $.fn.ihavecookies.preference( 'marketing' ) ) {

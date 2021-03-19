@@ -10,7 +10,7 @@
 
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
 	<div class="col-12 no-print">
-		<img src="<?php header_image(); ?>" class=".img-fluid header-image" alt="<?php echo esc_html_e( get_bloginfo( 'name' ) ); ?>" />
+		<img src="<?php header_image(); ?>" class=".img-fluid header-image" alt="<?php echo get_bloginfo( 'name', 'canada-info' ); ?>" />
 
 		<!-- Top Navigation Menu -->
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark no-print">
@@ -22,12 +22,13 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<?php
 				// make wp_mav_menu use bootstrap.
-				wp_nav_menu(  array(
-					'theme_location' => 'primary', 
+				wp_nav_menu( array(
+					'theme_location' => 'primary',
 					'menu_class'     => 'navbar-nav',
 					'add_li_class'   => 'nav-item col-md-4',
 					'container'      => false,
-				) );
+					)
+				);
 				?>
 			</div><!-- End Collapse -->
 		</nav><!-- #site-navigation -->

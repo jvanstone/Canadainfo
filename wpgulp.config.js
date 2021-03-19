@@ -12,7 +12,7 @@
 // Local project URL of your already running WordPress site.
 // > Could be something like "wpgulp.local" or "localhost"
 // > depending upon your local WordPress setup.
-const projectURL = 'localhost/sandbox-wp/canadainfo/';
+const projectURL = 'localhost/sandbox-wp/canada-info/';
 
 // Theme/Plugin URL. Leave it like it is; since our gulpfile.js lives in the root folder.
 const productURL = './';
@@ -21,17 +21,17 @@ const injectChanges = true;
 
 // >>>>> Style options.
 // Path to main .scss file.
-//const styleSRC = './assets/sass/style.scss';
-
-// Path to place the compiled CSS file. Default set to root folder.
-//const styleDestination = './';
-
-
-// Path to main editor.scss file
 const styleSRC = './assets/sass/style.scss';
 
 // Path to place the compiled CSS file. Default set to root folder.
-const styleDestination = './assets/css/';
+const styleDestination = './';
+
+
+// Path to main editor.scss file
+// const styleSRC = './assets/sass/style-editor.scss';
+
+// Path to place the compiled CSS file. Default set to root folder.
+// const styleDestination = './assets/css/';
 
 
 

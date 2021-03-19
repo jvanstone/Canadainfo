@@ -1,7 +1,7 @@
 
 #header {  
-    margin: .5rem;
-    padding: 1rem 2rem;
+    margin-left: 1rem;
+    padding: calc(var(--global--spacing-vertical) / 2); // 20px
     min-height: 100px; 
 }
 
@@ -48,7 +48,6 @@
 
 	color: var(--branding--color-link);
 	font-family: var(--branding--title--font-family2);
-
 	letter-spacing: normal;
 	text-transform: var(--branding--title--text-transform);
 	line-height: var(--global--line-height-heading);
@@ -100,12 +99,12 @@ a.custom-logo-link {
 	text-decoration-color: var(--global--color-secondary);
 }
 
-
-
 #site-title {
+	margin-left: calc(var(--global--spacing-vertical) / 2); // 20px
 
     h1 { 
-        margin: .5rem;
+		margin-top: calc(var(--global--spacing-vertical) / 1); // 40px
+		border-bottom: 1px solid var(--global--color-primary);
     }
     h1 > a, h1 > a:visited {
         color: var(--global--color-header-dark);
@@ -116,7 +115,6 @@ a.custom-logo-link {
     }
 
     #site-description { 
-        margin: .5rem;
         color: var(--global--color-black); 
         font-weight: var(--heading--font-weight);
     }
@@ -125,12 +123,11 @@ a.custom-logo-link {
 // Site logo
 .site-logo {
 
-	margin: calc(var(--global--spacing-vertical) / 2) 0;
+	margin: calc(var(--global--spacing-vertical) / 2);
 
 	.site-header > & {
 		width: 100%;
 		padding-bottom: calc(var(--global--spacing-vertical) * 1.5);
-		border-bottom: 1px solid;
 		text-align: center;
 	}
 
@@ -247,12 +244,10 @@ a.custom-logo-link {
 	margin: 0 auto;
 	padding: 0;
 	background-color: var(--global--color-background);    
-	width: 100%;
+	//width: 100%;
 	min-height: 100%;
 }
 
 .coming-soon { 
 	text-align: center;
 }
-
- 

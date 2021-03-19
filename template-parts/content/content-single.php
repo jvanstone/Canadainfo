@@ -16,7 +16,8 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php canada_info_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
-		content single
+
+	CONTENT SINGLE
 	<div class="entry-content">
 		<?php
 		the_content();

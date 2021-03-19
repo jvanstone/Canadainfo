@@ -19,9 +19,7 @@ VanstoneONline is distributed under the terms of the GNU GPL
 @import url("normalize.scss");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro&display=swap");
 body {
-  background-color: #f7f8f8;
-  background-image: url("https://jobcanada.org/Canada-Guide/wp-content/uploads/2021/01/canadaleaf-background-1.png");
-  background-position: center bottom;
+ background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 25%;
   color: #1f2a32;

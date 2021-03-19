@@ -361,7 +361,7 @@ hr.wp-block-separator.is-style-dots:before{color:var(--separator--border-color);
 .has-drop-cap:not(:focus)::first-letter {font-family:var(--heading--font-family);font-weight:var(--heading--font-weight);line-height:.66;text-transform:uppercase;font-style:normal;float:left;margin:.1em .1em 0 0;font-size:48px}
 .has-drop-cap:not(:focus)::after{content:"";display:table;clear:both;padding-top:14px}
 .desktop-only{display:none}
-#header{margin:.5rem;padding:1rem 2rem;min-height:100px}
+#header{margin-left:1rem;padding:calc(var(--global--spacing-vertical) / 2);min-height:100px}
 .site-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;-ms-flex-wrap:wrap;flex-wrap:wrap;row-gap:var(--global--spacing-vertical)}
 .wp-custom-logo .site-header{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .site-branding{color:var(--branding--color-text);margin-right:140px}
@@ -374,11 +374,12 @@ hr.wp-block-separator.is-style-dots:before{color:var(--separator--border-color);
 a.custom-logo-link{text-decoration:none}
 .has-background-white a.custom-logo-link:focus,.is-dark-theme a.custom-logo-link:focus{background:0}
 .site-title>a{-webkit-text-decoration-color:var(--global--color-secondary);text-decoration-color:var(--global--color-secondary)}
-#site-title h1{margin:.5rem}
+#site-title{margin-left:calc(var(--global--spacing-vertical) / 2)}
+#site-title h1{margin-top:calc(var(--global--spacing-vertical) / 1);border-bottom:1px solid var(--global--color-primary)}
 #site-title h1>a,#site-title h1>a:visited{color:var(--global--color-header-dark);font-family:var(--heading--font-family2);font-weight:var(--heading--font-weight-strong);text-decoration:none}
-#site-title #site-description{margin:.5rem;color:var(--global--color-black);font-weight:var(--heading--font-weight)}
-.site-logo{margin:calc(var(--global--spacing-vertical) / 2) 0}
-.site-header>.site-logo{width:100%;padding-bottom:calc(var(--global--spacing-vertical) * 1.5);border-bottom:1px solid;text-align:center}
+#site-title #site-description{color:var(--global--color-black);font-weight:var(--heading--font-weight)}
+.site-logo{margin:calc(var(--global--spacing-vertical) / 2)}
+.site-header>.site-logo{width:100%;padding-bottom:calc(var(--global--spacing-vertical) * 1.5);text-align:center}
 .site-logo .custom-logo{margin-left:auto;margin-right:auto;max-width:var(--branding--logo--max-width-mobile);max-height:var(--branding--logo--max-height-mobile);height:auto;display:inline-block;width:auto}
 #wrapper{margin:0 auto;padding:0;background-color:var(--global--color-background);width:100%;min-height:100%}
 .coming-soon{text-align:center}

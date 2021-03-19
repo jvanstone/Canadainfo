@@ -507,12 +507,7 @@ function canada_info_scripts() {
 	wp_enqueue_script( 'Popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'Javascript', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'top', get_stylesheet_directory_uri() . '/assets/js/top.js', array(), wp_get_theme()->get( 'Version' ), true );
-	// wp_enqueue_script( 'star-rating', get_stylesheet_directory_uri() . '/jquery-bar-rating-master/jquery.barrating.js', array(), wp_get_theme()->get( 'Version' ), true );   Hiding this.
 
-	// Remove unwanted stylesheets that are part of the basic WordPress build.
-	// wp_dequeue_style( 'wp-block-library' ); .
-	// wp_dequeue_style( 'wp-block-library-theme' ); .
-	// wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS.
 }
 add_action( 'wp_enqueue_scripts', 'canada_info_scripts' );
 
@@ -648,7 +643,7 @@ function canada_info_non_latin_languages() {
 	if ( $custom_css ) {
 		wp_add_inline_style( 'canada-info-style', $custom_css );
 	}
-} 
+}
 add_action( 'wp_enqueue_scripts', 'canada_info_non_latin_languages' );
 
 // SVG Icons class.
