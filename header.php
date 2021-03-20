@@ -31,4 +31,3 @@
 
 	<!-- <div id="content" class="site-content"> -->
 		<!-- <div id="primary" class="content-area"> -->
-		<main>

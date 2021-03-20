@@ -133,9 +133,9 @@
 				padding-top: var(--global--spacing-vertical);
 				padding-right: var(--global--spacing-horizontal);
 
-				&:last-child {
+			
 					padding-bottom: var(--global--spacing-vertical);
-				}
+			
 			}
 
 			// This is using a non-standard media query because it is directly overriding the gutenberg-provided widths.

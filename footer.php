@@ -12,7 +12,7 @@
  */
 
 ?>
-</main> <!-- End #Main -->
+
 		<footer id="colophon" class="site-footer no-print" role="contentinfo">
 			<button onclick="topFunction()" id="goTop" title="Go to top"><i class="fas fa-arrow-up"></i><br>Top</button>
 			<?php if ( has_nav_menu( 'footer' ) ) : ?>
