@@ -1,6 +1,6 @@
 
 #header {  
-    margin-left: 1rem;
+    margin: 0 auto;
     padding: calc(var(--global--spacing-vertical) / 2); // 20px
     min-height: 100px; 
 	max-width: 99%;
@@ -245,7 +245,7 @@ a.custom-logo-link {
 	margin: 0 auto;
 	padding: 0;
 	background-color: var(--global--color-background);    
-	width: 100%;
+	//width: 100%;
 	min-height: 100%;
 }
 
