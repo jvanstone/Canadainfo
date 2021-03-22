@@ -15,6 +15,9 @@
 		{
 			"name": "crossword-plugin",
 			"path": "../../plugins/crossword-plugin"
+		},
+		{
+			"path": "../../plugins/star-rating"
 		}
 	],
 	"settings": {
