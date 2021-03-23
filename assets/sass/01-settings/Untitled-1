@@ -1,0 +1,42 @@
+
+<!-- wp:paragraph {"className":"btn btn-primary"} -->
+<p class="btn btn-primary"><a class="btn" data-toggle="modal" role="button" href="#contactJeannie">Contact Us!</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div class="modal fade" id="contactJeannie">
+<div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+        	<h4 class="modal-title">Contact Health Jeannie!</h4>
+			<button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+<!-- Modal body -->
+        <div class="modal-body">
+
+<!-- wp:jetpack/contact-form {"subject":"Thanks for contacting Health Jeannie!","to":"admin@healthjeannie.ca,jean@healthjeannie.ca"} -->
+<!-- wp:jetpack/field-name {"required":true} /-->
+
+<!-- wp:jetpack/field-email {"required":true} /-->
+
+<!-- wp:jetpack/field-telephone {"required":true} /-->
+
+<!-- wp:jetpack/field-text {"label":"Country"} /-->
+
+<!-- wp:jetpack/field-textarea {"label":"How may we help you?"} /-->
+
+<!-- wp:jetpack/button {"element":"button","text":"Contact Us"} /-->
+<!-- /wp:jetpack/contact-form -->	
+		</div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<!-- /wp:html -->

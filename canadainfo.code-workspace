@@ -23,6 +23,11 @@
 	"settings": {
 		"phpcs.enable": true,
     	"phpcs.standard": "WordPress",
-    	"phpcs.autoConfigSearch": false,
+		"phpcs.autoConfigSearch": false,
+		"workbench.colorCustomizations" : {
+			"terminal.foreground" : "#6485f4",
+			"terminal.background" : "#262a31"
+		}
+	
 	}
 }

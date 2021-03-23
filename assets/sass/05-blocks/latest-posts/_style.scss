@@ -132,9 +132,7 @@
 				margin: 0;
 				padding-top: var(--global--spacing-vertical);
 				padding-right: var(--global--spacing-horizontal);
-
-			
-					padding-bottom: var(--global--spacing-vertical);
+				padding-bottom: var(--global--spacing-vertical);
 			
 			}
 
@@ -174,5 +172,9 @@
 	img {
 		width: 150px !important;
 		height: auto;
+	}
+
+	li {
+		padding-bottom:  var(--global--spacing-horizontal);
 	}
 }
