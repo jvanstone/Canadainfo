@@ -1,5 +1,6 @@
 .wp-block-latest-posts {
 	padding-left: 0;
+	
 
 	// Vertical margins logic
 	&:not(.is-grid) > li {
@@ -21,6 +22,7 @@
 
 		> li {
 			margin-bottom: var(--global--spacing-vertical);
+			padding-bottom: 2rem;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -63,6 +65,9 @@
 		font-weight: var(--heading--font-weight);
 		line-height: var(--global--line-height-heading);
 		margin-bottom: calc(0.333 * var(--global--spacing-vertical));
+		// make the link not clickable.
+		pointer-events: none;
+		cursor: default;
 	}
 
 	// Post author
@@ -90,7 +95,7 @@
 		font-family: var(--latest-posts--description-font-family);
 		font-size: var(--latest-posts--description-font-size);
 		line-height: var(--global--line-height-body);
-		margin-top: calc(0.666 * var(--global--spacing-vertical));
+	
 	}
 
 	// Utility classes
@@ -172,9 +177,5 @@
 	img {
 		width: 150px !important;
 		height: auto;
-	}
-
-	li {
-		padding-bottom:  var(--global--spacing-horizontal);
 	}
 }
