@@ -17,8 +17,7 @@ get_header();
 
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
-
-<main id="content" class="guide_width">
+<article>
 		<header class="entry-header">
 			<h1 class="entry-title">Canada Info Issues Available</h1>
 		</header><!-- .entry-header -->
@@ -64,7 +63,5 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 		</div>
 
 		<?php endif; ?>
-
-		</main>
 
 <?php get_footer(); ?>

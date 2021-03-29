@@ -11,8 +11,6 @@
 
 get_header(); ?>
 
-<main id="content">
-
 <?php
 /* Start the Loop */
 while ( have_posts() ) :
@@ -26,6 +24,6 @@ while ( have_posts() ) :
 endwhile; // End of the loop.
 
 ?>
-</main>
+
 
 <?php get_footer(); ?>

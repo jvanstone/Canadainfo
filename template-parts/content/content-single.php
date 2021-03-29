@@ -32,9 +32,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer default-max-width">
-		<?php canada_info_entry_meta_footer(); ?>
-	</footer><!-- .entry-footer -->
+	
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
 		<?php get_template_part( 'template-parts/post/author-bio' ); ?>

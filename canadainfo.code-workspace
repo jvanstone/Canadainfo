@@ -15,9 +15,6 @@
 		{
 			"name": "crossword-plugin",
 			"path": "../../plugins/crossword-plugin"
-		},
-		{
-			"path": "../../plugins/star-rating"
 		}
 	],
 	"settings": {
@@ -27,7 +24,8 @@
 		"workbench.colorCustomizations" : {
 			"terminal.foreground" : "#6485f4",
 			"terminal.background" : "#262a31"
-		}
+		},
+		"liveServer.settings.multiRootWorkspaceName": "canadian-guide"
 	
 	}
 }

@@ -12,7 +12,8 @@
  */
 
 ?>
-
+		</div><!-- #primary -->
+	</div><!-- #content -->
 		<footer id="colophon" class="site-footer no-print" role="contentinfo">
 			<button onclick="topFunction()" id="goTop" title="Go to top"><i class="fas fa-arrow-up"></i><br>Top</button>
 			<?php if ( has_nav_menu( 'footer' ) ) : ?>
@@ -63,7 +64,6 @@
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 		<?php wp_footer(); ?>  
-   
 	</div> <!-- End Wrapper -->
 </body>
 </html>
