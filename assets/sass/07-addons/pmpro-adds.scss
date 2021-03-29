@@ -159,10 +159,16 @@ ul.latest-issue {
 
 .pmpro_content_message {
     padding: 20px;
-    //border: var(--global-border);
+    border: solid 1px var(--global-border);
     height: 400px;
+	background-color: var(--global--color-purple);
     //font-size: $h2-size;
     line-height: var(--global--line-height-body);
+	text-align: center;
+	p {
+		font-size: var(--global--font-size-md);
+	}
+
 }
 
 

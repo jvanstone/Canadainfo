@@ -6,7 +6,7 @@ Theme URI: https://github.com/jvanstone/canadian-guide
 Author: Vanstone Online
 Author URI: https://vanstoneonline.com
 Description: Template for Job Canada - Canada Info
-Version: 2021.9
+Version: 2021.10
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
 Tags: one-column, custom-menu, featured-images, microformats, threaded-comments, translation-ready
@@ -671,7 +671,8 @@ ul.latest-issue li:last-child{width:100%;text-align:center}
 .pmpro_asterisk{display:none}
 .pmpro_level_price{display:none}
 .pmpro_actionlinks>#pmpro_actionlink-cancel{display:none}
-.pmpro_content_message{padding:20px;height:400px;line-height:var(--global--line-height-body)}
+.pmpro_content_message{padding:20px;border:solid 1px var(--global-border);height:400px;background-color:var(--global--color-purple);line-height:var(--global--line-height-body);text-align:center}
+.pmpro_content_message p{font-size:var(--global--font-size-md)}
 #pmpro_payment_method span.gateway_paypalexpress,#pmpro_payment_method span.gateway_paypal{margin:.5rem}
 .pmpro_checkout>h3{margin:4rem 0;padding:1rem;background-color:#d9edf7;border:1px solid #bce8f1;border-radius:4px;color:#31708f;font-weight:400;line-height:1.5em;text-align:left}
 span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !important}
