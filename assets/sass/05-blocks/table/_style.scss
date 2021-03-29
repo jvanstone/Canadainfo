@@ -14,11 +14,6 @@ table,
 		border: 1px solid;
 	}
 
-	#puzzle th, #puzzle td {
-		padding: 0;
-		border: 0;
-	}
-
 	&.is-style-regular .has-background,
 	&.is-style-stripes .has-background thead tr,
 	&.is-style-stripes .has-background tfoot tr,
