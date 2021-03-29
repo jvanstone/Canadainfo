@@ -6,7 +6,7 @@ Theme URI: https://github.com/jvanstone/canadian-guide
 Author: Vanstone Online
 Author URI: https://vanstoneonline.com
 Description: Template for Job Canada - Canada Info
-Version: 2021.8
+Version: 2021.9
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
 Tags: one-column, custom-menu, featured-images, microformats, threaded-comments, translation-ready
@@ -375,7 +375,7 @@ hr.wp-block-separator.is-style-dots:before{color:var(--separator--border-color);
 .wp-block-spacer{display:block;margin-bottom:0 !important;margin-top:0 !important}
 table,.wp-block-table{width:100%;min-width:240px;border-collapse:collapse}
 table th,.wp-block-table th{font-family:var(--global--font-secondary)}
-table td,table th,.wp-block-table td,.wp-block-table th{padding:calc(0.5 * var(--global--spacing-unit))}
+table td,table th,.wp-block-table td,.wp-block-table th{padding:0;border:0}
 table.is-style-regular .has-background,table.is-style-stripes .has-background thead tr,table.is-style-stripes .has-background tfoot tr,table.is-style-stripes .has-background tbody tr:nth-child(even),.wp-block-table.is-style-regular .has-background,.wp-block-table.is-style-stripes .has-background thead tr,.wp-block-table.is-style-stripes .has-background tfoot tr,.wp-block-table.is-style-stripes .has-background tbody tr:nth-child(even){color:var(--table--has-background-text-color)}
 table.is-style-stripes,.wp-block-table.is-style-stripes{border-color:var(--table--stripes-border-color)}
 table.is-style-stripes th,table.is-style-stripes td,.wp-block-table.is-style-stripes th,.wp-block-table.is-style-stripes td{border-width:0}
