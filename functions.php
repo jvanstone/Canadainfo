@@ -142,7 +142,19 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 				'unlink-homepage-logo' => false,
 			)
 		);
-
+		/**
+		 * Show a custom login message above the login form
+		 *
+		 */
+		function custom_login_message( $message ) {
+			if ( empty( $message ) ) {
+				return '<h2>CanadaInfo.org</h2>';
+			} 
+			else {
+				return $message;
+			}
+		}
+		add_filter( 'login_message', 'custom_login_message' );
 		/*****
 		 *
 		 * Create a custom background

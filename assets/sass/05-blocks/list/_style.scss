@@ -2,7 +2,7 @@ ul,
 ol {
 	font-family: var(--list--font-family);
 	margin: 0;
-	padding-left: calc(2 * var(--global--spacing-horizontal));
+	padding-left: var(--global--spacing-horizontal);
 
 	// Utility classes
 	&.aligncenter {
@@ -19,7 +19,7 @@ ol {
 
 ul {
 	//list-style-type: disc;
-	line-height: 2;
+	line-height: var(--global--line-height-body);
 }
 
 ol {

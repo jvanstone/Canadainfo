@@ -238,10 +238,10 @@ img{height:auto;max-width:100%;vertical-align:middle}
 .gallery-columns-9 .gallery-item{max-width:11.11%}
 .gallery-caption{display:block}
 figure.wp-caption a:focus img{outline-offset:2px}
-ul,ol{font-family:var(--list--font-family);margin:0;padding-left:calc(2 * var(--global--spacing-horizontal))}
+ul,ol{font-family:var(--list--font-family);margin:0;padding-left:var(--global--spacing-horizontal)}
 ul.aligncenter,ol.aligncenter{list-style-position:inside;padding:0}
 ul.alignright,ol.alignright{list-style-position:inside;text-align:right;padding:0}
-ul{line-height:2}
+ul{line-height:var(--global--line-height-body)}
 ol{list-style-type:decimal}
 dt{font-family:var(--definition-term--font-family);font-weight:normal !important}
 dd{margin:0;padding-left:calc(2 * var(--global--spacing-horizontal))}
@@ -625,7 +625,7 @@ ul.latest-issue li:last-child{width:100%;text-align:center}
 .pmpro_checkout>h3{margin:4rem 0;padding:1rem;background-color:#d9edf7;border:1px solid #bce8f1;border-radius:4px;color:#31708f;font-weight:400;line-height:1.5em;text-align:left}
 span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !important}
 .pmpro_checkout h3 span.pmpro_checkout-h3-msg{margin:1rem;font-size:12px;font-style:normal}
-.pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,#pmpro_account,.pmpro_change_password_wrap,.pmpro_login_wrap,.contact-form{margin:2rem;padding:2rem;border:1px solid #ddd;border-radius:5px}
+#pmpro_account,.pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,.pmpro_change_password_wrap,.pmpro_login_wrap,.contact-form{margin:2rem;padding:2rem;border:1px solid #ddd;border-radius:5px}
 #goTop{display:none;position:fixed;bottom:1rem;right:.5rem;z-index:99;border:0 solid var(--global--color-blue);outline:0;background-color:var(--global--color-background2);color:white;cursor:pointer;padding:1rem;border-radius:4px}
 #goTop:hover{background-color:#555}
 .province{margin:1rem auto;width:95%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
@@ -702,10 +702,7 @@ html,body,div,header,nav,article,figure,hr,main,section,footer{max-width:none}
 .is-IE.is-dark-theme .skip-link:focus{color:#21759b}
 .is-IE .navigation .nav-links{display:block}
 .is-IE .post-thumbnail .wp-post-image{min-width:auto}
-@media screen and (max-size:400px){.container-fluid{padding:0}
-#header{margin:.5rem;padding:.5rem}
-.pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,#pmpro_account,.pmpro_change_password_wrap{margin:0;padding:0;border:0 solid #ddd;border-radius:0}
-}@media(prefers-reduced-motion){*{-webkit-transition-delay:0s !important;transition-delay:0s !important;-webkit-transition-duration:0s !important;transition-duration:0s !important}
+@media(prefers-reduced-motion){*{-webkit-transition-delay:0s !important;transition-delay:0s !important;-webkit-transition-duration:0s !important;transition-duration:0s !important}
 }@media screen and (min-width:325px){h1{font-size:calc(20.736px + 12.192 * ((100vw - 325px) / 875))}
 h2{font-size:calc(20.736px + 12.192 * ((100vw - 325px) / 875))}
 h3,.card-header{font-size:calc(17.28px + 6.24 * ((100vw - 325px) / 875))}
@@ -843,6 +840,9 @@ body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .
 .lock-scrolling .site{position:fixed;max-width:100%;width:100%}
 .pagination .nav-short,.comments-pagination .nav-short{display:none}
 .is-IE.is-dark-theme.primary-navigation-open .primary-navigation>.primary-menu-container,.is-IE.is-dark-theme.primary-navigation-open .menu-button-container{background-color:#000}
+}@media screen and (max-width:400px){.container-fluid{padding:0}
+#header{margin:.5rem;padding:.5rem}
+#pmpro_account,.pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,.pmpro_change_password_wrap{margin:.5rem !important;padding:0;border:0 solid #ddd !important;border-radius:0}
 }@-webkit-keyframes canadainfo-close-button-transition{from{opacity:0}
 to{opacity:1}
 }@keyframes canadainfo-close-button-transition{from{opacity:0}

@@ -197,7 +197,6 @@ span.pmpro_checkout-h3-name {
 }
 
 
-
 .pmpro_checkout h3 span.pmpro_checkout-h3-msg {
     margin: 1rem;
     font-size: 12px;
@@ -208,7 +207,7 @@ span.pmpro_checkout-h3-name {
 	Subscriber Profile Edit
 ---------------------------------------*/
 
-.pmpro_member_profile_edit_wrap, .pmpro_confirmation_wrap, #pmpro_account, .pmpro_change_password_wrap, .pmpro_login_wrap, .contact-form {
+#pmpro_account, .pmpro_member_profile_edit_wrap, .pmpro_confirmation_wrap, .pmpro_change_password_wrap, .pmpro_login_wrap, .contact-form {
     margin: 2rem;
     padding: 2rem;
     border: 1px solid #ddd;
@@ -216,7 +215,9 @@ span.pmpro_checkout-h3-name {
 }
 
 
-@media screen and (max-size:400px) {
+/* Makes the screen fit very small mobile screens */
+
+@media screen and (max-width:400px) {
 
     .container-fluid { padding: 0;}
 
@@ -225,11 +226,10 @@ span.pmpro_checkout-h3-name {
         padding: .5rem;
     }
 
-    .pmpro_member_profile_edit_wrap, .pmpro_confirmation_wrap, #pmpro_account, .pmpro_change_password_wrap {
-
-        margin: 0rem;
+    #pmpro_account, .pmpro_member_profile_edit_wrap, .pmpro_confirmation_wrap,  .pmpro_change_password_wrap {
+        margin: .5rem !important;
         padding: 0rem;
-        border: 0px solid #ddd;
+        border: 0px solid #ddd!important;
         border-radius: 0px;
     }
 }
