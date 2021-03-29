@@ -6,7 +6,7 @@ Theme URI: https://github.com/jvanstone/canadian-guide
 Author: Vanstone Online
 Author URI: https://vanstoneonline.com
 Description: Template for Job Canada - Canada Info
-Version: 2021.7
+Version: 2021.8
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
 Tags: one-column, custom-menu, featured-images, microformats, threaded-comments, translation-ready
@@ -282,6 +282,36 @@ p.has-background{padding:var(--global--spacing-unit)}
 p.has-text-color a{color:var(--wp--style--color--link,var(--global--color-primary))}
 p{font-size:14.4px}
 pre.wp-block-preformatted{overflow-x:auto;white-space:pre}
+.wp-block-pullquote{padding:var(--global--spacing-unit);text-align:center;border-width:var(--pullquote--border-width);border-bottom-style:solid;border-top-style:solid;color:currentColor;border-color:currentColor;position:relative}
+.wp-block-pullquote blockquote::before{color:currentColor;content:"\201C";display:none;position:relative;left:0;font-size:3rem;font-weight:500;line-height:1}
+.wp-block-pullquote p{font-family:var(--pullquote--font-family);font-size:var(--pullquote--font-size);font-style:var(--pullquote--font-style);font-weight:700;letter-spacing:var(--pullquote--letter-spacing);line-height:var(--pullquote--line-height);margin:0}
+.wp-block-pullquote a{color:currentColor}
+.wp-block-pullquote .wp-block-pullquote__citation,.wp-block-pullquote cite,.wp-block-pullquote footer{color:currentColor;display:block;font-size:var(--global--font-size-xs);font-style:var(--pullquote--font-style);text-transform:none}
+.wp-block-pullquote:not(.is-style-solid-color){background:0}
+.wp-block-pullquote.alignleft:not(.is-style-solid-color) blockquote:before,.wp-block-pullquote.alignleft:not(.is-style-solid-color) cite{text-align:center}
+.wp-block-pullquote.alignwide>p,.wp-block-pullquote.alignwide blockquote{max-width:var(--responsive--alignwide-width)}
+.wp-block-pullquote.alignfull:not(.is-style-solid-color)>p,.wp-block-pullquote.alignfull:not(.is-style-solid-color) blockquote{padding:0 calc(2 * var(--global--spacing-unit))}
+.wp-block-pullquote.is-style-solid-color{color:var(--pullquote--color-foreground);padding:calc(2.5 * var(--global--spacing-unit));border-width:var(--pullquote--border-width);border-style:solid;border-color:var(--pullquote--border-color)}
+.wp-block-pullquote.is-style-solid-color blockquote::before{text-align:left}
+.wp-block-pullquote.is-style-solid-color blockquote{margin:0;max-width:inherit}
+.wp-block-pullquote.is-style-solid-color blockquote p{font-size:var(--pullquote--font-size)}
+.wp-block-pullquote.is-style-solid-color .wp-block-pullquote__citation,.wp-block-pullquote.is-style-solid-color cite,.wp-block-pullquote.is-style-solid-color footer{color:currentColor}
+.wp-block-pullquote.is-style-solid-color.alignleft,.wp-block-pullquote.is-style-solid-color.alignright{padding:var(--global--spacing-unit)}
+.wp-block-pullquote.is-style-solid-color.alignleft blockquote,.wp-block-pullquote.is-style-solid-color.alignright blockquote{max-width:initial}
+.wp-block-quote{border-left:0}
+.wp-block-quote:before{display:none;content:"\201C";font-size:var(--quote--font-size);line-height:var(--quote--line-height);left:8px}
+.has-background .wp-block-quote .wp-block-quote__citation,[class*="background-color"] .wp-block-quote .wp-block-quote__citation,[style*="background-color"] .wp-block-quote .wp-block-quote__citation,.wp-block-cover[style*="background-image"] .wp-block-quote .wp-block-quote__citation,.has-background .wp-block-quote cite,[class*="background-color"] .wp-block-quote cite,[style*="background-color"] .wp-block-quote cite,.wp-block-cover[style*="background-image"] .wp-block-quote cite,.has-background .wp-block-quote footer,[class*="background-color"] .wp-block-quote footer,[style*="background-color"] .wp-block-quote footer,.wp-block-cover[style*="background-image"] .wp-block-quote footer{color:currentColor}
+.wp-block-quote.has-text-align-right{margin:var(--global--spacing-vertical) var(--global--spacing-horizontal) var(--global--spacing-vertical) auto;padding-right:0;border-right:0}
+.wp-block-quote.has-text-align-right:before{display:none}
+.wp-block-quote.has-text-align-right p:before{content:"\201D";font-size:var(--quote--font-size);font-weight:normal;line-height:var(--quote--line-height);margin-right:5px}
+.wp-block-quote.has-text-align-center{margin:var(--global--spacing-vertical) auto}
+.wp-block-quote.has-text-align-center:before{display:none}
+.wp-block-quote.is-large,.wp-block-quote.is-style-large{padding-left:0;padding-right:0;margin-top:var(--global--spacing-vertical);margin-bottom:var(--global--spacing-vertical)}
+.wp-block-quote.is-large p,.wp-block-quote.is-style-large p{font-size:var(--quote--font-size-large);font-style:var(--quote--font-style-large);line-height:var(--quote--line-height-large)}
+.wp-block-quote.is-large:before,.wp-block-quote.is-style-large:before{font-size:var(--quote--font-size-large);line-height:var(--quote--line-height-large);left:calc(-1 * var(--global--spacing-horizontal))}
+.wp-block-quote.is-large.has-text-align-right:before,.wp-block-quote.is-style-large.has-text-align-right:before{display:none}
+.wp-block-quote.is-large.has-text-align-right p:before,.wp-block-quote.is-style-large.has-text-align-right p:before{content:"\201D";font-size:var(--quote--font-size-large);font-weight:normal;line-height:var(--quote--line-height-large);margin-right:10px}
+.wp-block-quote.is-large .wp-block-quote__citation,.wp-block-quote.is-large cite,.wp-block-quote.is-large footer,.wp-block-quote.is-style-large .wp-block-quote__citation,.wp-block-quote.is-style-large cite,.wp-block-quote.is-style-large footer{color:var(--global--color-primary);font-size:var(--global--font-size-sm)}
 .wp-block-rss{padding-left:0}
 .wp-block-rss>li{list-style:none}
 .wp-block-rss:not(.is-grid)>li{margin-top:calc(1.666 * var(--global--spacing-vertical));margin-bottom:calc(1.666 * var(--global--spacing-vertical))}
@@ -343,10 +373,32 @@ hr.wp-block-separator.is-style-dots:before{color:var(--separator--border-color);
 .wp-block-social-links.is-style-canadainfo-social-icons-color a{color:var(--global--color-primary)}
 .wp-block-social-links.is-style-canadainfo-social-icons-color .wp-social-link{background:0}
 .wp-block-spacer{display:block;margin-bottom:0 !important;margin-top:0 !important}
+table,.wp-block-table{width:100%;min-width:240px;border-collapse:collapse}
+table th,.wp-block-table th{font-family:var(--heading--font-family)}
+table td,table th,.wp-block-table td,.wp-block-table th{padding:calc(0.5 * var(--global--spacing-unit));border:1px solid}
+table.is-style-regular .has-background,table.is-style-stripes .has-background thead tr,table.is-style-stripes .has-background tfoot tr,table.is-style-stripes .has-background tbody tr:nth-child(even),.wp-block-table.is-style-regular .has-background,.wp-block-table.is-style-stripes .has-background thead tr,.wp-block-table.is-style-stripes .has-background tfoot tr,.wp-block-table.is-style-stripes .has-background tbody tr:nth-child(even){color:var(--table--has-background-text-color)}
+table.is-style-stripes,.wp-block-table.is-style-stripes{border-color:var(--table--stripes-border-color)}
+table.is-style-stripes th,table.is-style-stripes td,.wp-block-table.is-style-stripes th,.wp-block-table.is-style-stripes td{border-width:0}
+table.is-style-stripes tbody tr:nth-child(odd),.wp-block-table.is-style-stripes tbody tr:nth-child(odd){background-color:var(--table--stripes-background-color)}
+table.wp-calendar-table td,table.wp-calendar-table th{background:transparent;border:0;text-align:center;line-height:2;vertical-align:middle;word-break:normal}
+table.wp-calendar-table th{font-weight:bold}
+table.wp-calendar-table thead,table.wp-calendar-table tbody{color:currentColor;border:1px solid}
+table.wp-calendar-table caption{font-weight:bold;text-align:left;margin-bottom:var(--global--spacing-unit);color:currentColor}
+.wp-calendar-nav{text-align:left;margin-top:calc(var(--global--spacing-unit) / 2)}
+.wp-calendar-nav svg{height:1em;vertical-align:middle}
+.wp-calendar-nav svg path{fill:currentColor}
+.wp-calendar-nav .wp-calendar-nav-next{float:right}
 .wp-block-tag-cloud.alignfull{padding-left:var(--global--spacing-unit);padding-right:var(--global--spacing-unit)}
 .wp-block-verse{font-family:var(--entry-content--font-family)}
 .wp-block-video figcaption{color:var(--global--color-primary);font-size:var(--global--font-size-xs);margin-top:calc(0.5 * var(--global--spacing-unit));margin-bottom:var(--global--spacing-unit);text-align:center}
 *>figure>video{max-width:unset;width:100%;vertical-align:middle}
+:root .is-extra-small-text,:root .has-extra-small-font-size{font-size:var(--global--font-size-xs)}
+:root .is-small-text,:root .has-small-font-size{font-size:var(--global--font-size-sm)}
+:root .is-regular-text,:root .has-regular-font-size,:root .is-normal-font-size,:root .has-normal-font-size,:root .has-medium-font-size{font-size:var(--global--font-size-base)}
+:root .is-large-text,:root .has-large-font-size{font-size:var(--global--font-size-lg);line-height:var(--global--line-height-heading)}
+:root .is-larger-text,:root .has-larger-font-size,:root .is-extra-large-text,:root .has-extra-large-font-size{font-size:var(--global--font-size-xl);line-height:var(--global--line-height-heading)}
+:root .is-huge-text,:root .has-huge-font-size{font-size:var(--global--font-size-xxl);line-height:var(--global--line-height-heading);font-weight:var(--heading--font-weight-page-title)}
+:root .is-gigantic-text,:root .has-gigantic-font-size{font-size:var(--global--font-size-xxxl);line-height:var(--global--line-height-heading);font-weight:var(--heading--font-weight-page-title)}
 .alignleft{text-align:left;margin-top:0}
 .entry-content>.alignleft{max-width:var(--responsive--aligndefault-width)}
 .aligncenter{clear:both;display:block;float:none;margin-right:auto;margin-left:auto;text-align:center}
@@ -806,6 +858,14 @@ p{font-size:16.8px}
 }@media only screen and (max-width:481px){blockquote{padding:calc(0.5 * var(--global--spacing-horizontal))}
 blockquote:before{left:0}
 .entry-content>.wp-block-image>.alignleft,.entry-content>.wp-block-image>.alignright{margin-left:0;margin-right:0}
+.wp-block-quote.is-large,.wp-block-quote.is-style-large{padding-left:var(--global--spacing-horizontal)}
+.wp-block-quote.is-large:before,.wp-block-quote.is-style-large:before{left:0}
+.wp-block-quote.is-large.has-text-align-right,.wp-block-quote.is-style-large.has-text-align-right{padding-left:0;padding-right:var(--global--spacing-horizontal)}
+.wp-block-quote.is-large.has-text-align-right:before,.wp-block-quote.is-style-large.has-text-align-right:before{right:0}
+.wp-block-quote.is-large.has-text-align-center,.wp-block-quote.is-style-large.has-text-align-center{padding-left:0;padding-right:0}
+.wp-block-quote.has-text-align-right{padding-left:0;padding-right:calc(0.5 * var(--global--spacing-horizontal))}
+.wp-block-quote.has-text-align-right:before{right:0}
+.wp-block-quote.has-text-align-center{padding-left:0;padding-right:0}
 .wp-block-spacer[style]{height:var(--global--spacing-unit) !important}
 .site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo{position:absolute;padding-top:calc(0.5 * var(--global--spacing-vertical));margin-top:0;top:var(--global--admin-bar--height)}
 .primary-navigation-open .site-header.has-logo:not(.has-title-and-tagline).has-menu .site-logo{display:none}
@@ -843,6 +903,7 @@ body:not(.primary-navigation-open) .site-header.has-logo.has-title-and-tagline .
 }@media screen and (max-width:400px){.container-fluid{padding:0}
 #header{margin:.5rem;padding:.5rem}
 #pmpro_account,.pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,.pmpro_change_password_wrap{margin:.5rem !important;padding:0;border:0 solid #ddd !important;border-radius:0}
+}@media screen and (max-width:360px){.table{margin:0 auto;font-size:.75rem !important}
 }@-webkit-keyframes canadainfo-close-button-transition{from{opacity:0}
 to{opacity:1}
 }@keyframes canadainfo-close-button-transition{from{opacity:0}

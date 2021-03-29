@@ -83,12 +83,10 @@ table.wp-calendar-table {
 	}
 }
 
-/***********
-
- Table Stylings  >> Beyond Bootstrap
-
-**************/
-.table { 
-    margin: 0 auto;
-    width: 95%;
+@media screen and (max-width: 360px) {
+	.table { 
+		margin: 0 auto;	
+		font-size: .75rem !important;
+	
+	}
 }
