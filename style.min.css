@@ -6,7 +6,7 @@ Theme URI: https://github.com/jvanstone/canadian-guide
 Author: Vanstone Online
 Author URI: https://vanstoneonline.com
 Description: Template for Job Canada - Canada Info
-Version: 2021.6
+Version: 2021.7
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
 Tags: one-column, custom-menu, featured-images, microformats, threaded-comments, translation-ready
@@ -172,7 +172,7 @@ h2,.h2{margin:2rem 0;padding:.313rem 1rem;background-color:var(--global--color-h
 h2,.h2{font-size:20.736px}
 h3,.h3{font-size:var(--heading--font-size-h3);letter-spacing:var(--heading--letter-spacing-h3);line-height:var(--heading--line-height-h3);font-family:var(--heading--font-family2)}
 h3,.h3{font-size:17.28px}
-.entry-content h3{margin:1rem;font-weight:500;color:#1f2a32}
+.entry-content h3{margin:1rem;padding:0 calc(0.2 * var(--global--spacing-horizontal));font-weight:500;color:#1f2a32}
 h4,.h4{font-size:var(--heading--font-size-h4);font-weight:var(--heading--font-weight-strong);letter-spacing:var(--heading--letter-spacing-h4);line-height:var(--heading--line-height-h4);font-family:var(--heading--font-family2)}
 h5,.h5{font-size:var(--heading--font-size-h5);font-weight:var(--heading--font-weight-strong);letter-spacing:var(--heading--letter-spacing-h5);line-height:var(--heading--line-height-h5)}
 h6,.h6{font-size:var(--heading--font-size-h6);font-weight:var(--heading--font-weight-strong);letter-spacing:var(--heading--letter-spacing-h6);line-height:var(--heading--line-height-h6);font-family:var(--heading--font-family2)}
