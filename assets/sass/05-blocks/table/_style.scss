@@ -10,8 +10,13 @@ table,
 
 	td,
 	th {
-		padding: 0;
+		padding: calc(0.5 * var(--global--spacing-unit));
 		border: 1px solid;
+	}
+
+	#puzzle th {
+		padding: 0;
+		border: 0;
 	}
 
 	&.is-style-regular .has-background,
