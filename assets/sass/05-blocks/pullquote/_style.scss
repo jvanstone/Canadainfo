@@ -1,5 +1,5 @@
 .wp-block-pullquote {
-	padding: calc(2 * var(--global--spacing-unit)) 0;
+	padding: var(--global--spacing-unit);
 	text-align: center;
 	border-width: var(--pullquote--border-width);
 	border-bottom-style: solid;
@@ -76,7 +76,7 @@
 		border-color: var(--pullquote--border-color);
 
 		@media (min-width: 600px) {
-			padding: calc(5 * var(--global--spacing-unit));
+			//padding: calc(5 * var(--global--spacing-unit));
 		}
 
 		blockquote::before {

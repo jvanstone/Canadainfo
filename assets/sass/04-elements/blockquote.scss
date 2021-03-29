@@ -1,6 +1,6 @@
 blockquote {
-    margin: var(--global--spacing-vertical) 0 var(--global--spacing-vertical) var(--global--spacing-horizontal);
-	padding: 2rem;
+    margin: calc(.2 * var(--global--spacing-vertical))	;
+	padding: calc(2 * var(--global--spacing-vertical));
 	position: relative;
     background-color: var(--global--color-background2);
 
@@ -73,7 +73,7 @@ blockquote {
 	}
 
 	@include media(mobile-only) {
-		padding-left: calc(0.5 * var(--global--spacing-horizontal));
+		padding: calc(0.5 * var(--global--spacing-horizontal));
 
 		&:before {
 			left: 0;
