@@ -52,7 +52,8 @@ h1.entry-title {
 
 	p {
 		word-wrap: break-word;
-		margin: var(--global--spacing-vertical);
+		margin: calc(.7 * var(--global--spacing-vertical)) var(--global--spacing-vertical);
+		padding: 0 calc(0.2 * var(--global--spacing-horizontal))
 	}
 
 	// Overwrite iframe embeds that have inline styles.
