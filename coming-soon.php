@@ -40,17 +40,16 @@
 		<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<header>
-				<h1 class="coming-soon">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-				</h1>
-			</header>
-		</article>
-	</main>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header>
+					<h1 class="coming-soon">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+					</h1>
+				</header>
+			</article>
+		</main>
+		</div>
 	</div>
-	</div>
-   
 	</div> <!-- End Wrapper -->
 </body>
 </html>
