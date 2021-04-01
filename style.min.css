@@ -684,7 +684,7 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 .province .list-inline-item{margin:1rem;padding-left:1rem;width:20rem;height:2rem;border-bottom:var(--global-border);-webkit-box-shadow:2px 5px #888;box-shadow:2px 5px #888;position:relative}
 .province .list-inline-item::after{width:0;height:0;position:absolute;top:0;right:50px}
 .canadaguide-map{-webkit-box-flex:100%;-ms-flex:100%;flex:100%;height:auto;background-color:white}
-#canadian-politic-parties{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;background-color:white;width:100%;text-align:center;font-weight:500}
+#canadian-politic-parties{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;width:100%;text-align:center;font-weight:500}
 .party{margin:1rem;-webkit-box-flex:30%;-ms-flex:30%;flex:30%;min-width:10em;min-height:5em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-line-pack:distribute;align-content:space-around}
 .party-logo{margin:5px auto;margin-bottom:8px;height:3em;text-align:center;clear:both}
 .party p{margin:5px;text-align:center}
