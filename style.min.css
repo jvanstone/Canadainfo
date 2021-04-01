@@ -33,7 +33,7 @@ p,p>a,ul,table{font-size:14.4px}
 .admin-bar{--global--admin-bar--height:32px}
 :root{--responsive--spacing-horizontal:calc(2 * var(--global--spacing-horizontal) * 0.6);--responsive--aligndefault-width:calc(100vw - var(--responsive--spacing-horizontal));--responsive--alignwide-width:calc(100vw - var(--responsive--spacing-horizontal));--responsive--alignfull-width:100%;--responsive--alignright-margin:var(--global--spacing-horizontal);--responsive--alignleft-margin:var(--global--spacing-horizontal)}
 .default-max-width,.entry-content>*:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),*[class*="inner-container"]>*:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),.entry-content .wp-audio-shortcode,.post-thumbnail{max-width:var(--responsive--aligndefault-width);margin-left:auto;margin-right:auto}
-.wide-max-width,#content,.alignwide,#header,.site-header,.col-12,.post-navigation,.pagination,.comments-pagination,.widget-area{max-width:var(--responsive--alignwide-width);margin-left:auto;margin-right:auto}
+.wide-max-width,.alignwide,.post-navigation,.pagination,.comments-pagination,.widget-area{max-width:var(--responsive--alignwide-width);margin-left:auto;margin-right:auto}
 .full-max-width,.wp-block-group .wp-block-group__inner-container>*.alignfull,.alignfull{max-width:var(--responsive--alignfull-width);width:var(--responsive--alignfull-width);margin-left:auto;margin-right:auto}
 .alignwide [class*="inner-container"]>.alignwide,.alignfull [class*="inner-container"]>.alignwide,.entry-header .post-thumbnail,.singular .post-thumbnail{margin-left:auto;margin-right:auto;width:var(--responsive--alignwide-width);max-width:var(--responsive--alignfull-width)}
 .site-header,.site-main,.widget-area,.site-footer{padding-top:var(--global--spacing-vertical);padding-bottom:var(--global--spacing-vertical);margin-left:auto;margin-right:auto}
@@ -186,7 +186,7 @@ h6,.h6{font-size:var(--heading--font-size-h6);font-weight:var(--heading--font-we
 img{height:auto;max-width:100%;vertical-align:middle}
 .wp-block-image.is-style-canadainfo-border img,.wp-block-image.is-style-canadainfo-image-frame img{border:calc(3 * var(--separator--height)) solid var(--global--color-border)}
 .wp-block-image.is-style-canadainfo-image-frame img{padding:var(--global--spacing-unit)}
-.header-image{width:100%;margin-left:auto;margin-right:auto;max-width:1000px;border:2px solid rgba(0,0,0,0.228)}
+.header-image{width:100%;margin-left:auto;margin-right:auto;border:2px solid rgba(0,0,0,0.228)}
 .img-fluid.wp-post-image{margin:0 auto}
 .attachment-feature{width:100%;height:auto}
 .logo{width:100px;height:100px;margin:0 auto}
