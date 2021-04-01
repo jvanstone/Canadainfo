@@ -4,7 +4,7 @@
 header *,
 main *,
 footer * {
-	@extend %responsive-alignwide-width;
+	max-width: var(--global--spacing-measure);
 }
 
 html,
