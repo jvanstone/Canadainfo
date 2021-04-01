@@ -226,7 +226,6 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 article { 
     margin: 0;
     padding: .5rem 1rem;
-	@extend %responsive-alignwide-width;
 }
 
 
