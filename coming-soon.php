@@ -36,7 +36,10 @@
 			<h3 id="site-description"><?php bloginfo( 'description' ); ?></h3>
 		</div>  
 	</header>
-	<main>
+	<div id="content" class="site-content">
+		<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header>
 				<h1 class="coming-soon">
@@ -45,6 +48,8 @@
 			</header>
 		</article>
 	</main>
+	</div>
+	</div>
    
 	</div> <!-- End Wrapper -->
 </body>
