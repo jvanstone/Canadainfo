@@ -46,7 +46,7 @@ h1.entry-title {
 .entry-content,
 .entry-summary {
 	font-family: var(--entry-content--font-family);
-	@extend %responsive-alignwide-width;
+	
 }
 
 .entry-content {
