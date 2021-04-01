@@ -186,7 +186,7 @@ h6,.h6{font-size:var(--heading--font-size-h6);font-weight:var(--heading--font-we
 img{height:auto;max-width:100%;vertical-align:middle}
 .wp-block-image.is-style-canadainfo-border img,.wp-block-image.is-style-canadainfo-image-frame img{border:calc(3 * var(--separator--height)) solid var(--global--color-border)}
 .wp-block-image.is-style-canadainfo-image-frame img{padding:var(--global--spacing-unit)}
-.header-image{width:100%;max-width:1000px;border:2px solid rgba(0,0,0,0.228)}
+.header-image{width:100%;margin-left:auto;margin-right:auto;max-width:1000px;border:2px solid rgba(0,0,0,0.228)}
 .img-fluid.wp-post-image{margin:0 auto}
 .attachment-feature{width:100%;height:auto}
 .logo{width:100px;height:100px;margin:0 auto}
