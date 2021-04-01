@@ -681,7 +681,7 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 #goTop{display:none;position:fixed;bottom:1rem;right:.5rem;z-index:99;border:0 solid var(--global--color-blue);outline:0;background-color:var(--global--color-background2);color:white;cursor:pointer;padding:1rem;border-radius:4px}
 #goTop:hover{background-color:#555}
 .province{margin:1rem auto;width:95%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
-.province .list-inline-item{margin:1rem;padding-left:1rem;width:20rem;height:2rem;border-bottom:var(--global-border);-webkit-box-shadow:2px 5px #888;box-shadow:2px 5px #888;position:relative}
+.province .list-inline-item{margin:1rem;padding-left:1rem;width:15rem;height:2rem;border-bottom:var(--global-border);-webkit-box-shadow:2px 5px #888;box-shadow:2px 5px #888;position:relative}
 .province .list-inline-item::after{width:0;height:0;position:absolute;top:0;right:50px}
 .canadaguide-map{-webkit-box-flex:100%;-ms-flex:100%;flex:100%;height:auto;background-color:white}
 #canadian-politic-parties{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;background-color:rgba(255,255,255,0);width:100%;text-align:center;font-weight:500}
