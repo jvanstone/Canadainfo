@@ -46,6 +46,7 @@ h1.entry-title {
 .entry-content,
 .entry-summary {
 	font-family: var(--entry-content--font-family);
+	@extend %responsive-alignwide-width;
 }
 
 .entry-content {
@@ -225,6 +226,7 @@ body:not(.single) .site-main > article:last-of-type .entry-footer {
 article { 
     margin: 0;
     padding: .5rem 1rem;
+	@extend %responsive-alignwide-width;
 }
 
 

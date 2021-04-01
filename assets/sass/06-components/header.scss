@@ -1,9 +1,10 @@
 
-#header {  
+#header { 
+	@extend %responsive-alignwide-width;
     margin: 0 auto;
     padding: calc(var(--global--spacing-vertical) / 2); // 20px
     min-height: 100px; 
-	max-width: 99%;
+	
 }
 
 // Site header
@@ -255,4 +256,5 @@ a.custom-logo-link {
 
 .col-12 {
 	padding: 0;
+	@extend %responsive-alignwide-width;
 }

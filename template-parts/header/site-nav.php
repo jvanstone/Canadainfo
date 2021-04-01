@@ -22,11 +22,12 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<?php
 				// make wp_mav_menu use bootstrap.
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'menu_class'     => 'navbar-nav',
-					'add_li_class'   => 'nav-item col-md-4',
-					'container'      => false,
+				wp_nav_menu(
+					array(
+						'theme_location' => 'primary',
+						'menu_class'     => 'navbar-nav',
+						'add_li_class'   => 'nav-item col-md-4',
+						'container'      => false,
 					)
 				);
 				?>
