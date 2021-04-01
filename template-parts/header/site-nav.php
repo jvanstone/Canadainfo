@@ -10,7 +10,7 @@
 
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
 	<div class="col-12 no-print">
-		<img src="<?php header_image(); ?>" class=".img-fluid header-image" alt="<?php echo get_bloginfo( 'name', 'canada-info' ); ?>" />
+		<img src="<?php header_image(); ?>" class="img-fluid header-image" alt="<?php echo get_bloginfo( 'name', 'canada-info' ); ?>" />
 
 		<!-- Top Navigation Menu -->
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark no-print">
