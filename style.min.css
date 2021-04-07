@@ -245,11 +245,6 @@ ul{line-height:var(--global--line-height-body)}
 ol{list-style-type:decimal}
 dt{font-family:var(--definition-term--font-family);font-weight:normal !important}
 dd{margin:0;padding-left:calc(2 * var(--global--spacing-horizontal))}
-ul.list-box{display:-webkit-box;display:-ms-flexbox;display:flex;margin:10px auto;padding:0;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly;width:90%;list-style-type:none}
-ul.list-box li{margin:1rem;padding:1rem;min-width:12rem;-ms-flex-preferred-size:10rem;flex-basis:10rem;min-height:5rem;height:auto;border:var(--global-border);text-align:center;-webkit-box-shadow:2px 5px #888;box-shadow:2px 5px #888;line-height:var(--global--line-height-body)}
-ul.checkmark-list{margin:0 auto;padding:0;list-style:none;width:90;text-align:left}
-.checkmark-list li{padding-left:1rem}
-.checkmark-list li:before{margin:0 2px;padding:10px;content:'✓';color:var(--global--color-purple)}
 .wp-block-media-text.alignfull{margin-top:0;margin-bottom:0}
 .wp-block-media-text a:focus img{outline-offset:-1px}
 .wp-block-media-text .wp-block-media-text__content{padding:var(--global--spacing-horizontal)}
