@@ -193,10 +193,6 @@ function pmp_mailchimp_add() {
 		<h3>Join our mailing list.</h3>
 	
 		<div class="col-12 p-2 ml-5">
-					<input type="checkbox" class="form-check-input" id="additional_lists_1" name="additional_lists[]" value="8b5021832a">
-					<label class="form-check-label" for="additional_lists_1">Canada Information Guide</label><br>
-		</div>
-
         <?php
 				global $current_user;
 				if ( isset( $_REQUEST['additional_lists'] ) ) {
@@ -223,6 +219,7 @@ function pmp_mailchimp_add() {
 					<?php
 				}
 				?>
+            </div>
 	</div>
  <?php
 }
