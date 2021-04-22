@@ -762,3 +762,6 @@ function canada_info_add_ie_class() {
 	<?php
 }
 add_action( 'wp_footer', 'canada_info_add_ie_class' );
+
+
+include ('inc/pmpro-changes.php');
