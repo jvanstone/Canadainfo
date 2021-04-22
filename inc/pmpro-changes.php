@@ -179,4 +179,4 @@ function pmp_mailchimp_add() {
  <?php
 }
 
-add_action( 'pmpro_checkout_after_tos_fields', 'pmpromc_additional_lists_on_checkout' );
+add_action( 'pmpro_checkout_after_tos_fields', 'pmp_mailchimp_add' );
