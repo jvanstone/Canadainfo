@@ -138,8 +138,56 @@ add_shortcode ( 'pmp-levels', 'pmp_get_latest' );
 
 
 
+remove_action ( 'pmpro_checkout_after_tos_fields', 'pmpromc_additional_lists_on_checkout' );
+
 function pmp_mailchimp_add() {
-    ?>
+    global $pmpro_review;
+
+	$options = get_option( 'pmpromc_options' );
+
+	// Get API and bail if we can't set it.
+	$api = pmpromc_getAPI();
+	if ( empty( $api ) ) {
+		return;
+	}
+
+	// Are there additional lists?
+	if ( ! empty( $options['additional_lists'] ) ) {
+		$additional_lists = $options['additional_lists'];
+	} else {
+		return;
+	}
+
+	global $current_user;
+	pmpromc_check_additional_audiences_for_user( $current_user->ID );
+
+	// Okay get through API.
+	$lists = $api->get_all_lists();
+
+	// No lists?
+	if ( empty( $lists ) ) {
+		return;
+	}
+
+	$additional_lists_array = array();
+	foreach ( $lists as $list ) {
+		if ( ! empty( $additional_lists ) ) {
+			foreach ( $additional_lists as $additional_list ) {
+				if ( $list->id == $additional_list ) {
+					$additional_lists_array[] = $list;
+					break;
+				}
+			}
+		}
+	}
+
+	// No lists? do nothing.
+	if ( empty( $additional_lists_array ) ) {
+		return;
+	}
+
+	$display_modifier = empty( $pmpro_review ) ? '' : 'style="display: none;"';
+	?>
 
     <div id="pmpro_mailing_lists" class="pmpro_checkout top1em" width="100%" cellpadding="0" cellspacing="0" border="0">
 		<h3>Join our mailing list.</h3>
