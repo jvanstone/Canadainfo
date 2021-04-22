@@ -136,3 +136,47 @@ function pmp_get_latest() {
 }
 add_shortcode ( 'pmp-levels', 'pmp_get_latest' );
 
+
+
+function pmp_mailchimp_add() {
+    ?>
+
+    <div id="pmpro_mailing_lists" class="pmpro_checkout top1em" width="100%" cellpadding="0" cellspacing="0" border="0">
+		<h3>Join our mailing list.</h3>
+	
+		<div class="col-12 p-2 ml-5">
+					<input type="checkbox" class="form-check-input" id="additional_lists_1" name="additional_lists[]" value="8b5021832a">
+					<label class="form-check-label" for="additional_lists_1">Canada Information Guide</label><br>
+		</div>
+
+        <?php
+				global $current_user;
+				if ( isset( $_REQUEST['additional_lists'] ) ) {
+					$additional_lists_selected = $_REQUEST['additional_lists'];
+				} elseif ( isset( $_SESSION['additional_lists'] ) ) {
+					$additional_lists_selected = $_SESSION['additional_lists'];
+				} elseif ( ! empty( $current_user->ID ) ) {
+					$additional_lists_selected = get_user_meta( $current_user->ID, 'pmpromc_additional_lists', true );
+				} else {
+					$additional_lists_selected = array();
+				}
+				$count = 0;
+				foreach ( $additional_lists_array as $key => $additional_list ) {
+					$count++;
+					?>
+					<input type="checkbox" id="additional_lists_<?php echo( $count ); ?>" name="additional_lists[]" value="<?php echo( $additional_list->id ); ?>" 
+							<?php
+							if ( is_array( $additional_lists_selected ) ) {
+								checked( in_array( $additional_list->id, $additional_lists_selected ) );
+							};
+							?>
+							/>
+					<label for="additional_lists_<?php echo( $count ); ?>" class="pmpromc-checkbox-label"><?php echo( $additional_list->name ); ?></label><br/>
+					<?php
+				}
+				?>
+	</div>
+ <?php
+}
+
+add_action( 'pmpro_checkout_after_tos_fields', 'pmpromc_additional_lists_on_checkout' );
