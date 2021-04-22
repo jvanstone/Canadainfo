@@ -208,14 +208,14 @@ function pmp_mailchimp_add() {
 				foreach ( $additional_lists_array as $key => $additional_list ) {
 					$count++;
 					?>
-					<input type="checkbox" id="additional_lists_<?php echo( $count ); ?>" name="additional_lists[]" value="<?php echo( $additional_list->id ); ?>" 
+					<input type="checkbox" class="form-check-input" id="additional_lists_<?php echo( $count ); ?>" name="additional_lists[]" value="<?php echo( $additional_list->id ); ?>" 
 							<?php
 							if ( is_array( $additional_lists_selected ) ) {
 								checked( in_array( $additional_list->id, $additional_lists_selected ) );
 							};
 							?>
 							/>
-					<label for="additional_lists_<?php echo( $count ); ?>" class="pmpromc-checkbox-label"><?php echo( $additional_list->name ); ?></label><br/>
+					<label class="form-check-label" for="additional_lists_<?php echo( $count ); ?>" class="pmpromc-checkbox-label"><?php echo( $additional_list->name ); ?></label><br/>
 					<?php
 				}
 				?>
