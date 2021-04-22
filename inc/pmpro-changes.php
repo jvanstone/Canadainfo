@@ -29,7 +29,7 @@ function pmp_add_accountsetup() {
   */ 
  function pmp_change_checkout( $translated_text ) {
 	if ( $translated_text == 'Membership Level' ) {
-		$translated_text = 'Your next purchase';
+		$translated_text = 'You are about to purchase';
 	} else if  ( $translated_text == 'You have selected the <strong>%s</strong> membership level.' ) {
         $translated_text = 'You are about to purchase <strong>%s</strong>.';
     } else if ( $translated_text == 'The price for membership is <strong>%s</strong> now' )  {
