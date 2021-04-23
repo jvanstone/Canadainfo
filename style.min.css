@@ -656,8 +656,8 @@ ul.latest-issue li{margin:0;padding:0;list-style-type:none}
 ul.latest-issue li:first-child{padding-left:.5rem}
 ul.latest-issue li:last-child{width:100%;text-align:center}
 .why-register{border:var(--global--border);border-radius:3px;margin:0 auto;padding-top:1rem;background-color:var(--global--color-background2);text-align:center;vertical-align:top;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;font-weight:600}
-.why-register h1{margin-top:.5rem;margin-bottom:0;color:var(--global--color-header);font-family:var(--global--font-primary);text-decoration:underline;-webkit-text-decoration-skip:auto;text-decoration-skip:auto}
-.why-register .wp-block-columns .wp-block-column>ul{margin-top:0;margin-bottom:1rem;padding:0;list-style:none;text-align:left;line-height:2}
+.why-register .wp-block-columns .wp-block-column>h1{margin-top:.5rem;margin-bottom:0 !important;color:var(--global--color-header);font-family:var(--global--font-primary);text-decoration:underline;-webkit-text-decoration-skip:auto;text-decoration-skip:auto}
+.why-register ul{margin-top:0;margin-bottom:1rem;padding:0;list-style:none;text-align:left;line-height:2}
 .why-register li:before{margin:0 2px;padding:10px;content:'✓'}
 form.pmpro_form{margin:auto;width:80%}
 .pmpro_checkout-fields>ul{padding-bottom:0}
