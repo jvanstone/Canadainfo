@@ -94,7 +94,7 @@ add_action( 'pmpro_checkout_after_tos_fields', 'pmp_mailchimp_add' );
 
 function pmp_change_mailchimp( $translated_text ) {
 	if ( $translated_text == 'Opt-in Mailchimp Mailing Lists' ) {
-		$translated_text = 'Opt-in for Canadainfo Mailing Lists';
+		$translated_text = 'Opt-in for our Mailing Lists';
 	}
 	return $translated_text;
 }
