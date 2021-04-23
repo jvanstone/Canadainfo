@@ -103,8 +103,8 @@ ul.latest-issue {
         text-decoration-skip: auto;
         }
 
-    ul {
-        margin-top: -2em;
+    .wp-block-columns .wp-block-column > ul {
+        margin-top: 0em;
         margin-bottom: 1rem;
         padding: 0;
         list-style: none;
