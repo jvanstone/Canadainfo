@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @category   WordPress_Theme
- * @package    Canada_Info
+ * @package    Canadainfo
  * @since      Canada_Info 1.0.0
  */
 

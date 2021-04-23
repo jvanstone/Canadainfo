@@ -3,7 +3,7 @@
  * Displays the site header.
  *
  * @category   WordPress_Theme
- * @package    Canada_Info
+ * @package    Canadainfo
  * @license    GPL 3.0 http://www.gnu.org/licenses/gpl-3.0.html
  * @link       https://developer.wordpress.org/themes/basics/template-hierarchy/
  * @since      1.0.0

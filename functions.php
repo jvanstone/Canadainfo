@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @category   WordPress_Theme
- * @package    Canada_Info
+ * @package    Canadainfo
  * @author     Vanstone Online <jason@vanstoneonline.com>
  * @license    GPL 3.0 http://www.gnu.org/licenses/gpl-3.0.html
  * @link       https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -764,7 +764,7 @@ function canada_info_add_ie_class() {
 add_action( 'wp_footer', 'canada_info_add_ie_class' );
 
 
-include ('inc/pmpro-changes.php');
+include ('pmpro-custom/pmpro-changes.php');
 
 
 /* function wp_maintenance_mode() {

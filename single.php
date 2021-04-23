@@ -4,7 +4,7 @@
  *
  * This is the template that displays all of the <main> section and everything up until footer
  *
- * @package Canada Info
+ * @package Canadainfo
  * @since 1.0.0
  */
 
