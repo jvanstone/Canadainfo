@@ -831,7 +831,7 @@ p{font-size:calc(14.4px + 2.4 * ((100vw - 325px) / 875))}
 .wp-block-columns.is-style-canadainfo-columns-overlap .wp-block-column:nth-child(2n)>ul:not(.has-background),.wp-block-columns.is-style-canadainfo-columns-overlap .wp-block-column:nth-child(2n)>ol:not(.has-background){padding-left:calc(2 * var(--global--spacing-horizontal))}
 .wp-block-columns.is-style-canadainfo-columns-overlap .wp-block-column:nth-child(2n).is-vertically-aligned-center{margin-top:0}
 .widget-area{display:grid;grid-template-columns:repeat(2,1fr);-webkit-column-gap:calc(2 * var(--global--spacing-horizontal));-moz-column-gap:calc(2 * var(--global--spacing-horizontal));column-gap:calc(2 * var(--global--spacing-horizontal))}
-}@media only screen and (min-width:822px){:root{--responsive--aligndefault-width:min(calc(100vw - 8 * var(--global--spacing-horizontal)), 800px, 800);--responsive--alignwide-width:min(calc(100vw - 8 * var(--global--spacing-horizontal)), 1000px)}
+}@media only screen and (min-width:822px){:root{--responsive--aligndefault-width:min(calc(100vw - 8 * var(--global--spacing-horizontal)), 800px, 800);--responsive--alignwide-width:min(calc(100vw - 8 * var(--global--spacing-horizontal)), 950px)}
 .wp-block-columns .wp-block-column:not(:last-child){margin-bottom:0}
 .site-header{padding-top:calc(2.4 * var(--global--spacing-vertical))}
 .post-navigation{margin:var(--global--spacing-vertical) auto}
