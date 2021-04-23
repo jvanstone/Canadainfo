@@ -15,9 +15,6 @@
 		{
 			"name": "crossword-plugin",
 			"path": "../../plugins/crossword-plugin"
-		},
-		{
-			"path": "../../plugins/canadian-guide-members"
 		}
 	],
 	"settings": {
