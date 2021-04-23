@@ -1,17 +1,17 @@
 @charset "UTF-8";
 /*
-Theme Name: Canada Info Default
-Theme URI: https://github.com/jvanstone/canadian-guide
+Theme Name: Canadainfo
+Theme URI: https://github.com/jvanstone/Canadinfo
 Author: Vanstone Online
 Author URI: https://vanstoneonline.com
-Description: Template for Job Canada - Canada Info
+Description: Theme for canadainfo.org
 Version: 2021.14
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
 Tags: one-column, custom-menu, featured-images, microformats, threaded-comments, translation-ready
 Text Domain: canada-info
 
-Vanstone Online is distributed under the terms of the GNU GPL
+Canadainfo is distributed under the terms of the GNU GPL
 */
 /** SETTINGS File-header..........The file header for the themes style.css file. Fonts................Any font files, if the project needs specific fonts. Global...............Project-specific, globally available variables. TOOLS Functions............Global functions. Mixins...............Global mixins. GENERIC Normalize.css........Normalise browser defaults. Breakpoints..........This theme uses the breakpoints set by BootStrap Vertical-margins.....Vertical spacing for the main components. Reset................Reset specific elements to make them easier to style in other contexts. Clearings............Clearnings for the main components. ELEMENTS Blockquote...........Default blockquote. Forms................Element-level form styling. Headings.............H1–H6 Links................Default links. Lists................Default lists. Media................Images, Figure, Figcaption, Embed, iFrame, Objects, Video. BLOCKS Audio................Specific styles for the audio block. Button...............Specific styles for the button block. Code.................Specific styles for the code block. Collumns.............Specific styles for the collumns block. Cover................Specific styles for the cover block. File.................Specific styles for the file block. Gallery..............Specific styles for the gallery block. Group................Specific styles for the group block. Heading..............Specific styles for the heading block. Image................Specific styles for the image block. Latest comments......Specific styles for the latest comments block. Latest posts.........Specific styles for the latest posts block. Legacy...............Specific styles for the legacy gallery. List.................Specific styles for the list block. Meda text............Specific styles for the media and text block. Navigation...........Specific styles for the navigation block. Paragraph............Specific styles for the paragraph block. Pullquote............Specific styles for the pullquote block. Quote................Specific styles for the quote block. Search...............Specific styles for the search block. Separator............Specific styles for the separator block. Spacer...............Specific styles for the spacer block. Table................Specific styles for the table block. Verse................Specific styles for the verse block. Video................Specific styles for the video block. Utilities............Block alignments. COMPONENTS Header...............Header styles. Footer...............Footer styles. Comments.............Comment styles. Archives.............Archive styles. 404..................404 styles. Search...............Search styles. Navigation...........Navigation styles. Footer Navigation....Footer Navigation styles. Pagination...........Pagination styles. Single...............Single page and post styles. Posts and pages......Misc, sticky post styles. Entry................Entry, author biography. Widget...............Widget styles. Editor...............Editor styles. ADD-ONS PMPRO................Modification to style the PLugin for the theme goTop................Style for  goTop Button. UTILITIES A11y.................Screen reader text, prefers reduced motion etc. Color Palette........Classes for the color palette colors. Editor Font Sizes....Editor Font Sizes. Measure..............The width of a line of text, in characters. */
 /* Categories 01 to 03 are the basics. */
@@ -1588,7 +1588,7 @@ ul.latest-issue li:first-child { padding-left: .5rem; }
 
 ul.latest-issue li:last-child { width: 100%; text-align: center; }
 
-.why-register { border: var(--global--border); border-radius: 3px; margin: 0 auto; padding-top: 1rem; background-color: var(--global--color-background2); text-align: center; vertical-align: top; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column nowrap; flex-flow: column nowrap; font-weight: 600; }
+.why-register { border: var(--global--border); border-radius: 3px; margin: 0 auto; padding-top: 0rem; background-color: var(--global--color-background2); text-align: center; vertical-align: top; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column nowrap; flex-flow: column nowrap; font-weight: 600; }
 
 .why-register h1 { margin-top: .5rem; color: var(--global--color-header); font-family: var(--global--font-primary); text-decoration: underline; -webkit-text-decoration-skip: auto; text-decoration-skip: auto; }
 

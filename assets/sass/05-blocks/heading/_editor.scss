@@ -37,22 +37,12 @@ h1,
 .wp-block-heading h2,
 h2,
 .h2 {
-	margin: 2rem 0;
-	padding: .313rem 1rem;
-
-
-	background-color: var(--global--color-header2background);
-	border: 1px solid var(--global--color-header-dark); 
-	box-shadow:  5px 10px var(--global--color-boxshadow);
-	color: #fff;
-
 	font-size: var(--heading--font-size-h2);
 	letter-spacing: var(--heading--letter-spacing-h2);
 	line-height: var(--heading--line-height-h2);
 	font-family: var(--heading--font-family2);
 	font-weight: var(--heading--font-weight);
 	@include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
-
 }
 
 .wp-block-heading h3,
