@@ -7,9 +7,15 @@
  * 
  */
 
+
+
+/**
+ *  Add Steps to the Checkout page to make it clear to get the latest issue. 
+ * 
+ */
 function pmp_add_accountsetup() {
 	?>
-    <h2 class=""><?php _e('1) Create your account', 'paid-memberships-pro' );?></h2>
+    <h2 class=""><?php _e('1) Create/Verify your account', 'paid-memberships-pro' );?></h2>
 	<?php
  }
  add_action( 'pmpro_checkout_after_pricing_fields',  'pmp_add_accountsetup');
@@ -39,6 +45,20 @@ function pmp_add_accountsetup() {
 	return $translated_text;
 }
 add_filter( 'gettext', 'pmp_change_checkout', 20 );
+
+/**
+ * Set country default to Canada
+ * 
+ */
+function pmp_change_country_default($country){
+
+    // Replace "US" with "CA"
+    $country = str_replace ( "US" , "CA" , $country );
+  
+    return $country;
+      
+  }
+  add_filter( 'pmpro_default_country', 'pmp_change_country_default', 10, 3 );
 
 
 /**
