@@ -96,6 +96,7 @@ ul.latest-issue {
 
     h1 {
         margin-top: .5rem;
+        margin-bottom: 0;
         color: var(--global--color-header);
         font-family: var(--global--font-primary);
         text-decoration: underline;
@@ -103,7 +104,7 @@ ul.latest-issue {
         }
 
     ul {
-        padding: 0 4px 0 1rem;
+        padding: 0;
         list-style: none;
         text-align: left;
         line-height: 2;
