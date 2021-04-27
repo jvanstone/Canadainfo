@@ -19,7 +19,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 ?>
 <article>
 		<header class="entry-header">
-			<h1 class="entry-title">Canada Info Issues Available</h1>
+			<h1 class="entry-title">Canadainfo Issues Available</h1>
 		</header><!-- .entry-header -->
 
 	<div class="entry-content">
