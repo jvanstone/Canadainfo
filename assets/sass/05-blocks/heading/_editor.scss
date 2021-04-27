@@ -1,6 +1,9 @@
 .wp-block-heading h1,
 h1,
 .h1,
+.wp-block-heading h2,
+h2,
+.h2,
 .wp-block-heading h3,
 h3,
 .h3,
@@ -14,7 +17,6 @@ h5,
 h6,
 .h6 {
 	clear: both;
-	font-family: var(--heading--font-family);
 	font-weight: var(--heading--font-weight);
 
 	strong {
@@ -32,6 +34,15 @@ h1,
 	font-size: var(--heading--font-size-h1);
 	letter-spacing: var(--heading--letter-spacing-h1);
 	line-height: var(--heading--line-height-h1);
+	font-family: var(--heading--font-family);
+	@include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+}
+
+h1, h1 > a, h1 > a:visited {
+    color: var(--global--color-header);
+    font-family: var(--global--font-primary);
+    text-decoration: none;
+    text-decoration-skip: auto;
 }
 
 .wp-block-heading h2,
@@ -51,8 +62,16 @@ h3,
 	font-size: var(--heading--font-size-h3);
 	letter-spacing: var(--heading--letter-spacing-h3);
 	line-height: var(--heading--line-height-h3);
+	font-family: var(--heading--font-family2);
+	@include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2  *$min_font);
 }
 
+.entry-content h3 {
+    margin: 1rem;
+	padding: 0 calc(0.2 * var(--global--spacing-horizontal));
+    font-weight: 500;
+    color:rgb(31, 42, 50);
+}
 .wp-block-heading h4,
 h4,
 .h4 {
@@ -60,6 +79,7 @@ h4,
 	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h4);
 	line-height: var(--heading--line-height-h4);
+	font-family: var(--heading--font-family2);
 }
 
 .wp-block-heading h5,
@@ -78,4 +98,5 @@ h6,
 	font-weight: var(--heading--font-weight-strong);
 	letter-spacing: var(--heading--letter-spacing-h6);
 	line-height: var(--heading--line-height-h6);
+	font-family: var(--heading--font-family2);
 }

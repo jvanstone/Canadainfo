@@ -25,7 +25,6 @@ h1,
 	line-height: var(--heading--line-height-h1);
 	font-family: var(--heading--font-family);
 	@include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
-
 }
 
 h1, h1 > a, h1 > a:visited {
@@ -54,7 +53,6 @@ h3,
 	line-height: var(--heading--line-height-h3);
 	font-family: var(--heading--font-family2);
 	@include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2  *$min_font);
-
 }
 
 .entry-content h3 {
@@ -63,7 +61,7 @@ h3,
     font-weight: 500;
     color:rgb(31, 42, 50);
 }
-
+ 
 
 h4,
 .h4 {
