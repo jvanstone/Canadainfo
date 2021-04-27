@@ -490,7 +490,7 @@ function canada_info_scripts() {
 
 	// Load Bootstrap CSS First to allow for Customization in style.css.
 	wp_enqueue_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css', array(), wp_get_theme()->get( 'Version' ) );
-	wp_enqueue_style( 'bootstrap-fontawesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'bootstrap-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css', array(), wp_get_theme()->get( 'Version' ) );
 
 		// Note, the is_IE global variable is defined by WordPress and is used
 		// to detect if the current browser is internet explorer.
@@ -764,7 +764,30 @@ function canada_info_add_ie_class() {
 add_action( 'wp_footer', 'canada_info_add_ie_class' );
 
 
+/**
+ * 
+ *  Include the custom changes to maker Paid Membership Pro fit Canadainfo
+ * 
+ */
 include ('pmpro-custom/pmpro-changes.php');
+
+
+/**
+ *  Add a Message Sent with Contact Form 7
+ * 
+ */
+add_action( 'wp_footer', 'mycustom_wp_footer' );
+ 
+function mycustom_wp_footer() {
+?>
+<script type="text/javascript">
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+    ga( 'send', 'event', 'Contact Form', 'submit' );
+}, false );
+</script>
+<?php
+}
+
 
 
 /* function wp_maintenance_mode() {

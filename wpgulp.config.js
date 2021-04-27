@@ -33,10 +33,6 @@ const styleDestination = './';
 // Path to place the compiled CSS file. Default set to root folder.
 // const styleDestination = './assets/css/';
 
-
-
-
-
 // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 const outputStyle = 'compact';
 const errLogToConsole = true;
