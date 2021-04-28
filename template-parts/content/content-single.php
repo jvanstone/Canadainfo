@@ -14,8 +14,9 @@
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<div style="text-align: center;"><?php _e('Date published', 'canada-info');?> <?php the_time('F jS, Y'); ?> <?php _e('| Created by the Canadinfo team.', 'canada-info');?></div>		
 		<?php canada_info_post_thumbnail(); ?>
+		<div style="text-align: center;"><?php _e('Date published', 'canada-info');?> <?php the_time('F jS, Y'); ?> <?php _e('| Created by the Canadinfo team.', 'canada-info');?></div>		
+	
 	</header><!-- .entry-header -->
 	
 	<div class="entry-content">
