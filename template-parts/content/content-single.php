@@ -14,7 +14,9 @@
 
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		
 		<?php canada_info_post_thumbnail(); ?>
+		<div style="text-align: left; margin-left: 1rem;"><?php _e('Date published', 'canada-info');?> <?php the_time('F jS, Y'); ?> <?php _e('Created by', 'canada-info');?> <?php the_author_posts_link(); ?>.</div>
 	</header><!-- .entry-header -->
 	
 	<div class="entry-content">
