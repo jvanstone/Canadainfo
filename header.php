@@ -18,6 +18,12 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<?php
+	$schema = get_post_meta(get_the_ID(), 'schema', true);
+		if(!empty($schema)) {
+			echo $schema;
+	}
+	?>
 	<?php wp_head(); ?>
 </head>
 
