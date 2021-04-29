@@ -1,8 +1,8 @@
-# canada info
+# Canadainfo
  WordPress Theme
 	
 ===  Canada Info ===
-Contributors: vjstereo 
+Contributors: vanstoneonline 
 Requires at least: 5.3
 Tested up to: 5.6
 Requires PHP: 5.6
@@ -16,8 +16,10 @@ Custom made theme that has Cookie-Pop-up. Styling uses Boostrap and SASS.
 
 == Plugin Add-ons == 
 1. Crossword Plugin
-2. Canadian-guide members. It is a plugin that has been customized from PMPRO to reflect the needs for the Subscription site. 
-3. "Rate us" Custom Plugin.
+2. PMPRO
+3. PMRPO Customizer - Using Hooks and filter changes the look of the PMRO Wording to fit the theme better.
+4. "Rate us" Custom Plugin.
+
 
 
 == Installation ==
