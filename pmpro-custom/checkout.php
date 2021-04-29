@@ -23,7 +23,7 @@ function pmp_add_accountsetup() {
  function pmp_add_paymentsetup() {
 	?>
     <h2 class=""><?php _e('2) Finish setup with PayPal', 'paid-memberships-pro' );?></h2>
-    <em><?php _e('You will be redirected back to Canadainfo after payment has been processed by PayPal.', 'paid-memberships-pro' );?></em>
+    <em><?php _e('You will be redirected back to Canadainfo.org after payment has been processed by PayPal.', 'paid-memberships-pro' );?></em>
 	
 	<?php
  }
