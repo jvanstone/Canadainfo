@@ -1,11 +1,10 @@
 <?php
-/***
- *  Custom changes for  the Account Details page. 
- * 
- *  returns a shortcode
+/**
+ *  Custom changes for  the Account Details page.
+ *
+ *  Returns a shortcode.
  */
-function pmp_shortcode_account($atts, $content=null, $code="")
-{
+function pmp_shortcode_account( $atts, $content = null, $code = '' ) {
 	global $wpdb, $pmpro_msg, $pmpro_msgt, $pmpro_levels, $current_user, $levels;
 
 	// $atts    ::= array of attributes
@@ -13,51 +12,43 @@ function pmp_shortcode_account($atts, $content=null, $code="")
 	// $code    ::= the shortcode found, when == callback name
 	// examples: [pmpro_account] [pmpro_account sections="membership,profile"/]
 
-	extract(shortcode_atts(array(
+	extract( shortcode_atts( array(
 		'section' => '',
 		'sections' => 'membership,profile,invoices,links'
 	), $atts));
 
-	//did they use 'section' instead of 'sections'?
-	if(!empty($section))
+	// Did they use 'section' instead of 'sections'?
+	if( !empty($section) )
 		$sections = $section;
 
-	//Extract the user-defined sections for the shortcode
-	$sections = array_map('trim',explode(",",$sections));
+	// Extract the user-defined sections for the shortcode.
+	$sections = array_map( 'trim', explode( ',', $sections ) );
 	ob_start();
 
-	//if a member is logged in, show them some info here (1. past invoices. 2. billing information with button to update.).
+	// If a member is logged in, show them some info here (1. past invoices. 2. billing information with button to update.).
 	$order = new MemberOrder();
 	$order->getLastMemberOrder();
-	$mylevels = pmpro_getMembershipLevelsForUser();
-	$pmpro_levels = pmpro_getAllLevels(false, true); // just to be sure - include only the ones that allow signups
-	$invoices = $wpdb->get_results("SELECT *, UNIX_TIMESTAMP(CONVERT_TZ(timestamp, '+00:00', @@global.time_zone)) as timestamp FROM $wpdb->pmpro_membership_orders WHERE user_id = '$current_user->ID' AND status NOT IN('review', 'token', 'error') ORDER BY timestamp DESC LIMIT 6");
+	$mylevels     = pmpro_getMembershipLevelsForUser();
+	$pmpro_levels = pmpro_getAllLevels( false, true ); // Just to be sure - include only the ones that allow signups.
+	$invoices     = $wpdb->get_results( "SELECT *, UNIX_TIMESTAMP(CONVERT_TZ(timestamp, '+00:00', @@global.time_zone)) as timestamp FROM $wpdb->pmpro_membership_orders WHERE user_id = '$current_user->ID' AND status NOT IN('review', 'token', 'error') ORDER BY timestamp DESC LIMIT 6" );
 	?>
 	<div id="pmpro_account">
 
-		<?php if(in_array('membership', $sections) || in_array('memberships', $sections)) { ?>
-			<h3><?php _e("My Subscriptions", 'paid-memberships-pro' );?></h3>
+		<?php if ( in_array( 'membership', $sections ) || in_array( 'memberships', $sections ) ) { ?>
+			<h3><?php __( 'My Subscriptions', 'paid-memberships-pro' ); ?></h3>
 			<div id="pmpro_account-membership" class="p-2 <?php echo pmpro_get_element_class( 'pmpro_box', 'pmpro_account-membership' ); ?>">
 				<div class="row ">
-							<div class="col-12 m-2">
-								<b><?php //_e("My Subscriptions", 'paid-memberships-pro' );?></b>
-							</div>
-							<!-- <div class="col-2">
-								<b><?php //_e("Paid", 'paid-memberships-pro' ); ?></b>
-								<?php //_e("Expiration", 'paid-memberships-pro' ); ?>	
-							</div> -->
-					
-			
-						<?php if ( empty( $mylevels ) ) { ?>
-						
+
+						<?php if ( empty( $mylevels ) ) { ?>	
+
 							<?php
-							// Check to see if the user has a cancelled order
+							// Check to see if the user has a cancelled order.
 							$order = new MemberOrder();
 							$order->getLastMemberOrder( $current_user->ID, array( 'cancelled', 'expired', 'admin_cancelled' ) );
 
 							if ( isset( $order->membership_id ) && ! empty( $order->membership_id ) && empty( $level->id ) ) {
 								$level = pmpro_getLevel( $order->membership_id );
-								echo $level;
+								echo esc_html( $level );
 							}
 
 							// If no level check for a default level.
@@ -77,41 +68,40 @@ function pmp_shortcode_account($atts, $content=null, $code="")
 								printf( __( "You have no subscriptions. <a href='%s'>Choose an issue to purchase.</a>", 'paid-memberships-pro' ), $url );
 							}
 							?>
-						
+
 							<?php } else { ?>
 
-							<?php
-								foreach($mylevels as $level) {
-							?>
-								<?php	 
-									function get_link_slug( $slug , $type ) {
-										$post = get_page_by_path( $slug, OBJECT, $type );
-										return get_permalink( $post->ID );
-									}
-									$getvalue = 'canada-info-issue-1';
-			
-									//$getvalue = esc_html( $current_user->membership_level->name);
-									
+							<?php foreach ( $mylevels as $level ) { ?>
+						
+								<?php 
+								/**
+								 * Get path by slug.
+								 *
+								 * @link https://developer.wordpress.org/reference/functions/get_page_by_path/
+								 */	
+								$get_value = esc_html( $current_user->membership_level->name );
+								$link      = get_page_by_path( $get_value );
 								?>
 								<div class="col-12 m-1 <?php echo pmpro_get_element_class( 'pmpro_account-membership-levelname' ); ?>">
-								
-									<?php 
-									$link = get_link_slug( $getvalue, 'post' );
-									//$link = get_link_slug( $level->name, 'post' );
-									echo '<h3 class="ml-3">' . $level->name . '</h3>';	
-									$confirmation_message2 = '<h3 class="ml-3">' . sprintf(__('<a href="'.$link.'">View %s now <i class="fas fa-arrow-circle-right"></i></a>', 'paid-memberships-pro' ), $current_user->membership_level->name) . "</h3>";
+
+				
+									<h3 class="ml-3"> <?php $level->name; ?> </h3>	
+							
+
+									<?php
+									$confirmation_message2 = '<h3 class="ml-3">' . sprintf( __( '<a href="https://canadainfo.org/canadainfo-issue-1/">View %s now <i class="fas fa-arrow-circle-right"></i></a>', 'paid-memberships-pro' ), $current_user->membership_level->name) . "</h3>";
 
 									?>
 
 									<?php echo $confirmation_message2; ?>
 									<div class="<?php echo pmpro_get_element_class( 'pmpro_actionlinks' ); ?>">
-										<?php do_action("pmpro_member_action_links_before"); ?>
+										<?php do_action( "pmpro_member_action_links_before" ); ?>
 
 										<?php
 										// Build the links to return.
 										$pmpro_member_action_links = array();
 
-										if( array_key_exists($level->id, $pmpro_levels) && pmpro_isLevelExpiringSoon( $level ) ) {
+										if( array_key_exists( $level->id, $pmpro_levels) && pmpro_isLevelExpiringSoon( $level ) ) {
 											$pmpro_member_action_links['renew'] = sprintf( '<a id="pmpro_actionlink-renew" href="%s">%s</a>', esc_url( add_query_arg( 'level', $level->id, pmpro_url( 'checkout', '', 'https' ) ) ), esc_html__( 'Renew', 'paid-memberships-pro' ) );
 										}
 
@@ -153,7 +143,7 @@ function pmp_shortcode_account($atts, $content=null, $code="")
 									else
 										$expiration_text = "---";
 
-								    	//echo apply_filters( 'pmpro_account_membership_expiration_text', $expiration_text, $level );
+										//echo apply_filters( 'pmpro_account_membership_expiration_text', $expiration_text, $level );
 								?>
 								</div> -->
 							
@@ -251,12 +241,12 @@ function pmp_shortcode_account($atts, $content=null, $code="")
 						$invoice->getMembershipLevel();
 
 						if ( in_array( $invoice->status, array( '', 'success', 'cancelled' ) ) ) {
-						    $display_status = __( 'Paid', 'paid-memberships-pro' );
+							$display_status = __( 'Paid', 'paid-memberships-pro' );
 						} elseif ( $invoice->status == 'pending' ) {
-						    // Some Add Ons set status to pending.
-						    $display_status = __( 'Pending', 'paid-memberships-pro' );
+							// Some Add Ons set status to pending.
+							$display_status = __( 'Pending', 'paid-memberships-pro' );
 						} elseif ( $invoice->status == 'refunded' ) {
-						    $display_status = __( 'Refunded', 'paid-memberships-pro' );
+							$display_status = __( 'Refunded', 'paid-memberships-pro' );
 						}
 						?>
 						<tr id="pmpro_account-invoice-<?php echo $invoice->code; ?>">
