@@ -4,7 +4,6 @@
  *
  * @category   WordPress_Theme
  * @package    Canadainfo
- * 
  * @author     Vanstone Online <jason@vanstoneonline.com>
  * @license    GPL 3.0 http://www.gnu.org/licenses/gpl-3.0.html
  * @link       https://developer.wordpress.org/themes/basics/template-hierarchy/
