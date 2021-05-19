@@ -17,7 +17,7 @@ $show_title   = ( true === get_theme_mod( 'display_title_and_tagline', true ) );
 $header_class = $show_title ? 'site-title' : 'screen-reader-text';
 ?>
 
-<header id="header" class="row justify-start align-middle no-print"> 
+<header id="header" class="row justify-start align-middle"> 
 		<?php if ( has_custom_logo() && $show_title ) : ?>
 			<div class="site-logo"><?php the_custom_logo(); ?></div>
 		<?php endif; ?>

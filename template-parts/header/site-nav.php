@@ -9,7 +9,7 @@
 ?>
 
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
-	<div class="col-12 no-print">
+	<div class="col-12">
 		<img src="<?php header_image(); ?>" class="img-fluid header-image" alt="<?php echo get_bloginfo( 'name', 'canada-info' ); ?>" />
 
 		<!-- Top Navigation Menu -->
