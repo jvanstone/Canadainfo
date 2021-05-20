@@ -16,7 +16,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php canada_info_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
-	
+
 	<div class="entry-content">
 		<?php
 		the_content();
@@ -31,9 +31,6 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-	<div style="text-align: center;"><?php _e('Date published', 'canada-info');?> <?php the_time('F jS, Y'); ?> <?php _e('| Created by the Canadinfo team', 'canada-info');?></div>		
-	
-	
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
 		<?php get_template_part( 'template-parts/post/author-bio' ); ?>
