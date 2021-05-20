@@ -15,17 +15,13 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php canada_info_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
-		content single
+
 	<div class="entry-content">
 		<?php
 		the_content();
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer default-max-width">
-		<?php canada_info_entry_meta_footer(); ?>
-	</footer><!-- .entry-footer -->
-
-
+	<?php canada_info_entry_meta_footer(); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
