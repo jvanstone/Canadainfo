@@ -792,7 +792,7 @@ add_action( 'wp_footer', 'mycustom_wp_footer' );
 function ci_add_print_button() {
 	
 	return '<div style="text-align: center;"> 
-		<button id="btnPrint">Print</button>
+		<button id="btnPrint" class="btn btn-primary">Print</button>
 	</div>';
 	
 }
