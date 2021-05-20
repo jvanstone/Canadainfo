@@ -507,19 +507,16 @@ function canada_info_scripts() {
 	wp_style_add_data( 'canadian-guide-style', 'rtl', 'replace' );
 
 	wp_enqueue_style( 'canadian-guide-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
-	// Load Cookie Disclaimer.
-	wp_enqueue_script( 'Cookies-Script', get_stylesheet_directory_uri() . '/assets/js/jquery.ihavecookies.js', array( 'jQuery' ), wp_get_theme()->get( 'Version' ), false );
-	wp_enqueue_script( 'Cookies-Config', get_stylesheet_directory_uri() . '/assets/js/cookie-config.js', array( 'jQuery' ), wp_get_theme()->get( 'Version' ), false );
 
-	/*****
-	* Add BootStrap to WP footer
-	*
-	*/
-	wp_enqueue_script( 'jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), wp_get_theme()->get( 'Version' ), false );
+	// Add BootStrap to WP footer.
+	wp_enqueue_script( 'jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'Popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'Javascript', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), wp_get_theme()->get( 'Version' ), true );
-	wp_enqueue_script( 'top', get_stylesheet_directory_uri() . '/assets/js/top.js', array(), wp_get_theme()->get( 'Version' ), true );
 
+	wp_enqueue_script( 'Cookies-Script', get_stylesheet_directory_uri() . '/assets/js/jquery.ihavecookies.js', array( 'jQuery' ), wp_get_theme()->get( 'Version' ), false );
+	wp_enqueue_script( 'Cookies-Config', get_stylesheet_directory_uri() . '/assets/js/cookie-config.js', array( 'jQuery' ), wp_get_theme()->get( 'Version' ), false );
+	wp_enqueue_script( 'top', get_stylesheet_directory_uri() . '/assets/js/top.js', array('jQuery'), wp_get_theme()->get( 'Version' ), true );
+	wp_enqueue_script( 'Print', get_stylesheet_directory_uri() . '/assets/js/printPage.js', array('jQuery'), wp_get_theme()->get( 'Version' ), true );
 }
 add_action( 'wp_enqueue_scripts', 'canada_info_scripts' );
 
@@ -787,3 +784,16 @@ add_action( 'wp_footer', 'mycustom_wp_footer' );
  *
  */
 // require_once ('inc/maintenance-mode.php'); .
+
+
+/**
+ *  Add a print function to page
+ */
+function ci_add_print_button() {
+	
+	return '<div style="text-align: center;"> 
+		<button id="btnPrint">Print</button>
+	</div>';
+	
+}
+add_shortcode( 'print-page', 'ci_add_print_button' );
