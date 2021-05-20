@@ -102,10 +102,11 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 		/**
 		 * Dynamic Login.
 		 *
-		 * @link https://developer.wordpress.org/reference/functions/wp_login/
+		 * @param string $items returns the default menu.
+		 * @param string $args returns theme location.
 		 */
 		function wp_login_logout( $items, $args ) {
-			if ( $args->theme_location === 'primary' ) :
+			if ( 'primary' === $args->theme_location ) :
 
 				if ( is_user_logged_in() ) {
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . get_site_url() . '/account-details/">Account Details</a></li>';
@@ -145,12 +146,12 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 		/**
 		 * Show a custom login message above the login form
 		 *
+		 * @param string $message returns message.
 		 */
 		function custom_login_message( $message ) {
 			if ( empty( $message ) ) {
 				return '<h2>CanadaInfo.org</h2>';
-			} 
-			else {
+			} else {
 				return $message;
 			}
 		}
@@ -442,8 +443,8 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 				'rewrite'           => [
 					'slug'         => 'guide',
 					'with_front'   => true, // Don't display the category base before "/locations/".
-					'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/" .
-				]
+					'hierarchical' => true, // This will allow URL's like "/locations/boston/cambridge/".
+				],
 			);
 			register_taxonomy( 'guide', [ 'post' ], $args );
 		}
@@ -506,15 +507,14 @@ function canada_info_scripts() {
 	wp_style_add_data( 'canadian-guide-style', 'rtl', 'replace' );
 
 	wp_enqueue_style( 'canadian-guide-print-style', get_template_directory_uri() . '/assets/css/print.css', array(), wp_get_theme()->get( 'Version' ), 'print' );
-			// Load Cookie Disclaimer.
-			wp_enqueue_script( 'Cookies-Script', get_stylesheet_directory_uri() . '/assets/js/jquery.ihavecookies.js', array( 'jQuery' ), wp_get_theme()->get( 'Version' ), false );
-			wp_enqueue_script( 'Cookies-Config', get_stylesheet_directory_uri() . '/assets/js/cookie-config.js', array( 'jQuery' ), wp_get_theme()->get( 'Version' ), false );
+	// Load Cookie Disclaimer.
+	wp_enqueue_script( 'Cookies-Script', get_stylesheet_directory_uri() . '/assets/js/jquery.ihavecookies.js', array( 'jQuery' ), wp_get_theme()->get( 'Version' ), false );
+	wp_enqueue_script( 'Cookies-Config', get_stylesheet_directory_uri() . '/assets/js/cookie-config.js', array( 'jQuery' ), wp_get_theme()->get( 'Version' ), false );
 
 	/*****
 	* Add BootStrap to WP footer
 	*
 	*/
-	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), wp_get_theme()->get( 'Version' ), false );
 	wp_enqueue_script( 'Popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 	wp_enqueue_script( 'Javascript', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', array(), wp_get_theme()->get( 'Version' ), true );
@@ -567,8 +567,9 @@ function theme_prefix_the_custom_logo() {
 }
 
 /**
- *  A Filter to  change the logo class to work with Bootstrap
+ *  A Filter to  change the logo class to work with Bootstrap.
  *
+ *  @param string $html make the logo from bootstrap work in WordPress.
  */
 function change_logo_class( $html ) {
 	$html = str_replace( 'custom-logo', 'logo', $html );
@@ -579,24 +580,18 @@ add_filter( 'get_custom_logo', 'change_logo_class' );
 /**
  *  A Filter to make Bootstrap Drop-down work better with WordPress
  *
+ *  @param string $ulclass  add nav-link to get a bootstrap drop down menu working.
  */
 function add_menuclass( $ulclass ) {
 	return preg_replace( '/<a /', '<a class="nav-link" ', $ulclass );
 }
 add_filter( 'wp_nav_menu', 'add_menuclass' );
 
-/* function add_image_fluid_class( $content ) {
-	global $post;
-		$pattern     = '<figure class="[A-Za-z-]+"><img (.*?)class=".*?"(.*?)><figcaption>(.*?)<\/figcaption><\/figure>/i';
-		$replacement = '<figure class="figure"><img class="img-fluid" $1$2><figcaption class="text-muted">$3</figcaption></figure>';
-		$content     = preg_replace( $pattern, $replacement, $content );
-		return $content;
-}
-add_filter( 'the_content', 'add_image_fluid_class '); */
 
 /**
  *  A Filter to make Bootstrap to Tables
  *
+ *  @param string $content convert table to add BootStrap function.
  */
 function add_custom_table_class( $content ) {
 	return str_replace( '<table', '<table class="table  table-stripedtable-responsive-sm"', $content );
@@ -765,34 +760,30 @@ add_action( 'wp_footer', 'canada_info_add_ie_class' );
 
 
 /**
- * 
- *  Include the custom changes to maker Paid Membership Pro fit Canadainfo
- * 
+ *  Include the custom changes to maker Paid Membership Pro for Canadainfo
+ *
  */
-include ('pmpro-custom/pmpro-changes.php');
+require ( 'pmpro-custom/pmpro-changes.php' );
 
 
 /**
  *  Add a Message Sent with Contact Form 7
- * 
+ *
  */
-add_action( 'wp_footer', 'mycustom_wp_footer' );
- 
 function mycustom_wp_footer() {
-?>
-<script type="text/javascript">
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-    ga( 'send', 'event', 'Contact Form', 'submit' );
-}, false );
-</script>
-<?php
+	?>
+	<script type="text/javascript">
+		document.addEventListener( 'wpcf7mailsent', function( event ) {
+			ga( 'send', 'event', 'Contact Form', 'submit' );
+		}, false );
+	</script>
+
+	<?php
 }
+add_action( 'wp_footer', 'mycustom_wp_footer' );
 
-
-
-/* function wp_maintenance_mode() {
-	if (!current_user_can('edit_themes') || !is_user_logged_in()) {
-	wp_die('<h1>Canadainfo is under maintenance</h1><br />Our website is under some planned maintenance. Please check back later.');
-	}
-	}
-	add_action('get_header', 'wp_maintenance_mode'); */
+/**
+ *  Use Maintenance Mode when needed. 
+ *
+ */
+// require_once ('inc/maintenance-mode.php'); .
