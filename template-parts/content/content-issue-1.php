@@ -22,6 +22,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php canada_info_entry_meta_footer(); ?>
+	<div style="text-align: center;"><?php esc_html_e( 'Date published', 'canada-info' ); ?> <?php the_time( 'F jS, Y' ); ?> <?php esc_html_e( '| Created by the Canadinfo team', 'canada-info' ); ?></div>
+
 
 </article><!-- #post-<?php the_ID(); ?> -->
