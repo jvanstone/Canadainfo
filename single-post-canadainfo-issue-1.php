@@ -14,7 +14,7 @@
 while ( have_posts() ) :
 	the_post();
 
-	get_template_part( 'template-parts/content/content-guide' );
+	get_template_part( 'template-parts/content/content-issue-1' );
 
 	if ( is_attachment() ) {
 		// Parent post navigation.
