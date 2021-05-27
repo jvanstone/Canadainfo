@@ -15,6 +15,9 @@
  * @since      1.0.0
  */
 
+require_once( trailingslashit( ABSPATH ) . 'wp-admin/includes/upgrade.php' );
+
+
 if (!defined('ABSPATH')) exit;
 get_header();
 
