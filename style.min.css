@@ -693,7 +693,7 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 .people{background-color:#5115f5}
 .green{background-color:#2b9542}
 #gdpr-cookie-types{padding-bottom:1rem;margin:1rem}
-#cookie-message{position:fixed;right:10px;bottom:10px;max-width:450px;background-color:var(--global--color-background2);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:1rem}
+#cookie-message{position:fixed;right:10px;bottom:10px;max-width:400px;background-color:var(--global--color-background2);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:1rem}
 #cookie-message h4{color:black;font-weight:500;margin-bottom:10px}
 #cookie-message h5{color:black;font-weight:500;margin:1rem 0}
 #cookie-message ul{margin:1rem}
