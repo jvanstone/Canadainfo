@@ -1,6 +1,6 @@
 var options = {
 	title: '&#x1F36A; Accept Cookies & Privacy Policy?',
-	message: ' We use cookies as specified in our cookie policy. You can consent to the use of such technologies by closing this notice, or button outside of this notice or by continuing to browse otherwise.<br> Click the Accept Cookies button below to see the optional callback in action...',
+	message: 'We use cookies as specified in our cookie policy. You can consent to the use of such technologies by clicking accept or select your preferences...',
 	delay: 300,
 	expires: 1,
 	link: 'https://canadainfo.org/privacy-policy/',
