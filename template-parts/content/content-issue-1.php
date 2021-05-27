@@ -10,6 +10,8 @@
 
 ?>
 
+<div id="nonPrintable">
+
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'printMe' ); ?>>
 
 	<header class="entry-header">
@@ -31,3 +33,4 @@
 	 <?php ci_add_print_button(); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>

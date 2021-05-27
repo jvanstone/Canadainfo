@@ -179,13 +179,16 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
 	body * {
 		visibility:hidden;
 	  }
-	  #printSection, #printSection * {
-		visibility:visible;
-	  }
-	  #printSection {
-		position:absolute;
-		left:0;
-		top:0;
-	  }
+
+	#printSection, #printSection * {
+	visibility:visible;
+	}
+	#printSection {
+	position:absolute;
+	left:0;
+	top:0;
+	}
+
+	
 
 }
