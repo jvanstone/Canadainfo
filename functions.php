@@ -869,4 +869,4 @@ function ci_add_print_button() {
 }
 add_shortcode( 'print-page', 'ci_add_print_button' );
 
-include 'inc/covid-table.php'
+include 'inc/covid-table.php';
