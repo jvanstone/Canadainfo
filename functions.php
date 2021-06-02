@@ -479,12 +479,13 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 					'label'               => __( 'COVID Tables', 'canada-info' ),
 					'description'         => __( 'COVID Table', 'canada-info' ),
 					'labels'              => $labels,
-					// Features this CPT supports in Post Editor
+					// Features this CPT supports in Post Editor.
 					'supports'            => array( 'title', 'editor' ),
-					// You can associate this CPT with a taxonomy or custom taxonomy. 
+					// You can associate this CPT with a taxonomy or custom taxonomy.
 					'taxonomies'          => array( 'covid-table' ),
-					'menu_icon' => 'dashicons-editor-table',
-					/* A hierarchical CPT is like Pages and can have
+					'menu_icon'           => 'dashicons-editor-table',
+					/* 
+					* A hierarchical CPT is like Pages and can have
 					* Parent and child items. A non-hierarchical CPT
 					* is like Posts.
 					*/ 
@@ -499,6 +500,7 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 					'has_archive'         => true,
 					'exclude_from_search' => false,
 					'publicly_queryable'  => true,
+					'rewrite'            => array( 'slug' => 'covid-table' ),
 					'capability_type'     => 'post',
 					'show_in_rest' => true,
 			 
@@ -866,3 +868,5 @@ function ci_add_print_button() {
 	
 }
 add_shortcode( 'print-page', 'ci_add_print_button' );
+
+include 'inc/covid-table.php'
