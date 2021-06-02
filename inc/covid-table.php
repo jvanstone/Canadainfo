@@ -10,7 +10,7 @@ function ci_insert_covidtable() {
 	$args = array(
 		'post_type'      => 'covidtable',
 		'post_status'    => 'publish',
-		'posts_per_page' => 2,
+		'posts_per_page' => 1,
 		'orderby'        => 'title',
 		'order'          => 'ASC',
 	);
