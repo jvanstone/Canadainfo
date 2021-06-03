@@ -1,9 +1,7 @@
 <?php
-
 /**
  *  Insert COVID Table into post
- * 
- *  @link 
+ *
  */
 function ci_insert_covidtable() {
 	ob_start();
@@ -20,11 +18,14 @@ function ci_insert_covidtable() {
 	if( $the_query->have_posts() ) :
 		while ( $the_query->have_posts() ) :
 				$the_query->the_post();
-             the_content();
-		return ob_get_clean();
-		endwhile; 
-		wp_reset_postdata(); 
-	endif;
+			?> 
+			<h3><?php the_title(); ?></h3>
+			<?php
+				the_content();
 
+		endwhile;
+		wp_reset_postdata();
+	endif;
+	return ob_get_clean();
 }
 add_shortcode( 'covid-table', 'ci_insert_covidtable' );
