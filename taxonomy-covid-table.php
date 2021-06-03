@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Guides Available
+ * Template Name: Covid-table
  *
  * This is the template that displays all Info Guides that are avaialble.
  *
@@ -14,11 +14,14 @@
 
 get_header();
 
-$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+$terms = get_terms( array(
+    'taxonomy' => 'covid-table',
+    'hide_empty' => false,
+) );
 ?>
 <article>
 		<header class="entry-header">
-			<h1 class="entry-title">Canadainfo Issues Available</h1>
+			<h1 class="entry-title">Canadainfo COVID Table Information</h1>
 		</header><!-- .entry-header -->
 
 	<div class="entry-content">

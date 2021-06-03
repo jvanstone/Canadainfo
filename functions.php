@@ -489,7 +489,7 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 					* Parent and child items. A non-hierarchical CPT
 					* is like Posts.
 					*/ 
-					'hierarchical'        => false,
+					'hierarchical'        => true,
 					'public'              => true,
 					'show_ui'             => true,
 					'show_in_menu'        => true,
@@ -500,9 +500,9 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 					'has_archive'         => true,
 					'exclude_from_search' => false,
 					'publicly_queryable'  => true,
-					'rewrite'            => array( 'slug' => 'covid-table' ),
+					'rewrite'             => array( 'slug' => 'covid-table' ),
 					'capability_type'     => 'post',
-					'show_in_rest' => true,
+					'show_in_rest'        => true,
 			 
 				);
 				 
