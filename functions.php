@@ -490,6 +490,7 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 					* is like Posts.
 					*/ 
 					'hierarchical'        => true,
+					'has_archive'         => true,
 					'public'              => true,
 					'show_ui'             => true,
 					'show_in_menu'        => true,
@@ -878,5 +879,3 @@ function blazzdev_show_rating_widget() {
   }
   return true;
 }
-
-flush_rewrite_rules( false );
