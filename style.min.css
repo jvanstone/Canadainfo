@@ -479,7 +479,7 @@ body:not(.single) .site-main>article:last-of-type .entry-footer{border-bottom:va
 .author-bio .author-bio-content .author-title{font-family:var(--entry-author-bio--font-family);font-size:var(--entry-author-bio--font-size);display:inline}
 .author-bio .author-bio-content .author-description{font-size:var(--global--font-size-xs);margin-top:calc(0.5 * var(--global--spacing-vertical));margin-bottom:calc(0.5 * var(--global--spacing-vertical))}
 article{margin:0;padding:.5rem 1rem}
-.guide_width{margin:0 auto;padding:20px}
+.guide_width,.covidtable{margin:0 auto;padding:20px}
 .guide-card-row{margin:0 auto;width:100%}
 .guide-card{margin:0;padding:.5rem;background-color:var(--global--color-purple);text-align:center}
 .card-text>.guide-card p{margin:.5rem !important}

@@ -214,7 +214,7 @@ if ( ! function_exists( 'canada_info_post_thumbnail' ) ) {
 	}
 }
 
-if ( ! function_exists( 'canada_info_the_posts_navigation' ) ) {
+if ( ! function_exists( 'canadainfo_the_posts_navigation' ) ) {
 	/**
 	 * Print the next and previous posts navigation.
 	 *
@@ -222,7 +222,7 @@ if ( ! function_exists( 'canada_info_the_posts_navigation' ) ) {
 	 *
 	 * @return void
 	 */
-	function canada_info_the_posts_navigation() {
+	function canadainfo_the_posts_navigation() {
 		the_posts_pagination(
 			array(
 				'before_page_number' => esc_html__( 'Page', 'canada-info' ) . ' ',
