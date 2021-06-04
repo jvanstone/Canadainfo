@@ -11,7 +11,7 @@ function ci_insert_covidtable() {
 		'post_status'    => 'publish',
 		'posts_per_page' => 1,
 		'orderby'        => 'title',
-		'order'          => 'ASC',
+		'order'          => 'DSC',
 	);
 
 	$the_query = new WP_Query( $args );
