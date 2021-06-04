@@ -872,10 +872,11 @@ add_shortcode( 'print-page', 'ci_add_print_button' );
 include 'inc/covid-table.php';
 
 add_filter( 'rmp_display_rating_widget', 'blazzdev_show_rating_widget' );
-
 function blazzdev_show_rating_widget() {
   if( is_singular( 'covidtable' ) ) {
     return false;
   }
   return true;
 }
+
+flush_rewrite_rules( false );
