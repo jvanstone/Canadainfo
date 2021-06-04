@@ -25,7 +25,7 @@ function ci_insert_covidtable() {
 				the_content();
 
 			?>
-			<p><a href="<?php echo get_post_type_archive_link( $ci_post_type ); ?>">View past COVID Numbers in Canada.</a></p>
+			<h3><a href="<?php echo get_post_type_archive_link( $ci_post_type ); ?>">View past COVID Numbers in Canada.</a></h3>
 			<?php
 		endwhile;
 		wp_reset_postdata();
