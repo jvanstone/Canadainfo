@@ -477,7 +477,7 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 				 
 				$args = array(
 					'label'               => __( 'COVID Tables', 'canada-info' ),
-					'description'         => __( 'COVID Table', 'canada-info' ),
+					'description'         => __( 'A collecton of past numbers of COVID-19 in Canada and it\'s provinces and territories.', 'canada-info' ),
 					'labels'              => $labels,
 					// Features this CPT supports in Post Editor.
 					'supports'            => array( 'title', 'editor' ),

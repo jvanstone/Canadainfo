@@ -5,8 +5,9 @@
  */
 function ci_insert_covidtable() {
 	ob_start();
+	$ci_post_type = 'covidtable';
 	$args = array(
-		'post_type'      => 'covidtable',
+		'post_type'      => $ci_post_type,
 		'post_status'    => 'publish',
 		'posts_per_page' => 1,
 		'orderby'        => 'title',
@@ -23,6 +24,9 @@ function ci_insert_covidtable() {
 			<?php
 				the_content();
 
+			?>
+			<p><a href="<?php echo get_post_type_archive_link( $ci_post_type ); ?>">View past COVID Numbers in Canada.</a></p>
+			<?php
 		endwhile;
 		wp_reset_postdata();
 	endif;
