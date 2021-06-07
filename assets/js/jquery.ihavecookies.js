@@ -82,7 +82,7 @@
 			});
 
 			// Display cookie message on page
-			var cookieMessage = '<div id="cookie-message"><h4>' + settings.title + '</h4><p>' + settings.message + ' <a href="' + settings.link + '">' + settings.moreInfoLabel + '</a><div id="gdpr-cookie-types" style="display:none;"><h5>' + settings.cookieTypesTitle + '</h5><ul class="row">' + cookieTypes + '</ul></div><p><button id="gdpr-cookie-accept" type="button">' + settings.acceptBtnLabel + '</button><button id="cookie-advanced" type="button">' + settings.advancedBtnLabel + '</button></p></div>';
+			var cookieMessage = '<div id="cookie-message"><button id="close-btn">X</button><h4>' + settings.title + ' </h4><p>' + settings.message + ' <a href="' + settings.link + '">' + settings.moreInfoLabel + '</a><div id="gdpr-cookie-types" style="display:none;"><h5>' + settings.cookieTypesTitle + '</h5><ul class="row">' + cookieTypes + '</ul></div><p><button id="gdpr-cookie-accept" type="button">' + settings.acceptBtnLabel + '</button><button id="cookie-advanced" type="button">' + settings.advancedBtnLabel + '</button></p></div>';
 			setTimeout( function() {
 				$( $element ).append( cookieMessage );
 				$( '#cookie-message' ).hide().fadeIn( 'slow', function() {
@@ -97,6 +97,12 @@
 					}
 				});
 			}, settings.delay );
+
+			// Close the cookie warning
+			$('body').on('click', '#close-btn', function () {
+				$('#cookie-message').hide();
+				event.stopPropagation();
+			});
 
 			// When accept button is clicked drop cookie
 			$( 'body' ).on( 'click', '#gdpr-cookie-accept', function() {

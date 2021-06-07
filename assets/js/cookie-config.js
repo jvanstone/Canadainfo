@@ -29,4 +29,5 @@ $( document ).ready( function() {
 	$( '#ihavecookiesBtn' ).on( 'click', function() {
 		$( 'body' ).ihavecookies( options, 'reinit' );
 	});
+
 });
