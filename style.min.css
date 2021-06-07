@@ -675,23 +675,7 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 #pmpro_account,.pmpro_member_profile_edit_wrap,.pmpro_confirmation_wrap,.pmpro_change_password_wrap,.pmpro_login_wrap,.contact-form{margin:2rem;padding:2rem;border:1px solid #ddd;border-radius:5px}
 #goTop{display:none;position:fixed;bottom:1rem;right:.5rem;z-index:99;border:0 solid var(--global--color-blue);outline:0;background-color:var(--global--color-background2);color:white;cursor:pointer;padding:1rem;border-radius:4px}
 #goTop:hover{background-color:#555}
-.province{margin:1rem auto;width:95%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
-.province .list-inline-item{margin:1rem;padding-left:1rem;width:15rem;height:2rem;border-bottom:var(--global-border);-webkit-box-shadow:2px 5px #888;box-shadow:2px 5px #888;position:relative}
-.province .list-inline-item::after{width:0;height:0;position:absolute;top:0;right:50px}
 .canadaguide-map{-webkit-box-flex:100%;-ms-flex:100%;flex:100%;height:auto;background-color:white}
-#canadian-politic-parties{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;background-color:rgba(255,255,255,0);width:100%;text-align:center;font-weight:500}
-.party{margin:1rem;-webkit-box-flex:30%;-ms-flex:30%;flex:30%;min-width:10em;min-height:5em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-line-pack:distribute;align-content:space-around}
-.party-logo{margin:5px auto;margin-bottom:8px;height:3em;text-align:center;clear:both}
-.party p{margin:5px;text-align:center}
-.leader-img{margin:0 auto;width:100%;height:auto;max-width:280px;max-height:375px;clear:both}
-.colorblock{height:2em;width:100%}
-.colorblock-bottom{height:2em;width:100%;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;display:-webkit-box;display:-ms-flexbox;display:flex}
-.liberal{background-color:#c00}
-.conservative{background-color:#0400e7}
-.ndp{background-color:#cc7400}
-.bloc{background-color:#0034c2}
-.people{background-color:#5115f5}
-.green{background-color:#2b9542}
 #gdpr-cookie-types{padding-bottom:1rem;margin:1rem}
 #cookie-message{position:fixed;right:10px;bottom:10px;max-width:400px;background-color:var(--global--color-background2);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:1rem}
 #cookie-message h4{color:black;font-weight:500;margin-bottom:10px}

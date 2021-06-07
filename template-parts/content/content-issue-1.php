@@ -32,7 +32,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<div style="text-align: center;"><?php esc_html_e( 'Date published', 'canada-info' ); ?> <?php the_time( 'F jS, Y' ); ?> <?php esc_html_e( '| Created by the Canadinfo team', 'canada-info' ); ?></div>
+	<div style="text-align: center;"><?php/*  esc_html_e( 'Date published', 'canada-info' );  */?> <?php/*  the_time( 'F jS, Y' ); */ ?> <?php esc_html_e( 'Created by the Canadinfo team', 'canada-info' ); ?></div>
 	
 	 <?php ci_add_print_button(); ?>
 
