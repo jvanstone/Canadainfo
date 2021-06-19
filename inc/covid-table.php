@@ -20,7 +20,8 @@ function ci_insert_covidtable() {
 		while ( $the_query->have_posts() ) :
 				$the_query->the_post();
 			?> 
-			<h3><?php the_title(); ?> <a href="<?php echo get_post_type_archive_link( $ci_post_type ); ?>"> - View past COVID Numbers in Canada.</a></h3>
+			<h3><?php the_title(); ?></h3>
+			<p><a href="<?php echo get_post_type_archive_link( $ci_post_type ); ?>">View past COVID Numbers in Canada.</a></p>
 			<?php
 				the_content();
 
