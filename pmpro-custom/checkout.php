@@ -20,23 +20,23 @@ function pmp_add_accountsetup() {
  }
  add_action( 'pmpro_checkout_after_pricing_fields',  'pmp_add_accountsetup');
 
- function pmp_add_paymentsetup() {
+/*  function pmp_add_paymentsetup() {
 	?>
-    <h2 class=""><?php _e('2) Finish setup with PayPal', 'paid-memberships-pro' );?></h2>
-    <em><?php _e('You will be redirected back to Canadainfo.org after payment has been processed by PayPal.', 'paid-memberships-pro' );?></em>
+    <!-- <h2 class=""><?php _e('2) Finish setup with PayPal', 'paid-memberships-pro' );?></h2> -->
+    <em><?php _e('We look forward to having you as a member', 'paid-memberships-pro' );?></em>
 	
 	<?php
  }
- add_action( 'pmpro_checkout_before_submit_button', 'pmp_add_paymentsetup');
-
+ add_action( 'pmpro_checkout_before_submit_button', 'pmp_add_paymentsetup'); 
+ */
  /**
   * Change the text of the Checkout Page
   */ 
  function pmp_change_checkout( $translated_text ) {
 	if ( $translated_text == 'Membership Level' ) {
 		$translated_text = 'Canadainfo Guide';
-	} else if  ( $translated_text == 'You have selected the <strong>%s</strong> membership level.' ) {
-        $translated_text = 'You are about to purchase <strong>%s</strong>.';
+	} else if  ( $translated_text == 'You areregistering for <strong>%s</strong>.' ) {
+        $translated_text = 'You are signing up for a <strong>%s</strong>.';
     } else if ( $translated_text == 'The price for membership is <strong>%s</strong> now' )  {
         $translated_text = 'You will be charged a one time fee of -- <strong>%s</strong> CAD';
     } else if ( $translated_text == 'State' ) {
