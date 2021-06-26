@@ -113,15 +113,18 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . get_site_url() . '/account-details/">Account Details</a></li>';
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . get_site_url() . '/account-details/update-profile/">Update Profile</a></li>';
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . wp_logout_url() . '">Log Out</a></li>';
+					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://checkout.square.site/buy/IGE6BBZH6KZLUBATSQY6D7ME" target="_blank"><i class="fas fa-hand-holding-heart"></i></a></li>';
 					
 					if (  is_single() && 'post' === get_post_type() ) {
 						$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page" "><button id="btnPrint" class="btn btn-primary"><span class="dashicons dashicons-printer"></span></button></li>';
 					} 
 					
 				} else {
+					
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . get_site_url() . '/get-the-guide/?level=1">Get the Latest Issue</a></li>';
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . wp_login_url( get_permalink() ) . '">Log In</a></li>';
-				
+					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://checkout.square.site/buy/IGE6BBZH6KZLUBATSQY6D7ME" target="_blank"><i class="fas fa-hand-holding-heart"></i></a></li>';
+					
 				}
 			
 				return $items;

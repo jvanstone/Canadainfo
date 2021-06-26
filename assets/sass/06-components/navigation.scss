@@ -541,12 +541,8 @@ ul.navbar-nav {
 	li {
 		flex: 2;
 	}
-	li > button {
+	li > button, li > a > i {
 		flex: 1;
 	}
 }
 
-.donate-icon a::before {
-	content: "\f487";
-	margin-right: 2px;
-}
