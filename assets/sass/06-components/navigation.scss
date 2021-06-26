@@ -541,7 +541,8 @@ ul.navbar-nav {
 	li {
 		flex: 2;
 	}
-	li > button {
+	li > button, li > a > i {
 		flex: 1;
 	}
 }
+
