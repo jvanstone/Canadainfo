@@ -531,3 +531,17 @@
 		opacity: 1;
 	}
 }
+
+ul.navbar-nav {
+	width: 80%;
+	margin: 0 auto; 
+	display: flex;
+	justify-content: space-around;
+	
+	li {
+		flex: 2;
+	}
+	li > button {
+		flex: 1;
+	}
+}
