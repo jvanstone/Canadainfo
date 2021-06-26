@@ -38,7 +38,7 @@ function pmp_add_accountsetup() {
 	} else if  ( $translated_text == 'You have selected the <strong>%s</strong> membership level.' ) {
         $translated_text = 'You are signing up for a <strong>%s</strong>.';
     } else if ( $translated_text == 'The price for membership is <strong>%s</strong> now' )  {
-        $translated_text = 'The membership is FREE. We are a dontation run website. <a href="https://www.canadainfo.org/donations/" target="_blank">Learn more</a>';
+        $translated_text = 'The membership is FREE. We are a donation run website. <a href="https://www.canadainfo.org/donations/" target="_blank">Learn more</a>';
     } else if ( $translated_text == 'State' ) {
 		$translated_text = 'Province/State';
     }

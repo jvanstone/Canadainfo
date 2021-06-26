@@ -545,3 +545,8 @@ ul.navbar-nav {
 		flex: 1;
 	}
 }
+
+.donate-icon a::before {
+	content: "\f487";
+	margin-right: 2px;
+}
