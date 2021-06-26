@@ -34,11 +34,11 @@ function pmp_add_accountsetup() {
   */ 
  function pmp_change_checkout( $translated_text ) {
 	if ( $translated_text == 'Membership Level' ) {
-		$translated_text = 'Canadainfo Guide';
-	} else if  ( $translated_text == 'You areregistering for <strong>%s</strong>.' ) {
+		$translated_text = 'Canadainfo Membership';
+	} else if  ( $translated_text == 'You have selected the <strong>%s</strong> membership level.' ) {
         $translated_text = 'You are signing up for a <strong>%s</strong>.';
     } else if ( $translated_text == 'The price for membership is <strong>%s</strong> now' )  {
-        $translated_text = 'You will be charged a one time fee of -- <strong>%s</strong> CAD';
+        $translated_text = 'The membership is FREE. We are a dontation run website. <a href="https://www.canadainfo.org/donations/" target="_blank">Learn more</a>';
     } else if ( $translated_text == 'State' ) {
 		$translated_text = 'Province/State';
     }
