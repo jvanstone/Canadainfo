@@ -683,8 +683,10 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 #cookie-message{position:fixed;left:10px;bottom:10px;max-width:400px;background-color:var(--global--color-background2);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:1rem}
 #cookie-message h4{float:left;color:black;font-weight:500;margin:10px 60px 10px 10px}
 #cookie-message h5{color:black;font-weight:500;margin:1rem 0}
-#cookie-message ul{margin:1rem}
-#cookie-message li{color:white;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1}
+#cookie-message ul{margin:1rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column}
+#cookie-message li{color:white;-webkit-box-align:center;-ms-flex-align:center;align-items:center;line-height:1.2}
+#cookie-message ul.flex-btn{list-style-type:none;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:distribute;justify-content:space-around}
+#cookie-message ul.flex-btn li{-webkit-box-flex:1;-ms-flex:1;flex:1}
 #cookie-message p{margin:2rem auto;padding:0 calc(1.2 * var(--global--spacing-horizontal));width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap}
 #cookie-message p:last-child{margin-bottom:0;text-align:right}
 #cookie-message a{color:black;text-decoration:none;padding-bottom:2px;border-bottom:1px dotted rgba(255,255,255,0.75);-webkit-transition:all .3s ease-in;transition:all .3s ease-in}

@@ -31,13 +31,28 @@
 
     ul { 
         margin: 1rem;
+        display: flex;
+        flex-flow: column;
     }
+
     li {
         color: white;
         align-items: center;
-        line-height: 1;
+        line-height: 1.2;
+      
         
       
+    }
+
+    ul.flex-btn {
+        list-style-type: none;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        li {
+            flex: 1;
+        }
+        
     }
     p { 
         margin: 2rem auto;
