@@ -10,7 +10,8 @@ var options = {
 		console.log( myPreferences );
 	},
 	uncheckBoxes: true,
-	acceptBtnLabel: 'Accept Cookies',
+	acceptBtnLabel: 'Accept',
+	customBtnLabel: 'Customize',
 	moreInfoLabel: 'More information',
 	cookieTypesTitle: 'Select which cookies you want to accept',
 	fixedCookieTypeLabel: 'Essential',
@@ -28,4 +29,5 @@ $( document ).ready( function() {
 	$( '#ihavecookiesBtn' ).on( 'click', function() {
 		$( 'body' ).ihavecookies( options, 'reinit' );
 	});
+
 });

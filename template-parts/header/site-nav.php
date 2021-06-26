@@ -26,7 +26,7 @@
 					array(
 						'theme_location' => 'primary',
 						'menu_class'     => 'navbar-nav',
-						'add_li_class'   => 'nav-item col-md-4',
+						'add_li_class'   => 'nav-item col-lg-4',
 						'container'      => false,
 					)
 				);

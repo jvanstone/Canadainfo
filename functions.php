@@ -112,6 +112,9 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . get_site_url() . '/account-details/">Account Details</a></li>';
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . get_site_url() . '/account-details/update-profile/">Update Profile</a></li>';
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . wp_logout_url() . '">Log Out</a></li>';
+					if (  is_single() && 'post' === get_post_type() ) {
+						$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page" style="float: right;"><button id="btnPrint" class="btn btn-primary"><span class="dashicons dashicons-printer"></span></button></li>';
+					} 
 				} else {
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . get_site_url() . '/get-the-guide/?level=1">Get the Latest Issue</a></li>';
 					$items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . wp_login_url( get_permalink() ) . '">Log In</a></li>';
@@ -449,6 +452,78 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 			register_taxonomy( 'guide', [ 'post' ], $args );
 		}
 		add_action( 'init', 'cg_register_taxonomy_guide' );
+
+		/**
+		 * Create Custom Post-Type COVID Table
+		 * 
+		 */
+		function custom_post_type() {
+ 
+			// Set UI labels for Custom Post Type
+				$labels = array(
+					'name'                => _x( 'COVID Tables', 'Post Type General Name', 'canada-info' ),
+					'singular_name'       => _x( 'COVID Table', 'Post Type Singular Name', 'canada-info' ),
+					'menu_name'           => __( 'COVID Table', 'canada-info' ),
+					'parent_item_colon'   => __( 'Main COVID Table', 'canada-info' ),
+					'all_items'           => __( 'All COVID Tables', 'canada-info' ),
+					'view_item'           => __( 'View COVID Table', 'canada-info' ),
+					'add_new_item'        => __( 'Add New COVID Table', 'canada-info' ),
+					'add_new'             => __( 'Add New', 'canada-info' ),
+					'edit_item'           => __( 'Edit COVID Table', 'canada-info' ),
+					'update_item'         => __( 'Update COVID Table', 'canada-info' ),
+					'search_items'        => __( 'Search COVID Table', 'canada-info' ),
+					'not_found'           => __( 'Not Found', 'canada-info' ),
+					'not_found_in_trash'  => __( 'Not found in Trash', 'canada-info' ),
+				);
+				 
+			// Set other options for Custom Post Type
+				 
+				$args = array(
+					'label'               => __( 'COVID Tables', 'canada-info' ),
+					'description'         => __( 'A collecton of past numbers of COVID-19 in Canada and it\'s provinces and territories.', 'canada-info' ),
+					'labels'              => $labels,
+					// Features this CPT supports in Post Editor.
+					'supports'            => array( 'title', 'editor' ),
+					// You can associate this CPT with a taxonomy or custom taxonomy.
+					'taxonomies'          => array( 'covid-table' ),
+					'menu_icon'           => 'dashicons-editor-table',
+					/* 
+					* A hierarchical CPT is like Pages and can have
+					* Parent and child items. A non-hierarchical CPT
+					* is like Posts.
+					*/ 
+					'hierarchical'        => true,
+					'has_archive'         => true,
+					'public'              => true,
+					'show_ui'             => true,
+					'show_in_menu'        => true,
+					'show_in_nav_menus'   => true,
+					'show_in_admin_bar'   => true,
+					'menu_position'       => 5,
+					'can_export'          => true,
+					'has_archive'         => true,
+					'exclude_from_search' => false,
+					'publicly_queryable'  => true,
+					'rewrite'             => array( 'slug' => 'covid-table' ),
+					'capability_type'     => 'post',
+					'show_in_rest'        => true,
+			 
+				);
+				 
+				// Registering your Custom Post Type
+				register_post_type( 'COVID Table', $args );
+			 
+			}
+			 
+			/* Hook into the 'init' action so that the function
+			* Containing our post type registration is not 
+			* unnecessarily executed. 
+			*/
+			 
+			add_action( 'init', 'custom_post_type', 0 );
+		
+				
+			
 	}
 }
 add_action( 'after_setup_theme', 'canada_info_setup' );
@@ -797,3 +872,13 @@ function ci_add_print_button() {
 	
 }
 add_shortcode( 'print-page', 'ci_add_print_button' );
+
+include 'inc/covid-table.php';
+
+add_filter( 'rmp_display_rating_widget', 'blazzdev_show_rating_widget' );
+function blazzdev_show_rating_widget() {
+  if( is_singular( 'covidtable' ) ) {
+    return false;
+  }
+  return true;
+}
