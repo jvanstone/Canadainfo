@@ -67,7 +67,7 @@
 			$( '#cookie-message' ).remove();
 
 			// Set the 'necessary' cookie type checkbox which can not be unchecked
-			var cookieTypes = '<li class="col-md-3 form-check align-middle"><input type="checkbox" class="form-check-input" name="gdpr[]" value="necessary" checked="checked" disabled="disabled"> <label title="' + settings.fixedCookieTypeDesc + '" class="form-check-label">' + settings.fixedCookieTypeLabel + '</label></li>';
+			var cookieTypes = '<li class=" form-check align-middle"><input type="checkbox" class="form-check-input" name="gdpr[]" value="necessary" checked="checked" disabled="disabled"> <label title="' + settings.fixedCookieTypeDesc + '" class="form-check-label">' + settings.fixedCookieTypeLabel + '</label></li>';
 
 			// Generate list of cookie type checkboxes
 			var preferences = JSON.parse( myCookiePrefs );
@@ -82,7 +82,7 @@
 			});
 
 			// Display cookie message on page
-			var cookieMessage = '<div id="cookie-message"><button id="close-btn">X</button><h4>' + settings.title + ' </h4><p>' + settings.message + ' <a href="' + settings.link + '">' + settings.moreInfoLabel + '</a><div id="gdpr-cookie-types" style="display:none;"><h5>' + settings.cookieTypesTitle + '</h5><ul class="row">' + cookieTypes + '</ul></div><p><button id="gdpr-cookie-accept" type="button">' + settings.acceptBtnLabel + '</button><button id="cookie-advanced" type="button">' + settings.advancedBtnLabel + '</button></p></div>';
+			var cookieMessage = '<div id="cookie-message"><button id="close-btn">X</button><h4>' + settings.title + ' </h4><p>' + settings.message + ' <a href="' + settings.link + '">' + settings.moreInfoLabel + '</a><div id="gdpr-cookie-types" style="display:none;"><h5>' + settings.cookieTypesTitle + '</h5><ul class="row">' + cookieTypes + '</ul></div><ul class="flex-btn"><li><button id="gdpr-cookie-accept" type="button">' + settings.acceptBtnLabel + '</button></li><li><button id="cookie-advanced" type="button">' + settings.advancedBtnLabel + '</button></ul></ul></div>';
 			setTimeout( function() {
 				$( $element ).append( cookieMessage );
 				$( '#cookie-message' ).hide().fadeIn( 'slow', function() {

@@ -1,5 +1,5 @@
 var options = {
-	title: '&#x1F36A; Accept Cookies & Privacy Policy?',
+	title: '&#x1F36A;&nbsp; Accept Cookies & Privacy Policy?',
 	message: 'We use cookies as specified in our cookie policy. You can consent to the use of such technologies by clicking accept or select your preferences...',
 	delay: 300,
 	expires: 1,

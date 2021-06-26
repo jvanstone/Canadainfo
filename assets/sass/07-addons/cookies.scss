@@ -7,7 +7,7 @@
 /* Cookie Dialog */
 #cookie-message {
     position: fixed;
-    right: 10px;
+    left: 10px;
     bottom: 10px;
     max-width: 400px;
     background-color: var(--global--color-background2);
@@ -31,13 +31,28 @@
 
     ul { 
         margin: 1rem;
+        display: flex;
+        flex-flow: column;
     }
+
     li {
         color: white;
         align-items: center;
-        line-height: 1;
+        line-height: 1.2;
+      
         
       
+    }
+
+    ul.flex-btn {
+        list-style-type: none;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        li {
+            flex: 1;
+        }
+        
     }
     p { 
         margin: 2rem auto;
@@ -89,6 +104,10 @@
     }
     button:disabled {
         opacity: 0.3;
+    }
+    #close-btn {
+        background-color: transparent;
+        color: #111;
     }
   
 }
