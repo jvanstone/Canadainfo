@@ -680,7 +680,7 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 #goTop:hover{background-color:#555}
 .canadaguide-map{-webkit-box-flex:100%;-ms-flex:100%;flex:100%;height:auto;background-color:white}
 #gdpr-cookie-types{padding-bottom:1rem;margin:1rem}
-#cookie-message{position:fixed;right:10px;bottom:10px;max-width:400px;background-color:var(--global--color-background2);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:1rem}
+#cookie-message{position:fixed;left:10px;bottom:10px;max-width:400px;background-color:var(--global--color-background2);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:1rem}
 #cookie-message h4{float:left;color:black;font-weight:500;margin:10px 60px 10px 10px}
 #cookie-message h5{color:black;font-weight:500;margin:1rem 0}
 #cookie-message ul{margin:1rem}
@@ -693,6 +693,7 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 #cookie-message button:hover{background:white;color:black;-webkit-transition:all .3s ease-in;transition:all .3s ease-in}
 #cookie-message button#gdpr-cookie-advanced{background:white;color:black}
 #cookie-message button:disabled{opacity:.3}
+#cookie-message #close-btn{background-color:transparent;color:#111}
 .screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute !important;width:1px;word-wrap:normal !important;word-break:normal}
 .skip-link:focus{background-color:#f1f1f1;border-radius:3px;-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,0.6);box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;-webkit-clip-path:none;clip-path:none;color:#21759b;display:block;font-size:.875rem;font-weight:700;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 #content[tabindex="-1"]:focus{outline:0}
