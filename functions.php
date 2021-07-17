@@ -99,13 +99,13 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 			)
 		);
 
-		/**
+		/* *
 		 * Dynamic Login.
 		 *
 		 * @param string $items returns the default menu.
 		 * @param string $args returns theme location.
 		 */
-		function wp_login_logout( $items, $args ) {
+		/* function wp_login_logout( $items, $args ) {
 			if ( 'primary' === $args->theme_location ) :
 
 				if ( is_user_logged_in() ) {
@@ -132,7 +132,7 @@ if ( ! function_exists( 'canada_info_setup' ) ) {
 
 				return $items;
 		}
-		add_filter( 'wp_nav_menu_items', 'wp_login_logout', 10, 2 );
+		add_filter( 'wp_nav_menu_items', 'wp_login_logout', 10, 2 ); */
 
 		/**
 		 * Add support for core custom logo.
