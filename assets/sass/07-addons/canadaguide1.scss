@@ -19,3 +19,9 @@ Canada Info Issue 1 Extras
     word-break: normal!important; 
     overflow-wrap: normal !important; 
 }
+
+.entry-content p {
+    word-wrap: break-word;
+    margin: calc(.7 * var(--global--spacing-vertical)) var(--global--spacing-vertical);
+    padding: 0 .5rem;
+}
