@@ -3,7 +3,7 @@
 	color: var(--entry-header--color);
 	letter-spacing: var(--heading--letter-spacing-h2);
 	line-height: var(--heading--line-height-h2);
-	overflow-wrap: break-word;
+	overflow-wrap: normal;
 
 	a {
 		color: var(--entry-header--color-link);

@@ -11,3 +11,11 @@ Canada Info Issue 1 Extras
     height: auto;
     background-color: white;
 }
+
+
+.wp-block-column {
+    flex-grow: 1;
+    min-width: 0;
+    word-break: normal!important; 
+    overflow-wrap: normal !important; 
+}
