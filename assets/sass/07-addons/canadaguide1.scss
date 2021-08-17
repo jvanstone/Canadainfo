@@ -22,7 +22,7 @@ Canada Info Issue 1 Extras
 
 
 .entry-content p {
-    word-wrap: break-word;
+    word-wrap: normal !important;
     margin: calc(.7 * var(--global--spacing-vertical)) var(--global--spacing-vertical);
     padding: 0 .5rem!important;
 }
