@@ -449,7 +449,7 @@ footer{height:auto;border-top:1px solid #575555;background-color:var(--global--c
 .page-links{clear:both}
 .page-links .post-page-numbers{display:inline-block;margin-left:calc(0.66 * var(--global--spacing-unit));margin-right:calc(0.66 * var(--global--spacing-unit));min-width:44px;min-height:44px}
 .page-links .post-page-numbers:first-child{margin-left:0}
-.entry-title{color:var(--entry-header--color);letter-spacing:var(--heading--letter-spacing-h2);line-height:var(--heading--line-height-h2);overflow-wrap:break-word}
+.entry-title{color:var(--entry-header--color);letter-spacing:var(--heading--letter-spacing-h2);line-height:var(--heading--line-height-h2);overflow-wrap:normal}
 .entry-title a{color:var(--entry-header--color-link);text-underline-offset:.15em}
 .entry-title a:hover{color:var(--entry-header--color-hover)}
 .entry-title a:focus{color:var(--entry-header--color-focus)}
@@ -679,6 +679,7 @@ span.pmpro_checkout-h3-name{padding-top:.5rem;padding-left:1rem;display:block !i
 #goTop{display:none;position:fixed;bottom:1rem;right:.5rem;z-index:99;border:0 solid var(--global--color-blue);outline:0;background-color:var(--global--color-background2);color:white;cursor:pointer;padding:1rem;border-radius:4px}
 #goTop:hover{background-color:#555}
 .canadaguide-map{-webkit-box-flex:100%;-ms-flex:100%;flex:100%;height:auto;background-color:white}
+.wp-block-column{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;min-width:0;word-break:normal !important;overflow-wrap:normal !important}
 #gdpr-cookie-types{padding-bottom:1rem;margin:1rem}
 #cookie-message{position:fixed;left:10px;bottom:10px;max-width:400px;background-color:var(--global--color-background2);padding:20px;border-radius:5px;-webkit-box-shadow:0 6px 6px rgba(0,0,0,0.25);box-shadow:0 6px 6px rgba(0,0,0,0.25);margin-left:1rem}
 #cookie-message h4{float:left;color:black;font-weight:500;margin:10px 60px 10px 10px}
